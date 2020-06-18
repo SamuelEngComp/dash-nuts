@@ -288,3 +288,7 @@
 2020-06-18 00:40:04,211 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-10] select count(bancaexami0_.codigo) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=? and bancaexami0_.tipo_de_banca=?
 2020-06-18 00:40:04,213 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-10] select count(bancaexami0_.codigo) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=? and bancaexami0_.tipo_de_banca=?
 2020-06-18 00:40:04,216 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-10] select count(bancaexami0_.codigo) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=? and bancaexami0_.tipo_de_banca=?
+2020-06-18 00:54:33,070 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(2)-127.0.0.1] Application shutdown requested.
+2020-06-18 00:54:33,074 INFO o.s.o.j.AbstractEntityManagerFactoryBean [RMI TCP Connection(2)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-18 00:54:33,078 INFO c.z.h.HikariDataSource [RMI TCP Connection(2)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2020-06-18 00:54:33,091 INFO c.z.h.HikariDataSource [RMI TCP Connection(2)-127.0.0.1] HikariPool-1 - Shutdown completed.
