@@ -1,196 +1,156 @@
-2020-06-18 01:10:15,631 INFO o.s.b.StartupInfoLogger [main] Starting RevSpringBootApplication on DESKTOP-H0MQLKS with PID 8120 (C:\Users\samue\Documents\workspace-sts-3.9.12.RELEASE\RevSpringBoot\target\classes started by samue in C:\Users\samue\Documents\workspace-sts-3.9.12.RELEASE\RevSpringBoot)
-2020-06-18 01:10:15,646 INFO o.s.b.SpringApplication [main] The following profiles are active: prod
-2020-06-18 01:10:16,674 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-06-18 01:10:16,827 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 140ms. Found 4 JPA repository interfaces.
-2020-06-18 01:10:17,513 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
-2020-06-18 01:10:17,524 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
-2020-06-18 01:10:17,525 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
-2020-06-18 01:10:17,526 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.34]
-2020-06-18 01:10:17,714 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
-2020-06-18 01:10:17,715 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1977 ms
-2020-06-18 01:10:17,826 WARN o.s.c.s.AbstractApplicationContext [main] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unsatisfied dependency expressed through method 'flywayInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flyway' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.flywaydb.core.Flyway]: Factory method 'flyway' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceProd' defined in class path resource [com/rev/config/JpaConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSourceProd' threw exception; nested exception is java.lang.NullPointerException
-2020-06-18 01:10:17,829 INFO o.a.j.l.DirectJDKLog [main] Stopping service [Tomcat]
-2020-06-18 01:10:17,862 INFO o.s.b.a.l.ConditionEvaluationReportLoggingListener [main] 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2020-06-18 01:10:17,873 ERROR o.s.b.SpringApplication [main] Application run failed
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unsatisfied dependency expressed through method 'flywayInitializer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flyway' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.flywaydb.core.Flyway]: Factory method 'flyway' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceProd' defined in class path resource [com/rev/config/JpaConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSourceProd' threw exception; nested exception is java.lang.NullPointerException
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:539) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.7.RELEASE.jar:2.2.7.RELEASE]
-	at com.rev.RevSpringBootApplication.main(RevSpringBootApplication.java:12) [classes/:?]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flyway' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.flywaydb.core.Flyway]: Factory method 'flyway' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceProd' defined in class path resource [com/rev/config/JpaConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSourceProd' threw exception; nested exception is java.lang.NullPointerException
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	... 21 more
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.flywaydb.core.Flyway]: Factory method 'flyway' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceProd' defined in class path resource [com/rev/config/JpaConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSourceProd' threw exception; nested exception is java.lang.NullPointerException
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	... 21 more
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceProd' defined in class path resource [com/rev/config/JpaConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSourceProd' threw exception; nested exception is java.lang.NullPointerException
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:484) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory$DependencyObjectProvider.getIfUnique(DefaultListableBeanFactory.java:1963) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration$FlywayConfiguration.flyway(FlywayAutoConfiguration.java:128) ~[spring-boot-autoconfigure-2.2.7.RELEASE.jar:2.2.7.RELEASE]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_251]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_251]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_251]
-	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_251]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	... 21 more
-Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.sql.DataSource]: Factory method 'dataSourceProd' threw exception; nested exception is java.lang.NullPointerException
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:484) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory$DependencyObjectProvider.getIfUnique(DefaultListableBeanFactory.java:1963) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration$FlywayConfiguration.flyway(FlywayAutoConfiguration.java:128) ~[spring-boot-autoconfigure-2.2.7.RELEASE.jar:2.2.7.RELEASE]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_251]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_251]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_251]
-	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_251]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	... 21 more
-Caused by: java.lang.NullPointerException
-	at java.net.URI$Parser.parse(Unknown Source) ~[?:1.8.0_251]
-	at java.net.URI.<init>(Unknown Source) ~[?:1.8.0_251]
-	at com.rev.config.JpaConfig.dataSourceProd(JpaConfig.java:32) ~[classes/:?]
-	at com.rev.config.JpaConfig$$EnhancerBySpringCGLIB$$d578bf80.CGLIB$dataSourceProd$2(<generated>) ~[classes/:?]
-	at com.rev.config.JpaConfig$$EnhancerBySpringCGLIB$$d578bf80$$FastClassBySpringCGLIB$$22daba1e.invoke(<generated>) ~[classes/:?]
-	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at com.rev.config.JpaConfig$$EnhancerBySpringCGLIB$$d578bf80.dataSourceProd(<generated>) ~[classes/:?]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_251]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_251]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_251]
-	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_251]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:484) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory$DependencyObjectProvider.getIfUnique(DefaultListableBeanFactory.java:1963) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration$FlywayConfiguration.flyway(FlywayAutoConfiguration.java:128) ~[spring-boot-autoconfigure-2.2.7.RELEASE.jar:2.2.7.RELEASE]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_251]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_251]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_251]
-	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_251]
-	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1306) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1226) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-5.2.6.RELEASE.jar:5.2.6.RELEASE]
-	... 21 more
+2020-06-18 01:13:50,709 INFO o.s.b.StartupInfoLogger [main] Starting RevSpringBootApplication on DESKTOP-H0MQLKS with PID 9584 (C:\Users\samue\Documents\workspace-sts-3.9.12.RELEASE\RevSpringBoot\target\classes started by samue in C:\Users\samue\Documents\workspace-sts-3.9.12.RELEASE\RevSpringBoot)
+2020-06-18 01:13:50,726 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-06-18 01:13:51,656 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-06-18 01:13:51,795 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 128ms. Found 4 JPA repository interfaces.
+2020-06-18 01:13:52,582 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-06-18 01:13:52,596 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-06-18 01:13:52,597 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2020-06-18 01:13:52,599 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020-06-18 01:13:52,776 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-06-18 01:13:52,777 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1914 ms
+2020-06-18 01:13:52,915 INFO o.f.c.i.l.s.Slf4jLog [main] Flyway Community Edition 6.0.8 by Redgate
+2020-06-18 01:13:52,927 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2020-06-18 01:13:53,778 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-06-18 01:13:53,815 INFO o.f.c.i.l.s.Slf4jLog [main] Database: jdbc:mysql://localhost:3306/projetobase (MySQL 8.0)
+2020-06-18 01:13:53,878 INFO o.f.c.i.l.s.Slf4jLog [main] Successfully validated 14 migrations (execution time 00:00.034s)
+2020-06-18 01:13:53,897 INFO o.f.c.i.l.s.Slf4jLog [main] Current version of schema `projetobase`: 14
+2020-06-18 01:13:53,898 INFO o.f.c.i.l.s.Slf4jLog [main] Schema `projetobase` is up to date. No migration necessary.
+2020-06-18 01:13:54,051 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-06-18 01:13:54,115 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-06-18 01:13:54,252 INFO o.h.a.c.r.j.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-06-18 01:13:54,372 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-06-18 01:13:55,468 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-06-18 01:13:55,476 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-06-18 01:13:55,537 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-06-18 01:13:56,552 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/static/**'], []
+2020-06-18 01:13:56,552 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/img/**'], []
+2020-06-18 01:13:56,552 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/css/**'], []
+2020-06-18 01:13:56,552 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/js/**'], []
+2020-06-18 01:13:56,552 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/scss/**'], []
+2020-06-18 01:13:56,553 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/vendor/**'], []
+2020-06-18 01:13:56,595 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6ac9b66b, org.springframework.security.web.context.SecurityContextPersistenceFilter@50f3ba6a, org.springframework.security.web.header.HeaderWriterFilter@1a0ffb9b, org.springframework.security.web.csrf.CsrfFilter@4ffe3d42, org.springframework.security.web.authentication.logout.LogoutFilter@36a58466, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@644947ee, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1d806de6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b5b53c6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4491eaeb, org.springframework.security.web.session.SessionManagementFilter@8549c5f, org.springframework.security.web.access.ExceptionTranslationFilter@116fc29e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6bf0f70a]
+2020-06-18 01:13:56,790 WARN o.t.t.TemplateMode [main] [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-06-18 01:13:56,973 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-06-18 01:13:57,000 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-06-18 01:13:57,003 INFO o.s.b.StartupInfoLogger [main] Started RevSpringBootApplication in 6.754 seconds (JVM running for 9.284)
+2020-06-18 01:14:01,589 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-18 01:14:01,589 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-06-18 01:14:01,596 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 7 ms
+2020-06-18 01:14:01,688 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_
+2020-06-18 01:14:01,707 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(bancaexami0_.valor_total) as col_0_0_ from banca_examinadora bancaexami0_
+2020-06-18 01:14:01,718 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.forma_conexao) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=?
+2020-06-18 01:14:01,722 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.forma_conexao) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=?
+2020-06-18 01:14:01,731 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_
+2020-06-18 01:14:01,735 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(bancaexami0_.codigo) as col_0_0_ from banca_examinadora bancaexami0_
+2020-06-18 01:14:01,741 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.tipo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=?
+2020-06-18 01:14:01,744 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(atividade0_.pontos_conectados) as col_0_0_ from atividade atividade0_
+2020-06-18 01:14:10,300 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-5] select usuario0_.codigo as codigo1_5_, usuario0_.ativo as ativo2_5_, usuario0_.email as email3_5_, usuario0_.primeiro_nome as primeiro4_5_, usuario0_.senha as senha5_5_, usuario0_.ultimo_nome as ultimo_n6_5_ from usuario usuario0_ where lower(usuario0_.email)=lower(?) and usuario0_.ativo=1
+2020-06-18 01:14:10,339 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-5] select distinct permissao4_.nome as col_0_0_ from usuario usuario0_ inner join usuario_grupo grupos1_ on usuario0_.codigo=grupos1_.codigo_usuario inner join grupo grupo2_ on grupos1_.codigo_grupo=grupo2_.codigo inner join grupo_permissao permissoes3_ on grupo2_.codigo=permissoes3_.codigo_grupo inner join permissao permissao4_ on permissoes3_.codigo_permissao=permissao4_.codigo where usuario0_.codigo=?
+2020-06-18 01:14:10,483 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-06-18 01:14:10,487 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,489 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,491 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,496 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select sum(bancaexami0_.valor_total) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=?
+2020-06-18 01:14:10,499 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(bancaexami0_.codigo) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=? and bancaexami0_.tipo_de_banca=?
+2020-06-18 01:14:10,501 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(bancaexami0_.codigo) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=? and bancaexami0_.tipo_de_banca=?
+2020-06-18 01:14:10,504 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-06-18 01:14:10,507 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-06-18 01:14:10,510 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-06-18 01:14:10,516 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select sum(atividade0_.duracao)/60 as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-06-18 01:14:10,519 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,521 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,522 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,524 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,526 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,529 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,530 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,534 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,536 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,538 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select sum(bancaexami0_.valor_total) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=?
+2020-06-18 01:14:10,540 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-06-18 01:14:10,542 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-06-18 01:14:10,543 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select sum(atividade0_.duracao)/60 as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-06-18 01:14:10,546 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,548 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,550 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,552 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,554 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,555 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,558 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,560 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,563 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,565 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select sum(bancaexami0_.valor_total) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=?
+2020-06-18 01:14:10,566 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-06-18 01:14:10,568 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-06-18 01:14:10,570 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select sum(atividade0_.duracao)/60 as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-06-18 01:14:10,572 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,574 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,576 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,578 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,581 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,582 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,584 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,586 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,587 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,589 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select sum(bancaexami0_.valor_total) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=?
+2020-06-18 01:14:10,591 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-06-18 01:14:10,593 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-06-18 01:14:10,597 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select sum(atividade0_.duracao)/60 as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-06-18 01:14:10,599 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,601 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,603 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,606 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,608 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,610 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,614 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,617 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,619 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,621 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select sum(bancaexami0_.valor_total) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=?
+2020-06-18 01:14:10,622 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-06-18 01:14:10,624 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-06-18 01:14:10,627 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select sum(atividade0_.duracao)/60 as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-06-18 01:14:10,632 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,634 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,636 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,637 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,639 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,640 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,642 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,644 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,647 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-06-18 01:14:10,649 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select sum(bancaexami0_.valor_total) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=?
+2020-06-18 01:14:11,066 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-8] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-06-18 01:14:11,068 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-8] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-06-18 01:14:11,071 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-8] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-06-18 01:14:11,073 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-8] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-06-18 01:14:11,075 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-8] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-06-18 01:14:11,075 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-9] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-06-18 01:14:11,081 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-8] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-06-18 01:14:11,084 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-8] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-06-18 01:14:11,084 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-10] select count(atividade0_.forma_conexao) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-06-18 01:14:11,086 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-8] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-06-18 01:14:11,089 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-8] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-06-18 01:14:11,090 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(bancaexami0_.codigo) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=? and bancaexami0_.tipo_de_banca=?
+2020-06-18 01:14:11,091 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-8] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-06-18 01:14:11,096 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-8] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-06-18 01:14:11,100 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-9] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-06-18 01:14:11,100 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-8] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-06-18 01:14:11,102 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-9] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-06-18 01:14:11,105 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-9] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-06-18 01:14:11,105 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-10] select count(atividade0_.forma_conexao) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-06-18 01:14:11,105 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(bancaexami0_.codigo) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=? and bancaexami0_.tipo_de_banca=?
+2020-06-18 01:14:11,107 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-9] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-06-18 01:14:11,107 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(bancaexami0_.codigo) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=? and bancaexami0_.tipo_de_banca=?
+2020-06-18 01:14:11,109 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-10] select count(atividade0_.tipo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-06-18 01:14:11,109 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-9] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-06-18 01:14:11,109 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(bancaexami0_.codigo) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=? and bancaexami0_.tipo_de_banca=?
+2020-06-18 01:14:11,112 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-9] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-06-18 01:14:11,114 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-9] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-06-18 01:14:11,117 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-9] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-06-18 01:14:11,119 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-9] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-06-18 01:14:11,122 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-9] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-06-18 01:14:11,125 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-9] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-06-18 01:16:57,897 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(2)-127.0.0.1] Application shutdown requested.
+2020-06-18 01:16:57,902 INFO o.s.o.j.AbstractEntityManagerFactoryBean [RMI TCP Connection(2)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-06-18 01:16:57,906 INFO c.z.h.HikariDataSource [RMI TCP Connection(2)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2020-06-18 01:16:57,917 INFO c.z.h.HikariDataSource [RMI TCP Connection(2)-127.0.0.1] HikariPool-1 - Shutdown completed.
