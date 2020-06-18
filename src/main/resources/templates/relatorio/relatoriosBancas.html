@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>SIG - NUTS</title>
+
+<!-- Custom fonts for this template-->
+<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
+	type="text/css" th:href="@{/vendor/fontawesome-free/css/all.min.css}">
+<link
+	href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+	rel="stylesheet">
+
+<!-- Custom styles for this template-->
+<link href="css/sb-admin-2.min.css" rel="stylesheet"
+	th:href="@{/css/sb-admin-2.min.css}">
+	
+	<link href="css/bootstrap-datepicker.standalone.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap-datepicker.standalone.min.css}">
+<link rel="shortcut icon" th:href="@{/img/logo.png}">
+</head>
+
+<body id="page-top">
+
+	<!-- Page Wrapper -->
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/home">
+        <div class="sidebar-brand-icon rotate-n-0">
+          <!-- <i class="fas fa-laugh-wink"></i> -->
+          <!-- <img alt="nuts" src="img/logoNutsApenas.png" style="width: 50px; height: 50px;"> -->
+          <!-- <i class="fas fa-user-md"></i> -->
+          <i class="fas fa-headset"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">SIG - NUTS</div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item active">
+        <a class="nav-link" href="/home">
+          <!-- <i class="fas fa-fw fa-tachometer-alt"></i> -->
+          <i class="fas fa-home"></i>
+          <span>Dashboard</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        ATIVIDADES
+      </div>
+
+<!-- AQUI VAI FICAR ORGANIZADO PELO CADASTRO DE ATIVIDADES -->
+<!-- INICIO -->		
+		
+		<li class="nav-item" sec:authorize="hasRole('ROLE_CADASTRAR_ATIVIDADE')">
+        
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePagesCadastro" 
+        aria-expanded="true" aria-controls="collapsePages">
+          <i class="fas fa-database"></i>
+          <span>Cadastros</span>
+        </a>
+        
+        <div id="collapsePagesCadastro" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Cadastros</h6>
+            <a class="collapse-item" href="/atividade/nova" sec:authorize="hasRole('ROLE_CADASTRAR_ATIVIDADE')">
+          		<i class="fas fa-plus"></i>
+          		<span>Cadastrar atividade</span>
+        	</a>
+        	
+            <a class="collapse-item" href="/banca/nova" sec:authorize="hasRole('ROLE_CADASTRAR_BANCA')">
+          		<i class="fas fa-plus"></i>
+          		<span>Cadastrar banca</span>
+        	</a>
+            
+            <a class="collapse-item" href="/usuario/novo" sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')">
+          		<i class="fas fa-plus"></i>
+          		<span>Cadastrar usuário</span>
+        	</a>
+            <div class="collapse-divider"></div>
+            
+          </div>
+        </div>
+      </li>
+      
+      <!-- ---------------------------------------------------------------------------------------- -->
+      <li class="nav-item" sec:authorize="hasRole('ROLE_PESQUISAR_ATIVIDADE')">
+        
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePagesPesquisa" 
+        aria-expanded="true" aria-controls="collapsePages">
+          <i class="fas fa-search"></i>
+          <span>Pesquisas</span>
+        </a>
+        
+        <div id="collapsePagesPesquisa" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Pesquisas</h6>
+            <a class="collapse-item" href="/atividade" sec:authorize="hasRole('ROLE_PESQUISAR_ATIVIDADE')">
+          		<i class="fas fa-search"></i>
+          		<span>Pesquisar atividade</span>
+        	</a>
+        	
+            <a class="collapse-item" href="/banca" sec:authorize="hasRole('ROLE_PESQUISAR_BANCA')">
+          		<i class="fas fa-search"></i>
+          		<span>Pesquisar banca</span>
+        	</a>
+            
+            <a class="collapse-item" href="/usuario" sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')">
+          		<i class="fas fa-search"></i>
+          		<span>Pesquisar usuário</span>
+        	</a>
+            <div class="collapse-divider"></div>
+            
+          </div>
+        </div>
+      </li>
+		
+		<!-- ---------------------------------------------------------------------------------------- -->
+		
+		<li class="nav-item" sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')">
+        
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePagesFiltros" 
+        aria-expanded="true" aria-controls="collapsePages">
+          <i class="fas fa-filter"></i>
+          <span>Filtros</span>
+        </a>
+        
+        <div id="collapsePagesFiltros" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Filtros</h6>
+            <a class="collapse-item" href="/atividade/filtros" sec:authorize="hasRole('ROLE_PESQUISAR_ATIVIDADE')">
+          		<i class="fas fa-filter"></i>
+          		<span>Filtrar atividade</span>
+        	</a>
+        	
+            <a class="collapse-item" href="/banca/filtros" sec:authorize="hasRole('ROLE_PESQUISAR_BANCA')">
+          		<i class="fas fa-filter"></i>
+          		<span>Filtrar banca</span>
+        	</a>
+            
+            <a class="collapse-item" href="/usuario/filtros" sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')">
+          		<i class="fas fa-filter"></i>
+          		<span>Filtrar usuário</span>
+        	</a>
+            <div class="collapse-divider"></div>
+            
+          </div>
+        </div>
+      </li>
+		
+		
+		
+		
+		
+	
+
+
+<!-- FIM -->
+
+      
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+
+
+		<div sec:authorize="hasRole('ROLE_PESQUISAR_ATIVIDADE')">
+      <!-- Heading -->
+      <div class="sidebar-heading">
+        DOCUMENTOS
+      </div>
+
+      
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePagesRelatorio" 
+        aria-expanded="true" aria-controls="collapsePages">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Arquivos</span>
+        </a>
+        
+        <div id="collapsePagesRelatorio" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header" sec:authorize="hasRole('ROLE_CADASTRAR_ATIVIDADE')">RELATÓRIOS</h6>
+            <a class="collapse-item" th:href="@{/relatorios/atividades}" sec:authorize="hasRole('ROLE_CADASTRAR_ATIVIDADE')">
+	            <i class="fas fa-download"></i>
+	            <span>Atividades</span>
+            </a>
+            
+            <a class="collapse-item" th:href="@{/relatorios/bancas}" sec:authorize="hasRole('ROLE_CADASTRAR_ATIVIDADE')">
+	            <i class="fas fa-download"></i>
+	            <span>Bancas</span>
+	            
+            </a>
+           
+            <div class="collapse-divider"></div>
+            <h6 class="collapse-header">DOCUMENTAÇÃO</h6>
+            <a class="collapse-item" th:href="@{/download/sistema}" target="_blank" th:method="get">
+	            <i class="fas fa-download"></i>
+	            <span>Sistema</span>
+            </a>
+            <a class="collapse-item" th:href="@{/download/manual}" target="_blank" th:method="get">
+	            <i class="fas fa-download"></i>
+	            <span>Manual</span>
+            </a>
+          </div>
+        </div>
+      </li>
+
+            
+      <hr class="sidebar-divider d-none d-md-block">
+
+
+	</div>
+
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+		<!-- End of Sidebar -->
+
+		<!-- Content Wrapper -->
+		<div id="content-wrapper" class="d-flex flex-column">
+
+			<!-- Main Content -->
+			<div id="content">
+
+				<!-- Topbar -->
+				<nav
+					class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+					<!-- Sidebar Toggle (Topbar) -->
+					<button id="sidebarToggleTop"
+						class="btn btn-link d-md-none rounded-circle mr-3">
+						<i class="fa fa-bars"></i>
+					</button>
+
+					<!-- Topbar Navbar -->
+					<ul class="navbar-nav ml-auto">
+
+
+						<div class="topbar-divider d-none d-sm-block"></div>
+
+						<!-- Nav Item - User Information -->
+						<li class="nav-item dropdown no-arrow"><a
+							class="nav-link dropdown-toggle" href="#" id="userDropdown"
+							role="button" data-toggle="dropdown" aria-haspopup="true"
+							aria-expanded="false"> <span class="mr-2 d-none d-lg-inline text-gray-600 small" 
+                th:text="${#authentication.principal.usuario.primeiroNome + ' ' + #authentication.principal.usuario.ultimoNome}">Nome Usuário</span>
+                <!-- <img class="img-profile rounded-circle" th:src="@{/img/iconUser.jpg}"> -->
+                <i class="far fa-user"></i>
+						</a> <!-- Dropdown - Sair -->
+							<div
+								class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+								aria-labelledby="userDropdown">
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="#" data-toggle="modal"
+									data-target="#logoutModal"> <i
+									class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-600"></i>
+									Sair
+								</a>
+							</div></li>
+
+					</ul>
+
+				</nav>
+				<!-- End of Topbar -->
+
+				<!-- Begin Page Content -->
+				<div class="container-fluid">
+
+					<!-- Page Heading -->
+					<div
+						class="d-sm-flex align-items-center justify-content-between mb-4">
+						<h1 class="h3 mb-0 text-gray-800">Gerar relatório</h1>
+						<!-- <a href="cadastrar-atividade"
+							class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+							class="fas fa-plus fa-fw text-white-50"></i>Cadastrar Atividade</a> -->
+					</div>
+					
+					
+					<div class="alert alert-success alert-dismissible fade show" role="alert" th:if="${not #strings.isEmpty(mensagem)}">
+			  			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			  				<span aria-hidden="true">&times;</span>
+			  			</button>
+			  			<div><span th:text="${mensagem}"></span></div>
+					</div>
+					
+					
+
+					<form class="user" th:method="post" th:action="@{/relatorios/banca}" th:object="${periodoRelatorio}">
+
+						<div class="form-group row">
+							<div class="col-sm-2 mb-3 mb-sm-0">
+							<label for="dataDe">Data incial</label>
+								<input type="text" class="form-control js-data" id="dataDe" placeholder="Data inicial"
+									data-provide="datepicker" data-date-orientation="bottom"
+									data-date-language="pt-BR" data-date-today-highlight="true"
+									autocomplete="off" data-date-format="dd/mm/yyyy"
+									data-date-autoclose="true" th:field="*{dataInicio}"
+									th:classappend="${#fields.hasErrors('dataInicio')} ? is-invalid" required="required">
+									<div class="invalid-feedback hidden">Campo Obrigatório</div>
+							</div>
+							<div class="col-sm-2 mb-3 mb-sm-0">
+							<label for="dataAte">Data final</label>
+								<input type="text" class="form-control js-data" id="dataAte" placeholder="Data final"
+									data-provide="datepicker" data-date-orientation="bottom"
+									data-date-language="pt-BR" data-date-today-highlight="true"
+									autocomplete="off" data-date-format="dd/mm/yyyy"
+									data-date-autoclose="true" th:field="*{dataFim}"
+									th:classappend="${#fields.hasErrors('dataFim')} ? is-invalid" required="required">
+									<div class="invalid-feedback hidden">Campo Obrigatório</div>
+							</div>	
+						</div>
+						
+						<hr>
+
+
+						<div class="form-group row">
+							<div class="col-sm-2 mb-3 mb-sm-0">
+								<button type="submit" class="btn btn-primary btn-block shadow"
+									value="relatorio" title="relatorio" target="_blank">
+									<i class="fa fa-search text-white-100">Gerar Relatório</i></button>
+
+							</div>
+						</div>
+
+					</form>
+
+				</div>
+				<!-- /.container-fluid -->
+
+			</div>
+			<!-- End of Main Content -->
+
+			<!-- Footer -->
+			<footer class="sticky-footer bg-white shadow">
+				<div class="container my-auto">
+					<div class="copyright text-center my-auto">
+						<span>Copyright &copy; Equipe Técnica - Núcleo Universitário de Telessaúde</span>
+					</div>
+				</div>
+			</footer>
+			<!-- End of Footer -->
+
+		</div>
+		<!-- End of Content Wrapper -->
+
+	</div>
+	<!-- End of Page Wrapper -->
+
+	<!-- Scroll to Top Button-->
+	<a class="scroll-to-top rounded" href="#page-top"> <i
+		class="fas fa-angle-up"></i>
+	</a>
+
+	<!-- Logout Modal-->
+	<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Deseja
+						realmente sair?</h5>
+					<button class="close" type="button" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">×</span>
+					</button>
+				</div>
+				<div class="modal-body">Clique em Sair para encerrar a sessão.</div>
+				<div class="modal-footer">
+					<button class="btn btn-secondary" type="button"
+						data-dismiss="modal">Cancelar</button>
+					<a class="btn btn-primary" href="/logout">Sair</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Bootstrap core JavaScript-->
+	<script src="vendor/jquery/jquery.min.js"
+		th:src="@{/vendor/jquery/jquery.min.js}"></script>
+	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"
+		th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+
+	<!-- Core plugin JavaScript-->
+	<script src="vendor/jquery-easing/jquery.easing.min.js"
+		th:src="@{/vendor/jquery-easing/jquery.easing.min.js}"></script>
+
+	<!-- Custom scripts for all pages-->
+	<script src="js/sb-admin-2.min.js" th:src="@{/js/sb-admin-2.min.js}"></script>
+	
+	<script src="js/jquery.maskMoney.min.js" th:src="@{/js/jquery.maskMoney.min.js}"></script>
+	<script src="js/mascaraDinheiro.js" th:src="@{/js/mascaraDinheiro.js}"></script>
+	<script src="js/bootstrap-datepicker.min.js" th:src="@{/js/bootstrap-datepicker.min.js}"></script>
+	<script src="js/bootstrap-datepicker.pt-BR.min.js" th:src="@{/js/bootstrap-datepicker.pt-BR.min.js}"></script>
+	
+	<script src="js/exibir.js" th:src="@{/js/exibir.js}"></script>
+	<script src="js/jquery.mask.min.js" th:src="@{/js/jquery.mask.min.js}"></script>
+
+
+</body>
+
+</html>

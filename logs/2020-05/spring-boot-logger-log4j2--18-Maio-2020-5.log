@@ -1,0 +1,28 @@
+2020-05-18 23:50:02,318 INFO o.s.b.StartupInfoLogger [main] Starting RevSpringBootApplication on DESKTOP-H0MQLKS with PID 8652 (C:\Users\samue\Documents\workspace-sts-3.9.12.RELEASE\RevSpringBoot\target\classes started by samue in C:\Users\samue\Documents\workspace-sts-3.9.12.RELEASE\RevSpringBoot)
+2020-05-18 23:50:02,340 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-05-18 23:50:03,296 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-18 23:50:03,383 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 75ms. Found 1 JPA repository interfaces.
+2020-05-18 23:50:04,021 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-05-18 23:50:04,031 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-05-18 23:50:04,032 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2020-05-18 23:50:04,034 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020-05-18 23:50:04,223 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-05-18 23:50:04,224 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1763 ms
+2020-05-18 23:50:04,421 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-18 23:50:04,489 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-05-18 23:50:04,772 INFO o.h.a.c.r.j.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-18 23:50:04,913 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2020-05-18 23:50:05,754 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-05-18 23:50:05,770 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-05-18 23:50:06,811 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-18 23:50:06,819 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-18 23:50:07,275 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-18 23:50:07,398 INFO o.s.s.c.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-18 23:50:07,465 INFO o.s.b.a.w.s.WelcomePageHandlerMapping [main] Adding welcome page template: index
+2020-05-18 23:50:07,530 WARN o.t.t.TemplateMode [main] [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-05-18 23:50:07,614 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-05-18 23:50:07,639 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-18 23:50:07,641 INFO o.s.b.StartupInfoLogger [main] Started RevSpringBootApplication in 5.799 seconds (JVM running for 8.134)
+2020-05-18 23:50:19,191 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-18 23:50:19,191 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-05-18 23:50:19,197 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 5 ms

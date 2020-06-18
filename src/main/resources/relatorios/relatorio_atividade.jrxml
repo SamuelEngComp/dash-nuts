@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relatorio_atividade" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cbf3f86d-1031-4428-992c-b11d3539551b">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="sig-nuts mysql adapter"/>
+	<parameter name="Data_inicio" class="java.util.Date"/>
+	<parameter name="Data_fim" class="java.util.Date"/>
+	<queryString language="SQL">
+		<![CDATA[select 
+		a.data as data, 
+		a.tipo as tipo_de_atividade, 
+		a.forma_conexao as forma_de_conexao, 
+		a.tema as tema, 
+		a.qtd_participantes as participantes_local, 
+		a.pontos_conectados as pontos_conectados
+    from Atividade a
+    where a.data 
+    between  $P{Data_inicio} and  $P{Data_fim}
+    order by a.data asc]]>
+	</queryString>
+	<field name="data" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="data"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="atividade"/>
+	</field>
+	<field name="tipo_de_atividade" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="tipo_de_atividade"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="atividade"/>
+	</field>
+	<field name="forma_de_conexao" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="forma_de_conexao"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="atividade"/>
+	</field>
+	<field name="tema" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="tema"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="atividade"/>
+	</field>
+	<field name="participantes_local" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="participantes_local"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="atividade"/>
+	</field>
+	<field name="pontos_conectados" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="pontos_conectados"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="atividade"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="27" width="439" height="42" uuid="c5c73023-ee7b-4781-b805-3d45d6fd7fdf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Atividades - NUTS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="41" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="9" width="50" height="19" uuid="97e181b3-4bed-48a0-9140-fed90734fcff">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3bf40e9c-4838-492e-9b2d-cf88781afba8"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="59" y="10" width="114" height="19" uuid="f7da3004-897e-481f-b711-f797af3e70f6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="af0ca909-30cc-4b7e-bca2-cb30d9f1491a"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo de Atividade]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="10" width="114" height="19" uuid="c85f6627-7ff7-43ce-982a-34e20dd0f022">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e1cb75cb-9b3c-477b-b631-1ba453cf2b4f"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Forma de Conexao]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="9" width="159" height="19" uuid="f88d06d9-f8a8-4f81-9a02-245d62aafcac">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1ced769e-393d-49af-bfdf-7580e93921ed"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tema]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="0" width="80" height="38" uuid="ac1ffa98-7930-46f4-9416-e9497d576bda">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5d7723f8-6a8f-4310-b6d2-a30c75de4a2d"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Participantes Localmente]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-20" y="38" width="600" height="1" uuid="0aa4a249-1466-41c8-8c8b-1144786fea7a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="40" splitType="Stretch">
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="0" y="0" width="59" height="19" uuid="64595755-a90c-44c5-8a0b-3d03f051311e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3bf40e9c-4838-492e-9b2d-cf88781afba8"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="0" width="112" height="30" uuid="85a9d8a3-63a8-4a26-b78d-5fce0de83657">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="af0ca909-30cc-4b7e-bca2-cb30d9f1491a"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipo_de_atividade}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="0" width="115" height="30" uuid="335ef257-f8a9-43fb-8781-cf0b3417dc7b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e1cb75cb-9b3c-477b-b631-1ba453cf2b4f"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{forma_de_conexao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="159" height="30" uuid="838faec1-d678-42ac-9e83-b7e33360316a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1ced769e-393d-49af-bfdf-7580e93921ed"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tema}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="519" y="0" width="30" height="30" uuid="c6cd3824-cbfa-4d40-815e-593c3d52af85">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5d7723f8-6a8f-4310-b6d2-a30c75de4a2d"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{participantes_local}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="550" height="30" uuid="fdcd2c2d-c0cf-4216-8f0f-a2c3b9a9d4dd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tabela de atividades - Núcleo Universitário de Telessaúde]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="500" y="0" width="50" height="30" uuid="6c1ba272-8b73-410f-9777-f9faeccbbbb5"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

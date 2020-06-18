@@ -1,0 +1,11 @@
+CREATE TABLE atividade(
+	codigo BIGINT(20) PRIMARY KEY AUTO_INCREMENT,
+	data DATE NOT NULL,
+	descriminacao VARCHAR(255) NOT NULL,
+	tipo VARCHAR(255) NOT NULL,
+	forma_conexao VARCHAR(255) NOT NULL,
+	qtd_participantes INT NOT NULL,
+	tema VARCHAR(255) NOT NULL,
+	duracao INT NOT NULL
+	
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
