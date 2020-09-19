@@ -1,5 +1,6 @@
 package com.rev.repository;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -12,12 +13,15 @@ import com.rev.modelo.TipoAtividade;
 import com.rev.repository.helper.atividade.AtividadeRepositoryQueries;
 
 @Repository
-public interface AtividadeRepository extends JpaRepository<Atividade, Long>, AtividadeRepositoryQueries{
-	
+public interface AtividadeRepository extends JpaRepository<Atividade, Long>, AtividadeRepositoryQueries {
+
 	@Query("SELECT count(codigo) FROM Atividade a where a.tipo = :tipo")
 	public Long contarSessaoClinica(@Param("tipo") TipoAtividade tipo);
-	
+
 	@Query("SELECT a FROM Atividade a where a.data = :ano")
 	public List<Atividade> buscarPorAno(@Param("ano") String ano);
-		
+	
+	@Query("SELECT a FROM Atividade a WHERE a.data >= :dataInicial AND a.data <= :dataFinal ORDER BY a.data ASC")
+	public List<Atividade> atividadesPorDatas(@Param("dataInicial") LocalDate dataInicial, @Param("dataFinal") LocalDate dataFinal);
+
 }

@@ -7,21 +7,20 @@ import com.rev.modelo.TipoAtividade;
 
 public class AtividadeFiltro {
 
-	
 	private LocalDate dataDe;
 
 	private LocalDate dataAte;
-	
+
 	private String descriminacao;
-	
+
 	private TipoAtividade tipo;
-	
+
 	private FormaConexao formaConexao;
-	
+
 	private Integer qtdParticipantes;
-	
+
 	private String tema;
-	
+
 	private Integer duracao;
 
 	public LocalDate getDataDe() {
@@ -87,5 +86,5 @@ public class AtividadeFiltro {
 	public void setDuracao(Integer duracao) {
 		this.duracao = duracao;
 	}
-	
+
 }

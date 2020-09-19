@@ -1,0 +1,207 @@
+2020-08-21 13:00:57,999 INFO o.s.b.StartupInfoLogger [main] Starting RevSpringBootApplication on DESKTOP-H0MQLKS with PID 5176 (C:\Users\samue\Documents\workspace-sts-3.9.12.RELEASE\RevSpringBoot\target\classes started by samue in C:\Users\samue\Documents\workspace-sts-3.9.12.RELEASE\RevSpringBoot)
+2020-08-21 13:00:58,022 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-08-21 13:00:59,297 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-08-21 13:00:59,475 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 178ms. Found 4 JPA repository interfaces.
+2020-08-21 13:01:00,430 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-08-21 13:01:00,447 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-08-21 13:01:00,447 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2020-08-21 13:01:00,447 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020-08-21 13:01:00,662 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-08-21 13:01:00,662 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2550 ms
+2020-08-21 13:01:00,878 INFO o.f.c.i.l.s.Slf4jLog [main] Flyway Community Edition 6.0.8 by Redgate
+2020-08-21 13:01:00,894 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2020-08-21 13:01:01,850 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-08-21 13:01:01,888 INFO o.f.c.i.l.s.Slf4jLog [main] Database: jdbc:mysql://localhost:3306/projetobase (MySQL 8.0)
+2020-08-21 13:01:01,950 INFO o.f.c.i.l.s.Slf4jLog [main] Successfully validated 15 migrations (execution time 00:00.040s)
+2020-08-21 13:01:01,981 INFO o.f.c.i.l.s.Slf4jLog [main] Current version of schema `projetobase`: 15
+2020-08-21 13:01:01,981 INFO o.f.c.i.l.s.Slf4jLog [main] Schema `projetobase` is up to date. No migration necessary.
+2020-08-21 13:01:02,128 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-08-21 13:01:02,182 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-08-21 13:01:02,335 INFO o.h.a.c.r.j.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-08-21 13:01:02,451 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-08-21 13:01:03,654 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-08-21 13:01:03,669 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-08-21 13:01:03,739 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-08-21 13:01:04,688 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/static/**'], []
+2020-08-21 13:01:04,688 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/img/**'], []
+2020-08-21 13:01:04,703 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/css/**'], []
+2020-08-21 13:01:04,703 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/js/**'], []
+2020-08-21 13:01:04,703 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/scss/**'], []
+2020-08-21 13:01:04,703 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/vendor/**'], []
+2020-08-21 13:01:04,741 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3221588e, org.springframework.security.web.context.SecurityContextPersistenceFilter@11cc9e1e, org.springframework.security.web.header.HeaderWriterFilter@7827d7b, org.springframework.security.web.csrf.CsrfFilter@67c0c90b, org.springframework.security.web.authentication.logout.LogoutFilter@4fedf908, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@192f5f39, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@54234569, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@60a6840c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@51141f64, org.springframework.security.web.session.SessionManagementFilter@2e7a9db7, org.springframework.security.web.access.ExceptionTranslationFilter@2ec0ca83, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@38e7860c]
+2020-08-21 13:01:05,105 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-08-21 13:01:05,120 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-08-21 13:01:05,120 INFO o.s.b.StartupInfoLogger [main] Started RevSpringBootApplication in 7.9 seconds (JVM running for 10.126)
+2020-08-21 13:01:25,875 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-21 13:01:25,890 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-08-21 13:01:25,892 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2020-08-21 13:01:25,975 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_
+2020-08-21 13:01:25,991 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(bancaexami0_.valor_total) as col_0_0_ from banca_examinadora bancaexami0_
+2020-08-21 13:01:25,991 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.forma_conexao) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=?
+2020-08-21 13:01:25,991 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.forma_conexao) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=?
+2020-08-21 13:01:26,007 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_
+2020-08-21 13:01:26,013 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(bancaexami0_.codigo) as col_0_0_ from banca_examinadora bancaexami0_
+2020-08-21 13:01:26,013 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.tipo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=?
+2020-08-21 13:01:26,013 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(atividade0_.pontos_conectados) as col_0_0_ from atividade atividade0_
+2020-08-21 13:03:49,543 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-9] select usuario0_.codigo as codigo1_5_, usuario0_.ativo as ativo2_5_, usuario0_.email as email3_5_, usuario0_.primeiro_nome as primeiro4_5_, usuario0_.senha as senha5_5_, usuario0_.ultimo_nome as ultimo_n6_5_ from usuario usuario0_ where lower(usuario0_.email)=lower(?) and usuario0_.ativo=1
+2020-08-21 13:03:49,581 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-9] select distinct permissao4_.nome as col_0_0_ from usuario usuario0_ inner join usuario_grupo grupos1_ on usuario0_.codigo=grupos1_.codigo_usuario inner join grupo grupo2_ on grupos1_.codigo_grupo=grupo2_.codigo inner join grupo_permissao permissoes3_ on grupo2_.codigo=permissoes3_.codigo_grupo inner join permissao permissao4_ on permissoes3_.codigo_permissao=permissao4_.codigo where usuario0_.codigo=?
+2020-08-21 13:03:49,728 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-08-21 13:03:49,744 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:49,744 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:49,744 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:49,759 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select sum(bancaexami0_.valor_total) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=?
+2020-08-21 13:03:49,759 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(bancaexami0_.codigo) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=? and bancaexami0_.tipo_de_banca=?
+2020-08-21 13:03:49,759 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(bancaexami0_.codigo) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=? and bancaexami0_.tipo_de_banca=?
+2020-08-21 13:03:49,759 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-08-21 13:03:49,759 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-08-21 13:03:49,775 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-08-21 13:03:49,781 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select sum(atividade0_.duracao)/60 as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-08-21 13:03:49,781 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:49,781 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:49,781 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:49,781 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,854 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,854 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,854 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,854 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,870 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,870 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select sum(bancaexami0_.valor_total) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=?
+2020-08-21 13:03:50,870 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-08-21 13:03:50,870 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-08-21 13:03:50,870 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select sum(atividade0_.duracao)/60 as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-08-21 13:03:50,870 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,884 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,884 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,884 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,884 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,884 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,884 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,884 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,900 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,900 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select sum(bancaexami0_.valor_total) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=?
+2020-08-21 13:03:50,900 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-08-21 13:03:50,900 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-08-21 13:03:50,900 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select sum(atividade0_.duracao)/60 as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-08-21 13:03:50,900 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,916 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,916 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,916 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,916 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,916 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,916 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,931 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,931 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,931 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select sum(bancaexami0_.valor_total) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=?
+2020-08-21 13:03:50,931 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-08-21 13:03:50,931 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-08-21 13:03:50,931 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select sum(atividade0_.duracao)/60 as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-08-21 13:03:50,931 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,947 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,947 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,947 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,947 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,947 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,947 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,962 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,962 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,962 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select sum(bancaexami0_.valor_total) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=?
+2020-08-21 13:03:50,962 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-08-21 13:03:50,962 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-08-21 13:03:50,962 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select sum(atividade0_.duracao)/60 as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-08-21 13:03:50,962 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,978 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,978 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,985 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,985 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,985 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,985 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,985 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,985 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-08-21 13:03:50,985 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select sum(bancaexami0_.valor_total) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=?
+2020-08-21 13:03:51,000 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-08-21 13:03:51,000 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-08-21 13:03:51,000 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select sum(atividade0_.duracao)/60 as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-08-21 13:03:51,000 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,000 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,000 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,000 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,016 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,016 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,016 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,016 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,016 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,031 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select sum(bancaexami0_.valor_total) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=?
+2020-08-21 13:03:51,401 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-08-21 13:03:51,401 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-9] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-08-21 13:03:51,407 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-08-21 13:03:51,408 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-9] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-08-21 13:03:51,409 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-08-21 13:03:51,410 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-9] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-08-21 13:03:51,410 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-8] select count(atividade0_.forma_conexao) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,412 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-08-21 13:03:51,416 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-9] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-08-21 13:03:51,417 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-08-21 13:03:51,418 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-9] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-08-21 13:03:51,418 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-8] select count(atividade0_.forma_conexao) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,419 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-08-21 13:03:51,420 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-9] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-08-21 13:03:51,420 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-08-21 13:03:51,422 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-9] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-08-21 13:03:51,422 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-08-21 13:03:51,426 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-9] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-08-21 13:03:51,426 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-08-21 13:03:51,426 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-8] select count(atividade0_.tipo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,428 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-08-21 13:03:51,428 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-9] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-08-21 13:03:51,433 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-9] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-08-21 13:03:51,433 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-08-21 13:03:51,435 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-9] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-08-21 13:03:51,436 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-1] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-08-21 13:03:51,439 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-9] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-08-21 13:03:51,445 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-6] select count(bancaexami0_.codigo) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=? and bancaexami0_.tipo_de_banca=?
+2020-08-21 13:03:51,451 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-6] select count(bancaexami0_.codigo) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=? and bancaexami0_.tipo_de_banca=?
+2020-08-21 13:03:51,455 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-6] select count(bancaexami0_.codigo) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=? and bancaexami0_.tipo_de_banca=?
+2020-08-21 13:03:51,455 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-10] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-08-21 13:03:51,459 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-6] select count(bancaexami0_.codigo) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=? and bancaexami0_.tipo_de_banca=?
+2020-08-21 13:03:51,461 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-10] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-08-21 13:03:51,464 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-10] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-08-21 13:03:51,467 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-10] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-08-21 13:03:51,468 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-10] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-08-21 13:03:51,471 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-10] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-08-21 13:03:51,474 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-10] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-08-21 13:03:51,477 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-10] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-08-21 13:03:51,494 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,503 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,505 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,508 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,510 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,512 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,515 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,517 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,520 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,521 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,524 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,528 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,531 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,534 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,536 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,539 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,542 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,544 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,547 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,549 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,553 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,556 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,558 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,561 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,563 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,566 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,569 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,571 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,574 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,577 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,579 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,585 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,587 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,590 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-08-21 13:03:51,593 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?

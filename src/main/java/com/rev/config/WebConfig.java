@@ -2,9 +2,11 @@
 package com.rev.config;
 
 import java.math.BigDecimal;
+import java.nio.charset.Charset;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
+import javax.servlet.Filter;
 import javax.sql.DataSource;
 
 import org.springframework.beans.BeansException;
@@ -23,6 +25,7 @@ import org.springframework.format.number.NumberStyleFormatter;
 import org.springframework.format.support.DefaultFormattingConversionService;
 import org.springframework.format.support.FormattingConversionService;
 import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -31,6 +34,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.i18n.FixedLocaleResolver;
 import org.springframework.web.servlet.view.ResourceBundleViewResolver;
 import org.thymeleaf.TemplateEngine;
+import org.thymeleaf.spring5.ISpringTemplateEngine;
 import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
@@ -57,7 +61,7 @@ import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.JasperReportsContext;
 
 @Configuration
-@ComponentScan(basePackageClasses = { AtividadeController.class, BancaController.class, UsuarioController.class, 
+@ComponentScan(basePackageClasses = { AtividadeController.class, BancaController.class, UsuarioController.class,
 		SegurancaController.class })
 @EnableWebMvc
 @EnableAsync
@@ -68,8 +72,7 @@ public class WebConfig implements WebMvcConfigurer, ApplicationContextAware {
 	public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
 		this.applicationContext = applicationContext;
 	}
-	
-	
+
 	/*
 	 * @Bean public ViewResolver jasperReportsViewResolver(DataSource datasource) {
 	 * JasperReportsViewResolver resolver = new JasperReportsViewResolver();
@@ -79,12 +82,13 @@ public class WebConfig implements WebMvcConfigurer, ApplicationContextAware {
 	 * resolver.setJdbcDataSource(datasource); resolver.setOrder(0); return
 	 * resolver; }
 	 */
-	
+
 	@Bean
 	public ViewResolver viewResolver() {
 		ThymeleafViewResolver resolver = new ThymeleafViewResolver();
-		// resolver.setTemplateEngine(templateEngine());
+		resolver.setTemplateEngine((ISpringTemplateEngine) templateEngine());
 		resolver.setCharacterEncoding("UTF-8");
+		resolver.setContentType("text/html; charset=UTF-8");
 //		resolver.setOrder(1);
 		return resolver;
 	}
@@ -95,15 +99,18 @@ public class WebConfig implements WebMvcConfigurer, ApplicationContextAware {
 		engine.setEnableSpringELCompiler(true);
 		engine.setTemplateResolver(templateResolver());
 		// engine.addDialect(new LayoutDialect());
+
 		return engine;
 	}
 
 	private ITemplateResolver templateResolver() {
 		SpringResourceTemplateResolver resolver = new SpringResourceTemplateResolver();
 		resolver.setApplicationContext(applicationContext);
+		resolver.setCharacterEncoding("UTF-8");
 		resolver.setPrefix("classpath:/templates/");
 		resolver.setSuffix(".html");
 		resolver.setTemplateMode(TemplateMode.HTML);
+		resolver.setCharacterEncoding("UTF-8");
 		return resolver;
 	}
 
@@ -127,7 +134,7 @@ public class WebConfig implements WebMvcConfigurer, ApplicationContextAware {
 //		NumberStyleFormatter integerFormatter = new NumberStyleFormatter("#,##0");
 		BigDecimalFormatter integerFormatter = new BigDecimalFormatter("#,##0");
 		conversionService.addFormatterForFieldType(Integer.class, integerFormatter);
-		
+
 		DateTimeFormatterRegistrar dateTimeFormatter = new DateTimeFormatterRegistrar();
 		dateTimeFormatter.setDateFormatter(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
 		dateTimeFormatter.registerFormatters(conversionService);
@@ -135,18 +142,27 @@ public class WebConfig implements WebMvcConfigurer, ApplicationContextAware {
 		return conversionService;
 	}
 
-	/*
-	 * @Bean public LocaleResolver localeResolver() { return new
-	 * FixedLocaleResolver(new Locale("pt", "BR")); }
-	 */
-	
+	@Bean
+	public LocaleResolver localeResolver() {
+		return new FixedLocaleResolver(new Locale("pt", "BR"));
+	}
+
 	@Bean
 	public MessageSource messageSource() {
 		ReloadableResourceBundleMessageSource bundle = new ReloadableResourceBundleMessageSource();
 		bundle.setBasename("classpath:/messages");
-		bundle.setDefaultEncoding("UTF-8"); //http://www.utf8-chartable.de
+		bundle.setDefaultEncoding("UTF-8"); // http://www.utf8-chartable.de
 		return bundle;
-		
+
+	}
+
+	@Bean
+	@Order(Ordered.HIGHEST_PRECEDENCE)
+	public Filter characterEncodingFilter() {
+		CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
+		characterEncodingFilter.setEncoding("UTF-8");
+		characterEncodingFilter.setForceEncoding(true);
+		return characterEncodingFilter;
 	}
 
 }

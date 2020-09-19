@@ -10,19 +10,15 @@ import com.rev.modelo.Usuario;
 import com.rev.repository.filtro.UsuarioFiltro;
 
 public interface UsuarioRepositoryQueries {
-	
-	
+
 	public Optional<Usuario> porEmailEAtivo(String email);
-	
+
 	public List<String> permissoes(Usuario usuario);
-	
-	
+
 //	public List<Usuario> filtrar(UsuarioFiltro filtro);
-	
+
 	public Page<Usuario> filtrar(UsuarioFiltro filtro, Pageable paginacao);
-	
-	
+
 	public Usuario buscarPorGrupos(Long codigo);
-	
-	
+
 }

@@ -1,0 +1,35 @@
+2020-07-10 12:06:44,996 INFO o.s.b.StartupInfoLogger [main] Starting RevSpringBootApplication on DESKTOP-H0MQLKS with PID 14616 (C:\Users\samue\Documents\workspace-sts-3.9.12.RELEASE\RevSpringBoot\target\classes started by samue in C:\Users\samue\Documents\workspace-sts-3.9.12.RELEASE\RevSpringBoot)
+2020-07-10 12:06:45,011 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-10 12:06:45,904 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-07-10 12:06:46,045 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 131ms. Found 4 JPA repository interfaces.
+2020-07-10 12:06:46,978 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-07-10 12:06:46,994 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-07-10 12:06:46,995 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2020-07-10 12:06:46,996 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020-07-10 12:06:47,243 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-07-10 12:06:47,244 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 2130 ms
+2020-07-10 12:06:47,428 INFO o.f.c.i.l.s.Slf4jLog [main] Flyway Community Edition 6.0.8 by Redgate
+2020-07-10 12:06:47,441 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2020-07-10 12:06:48,258 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-07-10 12:06:48,308 INFO o.f.c.i.l.s.Slf4jLog [main] Database: jdbc:mysql://localhost:3306/projetobase (MySQL 8.0)
+2020-07-10 12:06:48,388 INFO o.f.c.i.l.s.Slf4jLog [main] Successfully validated 14 migrations (execution time 00:00.046s)
+2020-07-10 12:06:48,408 INFO o.f.c.i.l.s.Slf4jLog [main] Current version of schema `projetobase`: 14
+2020-07-10 12:06:48,410 INFO o.f.c.i.l.s.Slf4jLog [main] Schema `projetobase` is up to date. No migration necessary.
+2020-07-10 12:06:48,583 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-10 12:06:48,650 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-07-10 12:06:48,800 INFO o.h.a.c.r.j.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-10 12:06:48,920 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-07-10 12:06:49,925 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-10 12:06:49,934 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-10 12:06:49,993 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-10 12:06:50,992 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/static/**'], []
+2020-07-10 12:06:50,992 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/img/**'], []
+2020-07-10 12:06:50,993 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/css/**'], []
+2020-07-10 12:06:50,993 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/js/**'], []
+2020-07-10 12:06:50,993 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/scss/**'], []
+2020-07-10 12:06:50,993 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/vendor/**'], []
+2020-07-10 12:06:51,034 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@738a39cc, org.springframework.security.web.context.SecurityContextPersistenceFilter@3514ac7d, org.springframework.security.web.header.HeaderWriterFilter@1d806de6, org.springframework.security.web.csrf.CsrfFilter@402f61f5, org.springframework.security.web.authentication.logout.LogoutFilter@60a6840c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5f3ddc86, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@160c7c42, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5315266, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@42e202d7, org.springframework.security.web.session.SessionManagementFilter@4f541e67, org.springframework.security.web.access.ExceptionTranslationFilter@50f3ba6a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2faf6e4a]
+2020-07-10 12:06:51,255 WARN o.t.t.TemplateMode [main] [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+2020-07-10 12:06:51,443 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-07-10 12:06:51,472 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-10 12:06:51,474 INFO o.s.b.StartupInfoLogger [main] Started RevSpringBootApplication in 6.926 seconds (JVM running for 8.942)

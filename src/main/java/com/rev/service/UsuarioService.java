@@ -35,30 +35,27 @@ public class UsuarioService {
 
 		if (usuario.isNovo() || !StringUtils.isEmpty(usuario.getSenha())) {
 			usuario.setSenha(this.bcrypt.encode(usuario.getSenha()));
-		}else if(StringUtils.isEmpty(usuario.getSenha())) {
+		} else if (StringUtils.isEmpty(usuario.getSenha())) {
 			usuario.setSenha(usuarioExistente.get().getSenha());
 		}
 		usuario.setConfirmarSenha(usuario.getSenha());
-		
-		
-		if(!usuario.isNovo() && usuario.getAtivo() == null) {
+
+		if (!usuario.isNovo() && usuario.getAtivo() == null) {
 			usuario.setAtivo(usuarioExistente.get().getAtivo());
 		}
 
 		usuarioRepository.save(usuario);
 	}
 
-	
 	@Transactional
 	public void alterarStatus(Long[] codigos, StatusUsuario statusUsuario) {
-		
+
 		List<Usuario> usuariosDoBanco = usuarioRepository.findByCodigoIn(codigos);
-		
+
 		statusUsuario.executar(codigos, usuarioRepository);
-		
+
 	}
-	
-	
+
 	public void removerUsuario(Long codigo) {
 		usuarioRepository.deleteById(codigo);
 	}

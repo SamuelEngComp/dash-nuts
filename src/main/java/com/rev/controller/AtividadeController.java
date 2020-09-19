@@ -1,7 +1,10 @@
 package com.rev.controller;
 
+import java.nio.charset.Charset;
+import java.time.LocalDate;
+import java.time.Year;
+import java.util.HashMap;
 import java.util.List;
-import java.util.Optional;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -10,13 +13,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.MediaType;
-import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -25,7 +25,6 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.rev.controller.page.PageWrapper;
-import com.rev.mail.Mailer;
 import com.rev.modelo.Atividade;
 import com.rev.modelo.FormaConexao;
 import com.rev.modelo.TipoAtividade;
@@ -33,6 +32,7 @@ import com.rev.repository.AtividadeRepository;
 import com.rev.repository.filtro.AtividadeFiltro;
 import com.rev.service.AtividadeService;
 import com.rev.service.exception.ImpossivelExcluirEditarEntidadeException;
+import com.rev.utils.PeriodoRelatorio;
 
 @RestController
 @RequestMapping("/atividade")
@@ -61,8 +61,17 @@ public class AtividadeController {
 		if (bindingResult.hasErrors()) {
 			return novaAtividade(atividade);
 		} else {
+			if(atividade.getPontosConectados() == null || atividade.getPontosConectados() == 0) {
+				atividade.setPontosConectados(0);
+			}
+			
+			if(atividade.getQtdParticipantes() == null || atividade.getQtdParticipantes() == 0) {
+				atividade.setQtdParticipantes(0);
+			}
+			
 			atividadeService.salvarAtividade(atividade);
-			redirect.addFlashAttribute("mensagem", "Atividade Salva Com Sucesso !!! ");
+			
+			redirect.addFlashAttribute("mensagem", atividade.getDescriminacao() + " - SALVA COM SUCESSO !!! ");
 			return new ModelAndView("redirect:/atividade/nova");
 		}
 	}
@@ -70,8 +79,9 @@ public class AtividadeController {
 	// PESQUISA FUNCIONANDO PERFEITAMENTE
 	@GetMapping
 	public ModelAndView pesquisarAtividade() {
-		ModelAndView mv = new ModelAndView("/pesquisar-atividade");
+		ModelAndView mv = new ModelAndView("pesquisar-atividade");
 		mv.addObject("atividades", atividadeService.buscarAtividades());
+		mv.addObject("periodoRelatorio", new PeriodoRelatorio());
 		return mv;
 	}
 
@@ -110,55 +120,189 @@ public class AtividadeController {
 		mv.addObject(atividadeEdiacao);
 		return mv;
 	}
-	
-	
+
 	/**
 	 * grafico de linha do dashboard
+	 * 
 	 * @return
 	 */
-	@GetMapping(value =  "/dados", produces = MediaType.APPLICATION_JSON_VALUE)
-	public @ResponseBody List<Long> atividadesPorMes(){
+	@GetMapping(value = "/dados", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<Long> atividadesPorMes() {
 		return atividadeRepository.atividadesPorMes();
 	}
-	
-	
+
 	/**
 	 * grafico de barras verticais do dashboard
+	 * 
 	 * @return
 	 */
-	@GetMapping(value =  "/dados/participantes", produces = MediaType.APPLICATION_JSON_VALUE)
-	public @ResponseBody List<Long> participantesLocalPorMes(){
+	@GetMapping(value = "/dados/participantes", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<Long> participantesLocalPorMes() {
 		return atividadeRepository.participantesLocalPorMes();
 	}
+
+	
+	
+	
+	@GetMapping(value = "/dados/atividades2015", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<Long> atividades2015PorMes() {
+		LocalDate data2015 = LocalDate.parse("2015-01-01");
+		return atividadeRepository.atividadesPorMes(data2015.getYear());
+	}
+	
+	@GetMapping(value = "/dados/atividades2016", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<Long> atividades2016PorMes() {
+		LocalDate data2015 = LocalDate.parse("2016-01-01");
+		return atividadeRepository.atividadesPorMes(data2015.getYear());
+	}
+	
+	@GetMapping(value = "/dados/atividades2017", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<Long> atividades2017PorMes() {
+		LocalDate data2015 = LocalDate.parse("2017-01-01");
+		return atividadeRepository.atividadesPorMes(data2015.getYear());
+	}
+	
+	@GetMapping(value = "/dados/atividades2018", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<Long> atividades2018PorMes() {
+		LocalDate data2015 = LocalDate.parse("2018-01-01");
+		return atividadeRepository.atividadesPorMes(data2015.getYear());
+	}
+	
+	@GetMapping(value = "/dados/atividades2019", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<Long> atividades2019PorMes() {
+		LocalDate data2015 = LocalDate.parse("2019-01-01");
+		return atividadeRepository.atividadesPorMes(data2015.getYear());
+	}
+	
+	@GetMapping(value = "/dados/atividades2020", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<Long> atividades2020PorMes() {
+		LocalDate data2015 = LocalDate.parse("2020-01-01");
+		return atividadeRepository.atividadesPorMes(data2015.getYear());
+	}
+	
+	
+	
+	
+	
 	
 	
 	/**
 	 * grafico de rosquinha do dashboard
+	 * 
 	 * @return
 	 */
-	@GetMapping(value =  "/dados/formasconexao", produces = MediaType.APPLICATION_JSON_VALUE)
-	public @ResponseBody List<Long> formasConexao(){
+	@GetMapping(value = "/dados/formasconexao", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<Long> formasConexao() {
 		return atividadeRepository.formasConexaoUtilizadas();
+	}
+
+	/**
+	 * valor obtido, mas ainda nao utilizado
+	 * 
+	 * @return
+	 */
+	
+	@GetMapping(value = "/dados/Publico2015", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<Long> publicoLocal2015(){
+		LocalDate data2015 = LocalDate.parse("2015-01-01");
+		
+		return atividadeRepository.participantesLocalPorMes(data2015.getYear());
+	}
+	
+	@GetMapping(value = "/dados/Publico2016", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<Long> publicoLocal2016(){
+		LocalDate data2015 = LocalDate.parse("2016-01-01");
+		
+		return atividadeRepository.participantesLocalPorMes(data2015.getYear());
+	}
+	
+	@GetMapping(value = "/dados/Publico2017", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<Long> publicoLocal2017(){
+		LocalDate data2015 = LocalDate.parse("2017-01-01");
+		
+		return atividadeRepository.participantesLocalPorMes(data2015.getYear());
+	}
+	
+	@GetMapping(value = "/dados/Publico2018", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<Long> publicoLocal2018(){
+		LocalDate data2015 = LocalDate.parse("2018-01-01");
+		
+		return atividadeRepository.participantesLocalPorMes(data2015.getYear());
+	}
+	
+	@GetMapping(value = "/dados/Publico2019", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<Long> publicoLocal2019(){
+		LocalDate data2015 = LocalDate.parse("2019-01-01");
+		
+		return atividadeRepository.participantesLocalPorMes(data2015.getYear());
+	}
+	
+	@GetMapping(value = "/dados/Publico2020", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<Long> publicoLocal2020(){
+		LocalDate data2015 = LocalDate.parse("2020-01-01");
+		
+		return atividadeRepository.participantesLocalPorMes(data2015.getYear());
 	}
 	
 	
-	/**
-	 * valor obtido, mas ainda nao utilizado
-	 * @return
-	 */
-	@GetMapping(value =  "/dados/pontosConectados", produces = MediaType.APPLICATION_JSON_VALUE)
-	public @ResponseBody List<Long> pontosConectados(){
+	
+	@GetMapping(value = "/dados/pontosConectados2015", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<Long> pontosConectados2015() {
+		LocalDate data2015 = LocalDate.parse("2015-01-01");
+		return atividadeRepository.pontosConectados(data2015.getYear());
+	}
+	
+	@GetMapping(value = "/dados/pontosConectados2016", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<Long> pontosConectados2016() {
+		LocalDate data2016 = LocalDate.parse("2016-01-01");
+		return atividadeRepository.pontosConectados(data2016.getYear());
+	}
+	
+	@GetMapping(value = "/dados/pontosConectados2017", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<Long> pontosConectados2017() {
+		LocalDate data2017 = LocalDate.parse("2017-01-01");
+		return atividadeRepository.pontosConectados(data2017.getYear());
+	}
+	
+	@GetMapping(value = "/dados/pontosConectados2018", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<Long> pontosConectados2018() {
+		LocalDate data2018 = LocalDate.parse("2018-01-01");
+		return atividadeRepository.pontosConectados(data2018.getYear());
+	}
+	
+	@GetMapping(value = "/dados/pontosConectados2019", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<Long> pontosConectados2019() {
+		LocalDate data2019 = LocalDate.parse("2019-01-01");
+		return atividadeRepository.pontosConectados(data2019.getYear());
+	}
+	
+	@GetMapping(value = "/dados/pontosConectados2020", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<Long> pontosConectados2020() {
+		LocalDate data2020 = LocalDate.parse("2020-01-01");
+		return atividadeRepository.pontosConectados(data2020.getYear());
+	}
+	
+	@GetMapping(value = "/dados/pontosConectados", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<Long> pontosConectados() {
 		return atividadeRepository.pontosConectados();
+	}
+	
+
+	/**
+	 * Comparativo anual entre atividades, participantes, pontos conectados, web e
+	 * video
+	 */
+	@GetMapping(value = "/dados/comparativoAnual", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<Long> comparativoAnual() {
+		return atividadeRepository.comparativoAnual();
+	}
+
+	/**
+	 * Comparativo anual entre sessão clinica, banca, gravação, ebserh e sig
+	 */
+	@GetMapping(value = "/dados/comparativoFinal", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody HashMap<String, List<Long>> comparativoFinal() {
+		return atividadeRepository.comparativoFinal();
 	}
 
 }
-
-
-
-
-
-
-
-
-
-

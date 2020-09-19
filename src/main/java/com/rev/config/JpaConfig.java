@@ -1,20 +1,5 @@
 package com.rev.config;
 
-import java.net.URI;
-import java.net.URISyntaxException;
-
-import javax.sql.DataSource;
-
-import org.apache.commons.dbcp2.BasicDataSource;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
-import org.springframework.jdbc.datasource.lookup.JndiDataSourceLookup;
-import org.springframework.orm.jpa.JpaVendorAdapter;
-import org.springframework.orm.jpa.vendor.Database;
-import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
-
-
 //@Configuration
 public class JpaConfig {
 	/*
@@ -45,5 +30,5 @@ public class JpaConfig {
 	 * adapter.setGenerateDdl(false);
 	 * adapter.setDatabasePlatform("org.hibernate.dialect.MySQLDialect"); return
 	 * adapter; }
-	 */	
+	 */
 }

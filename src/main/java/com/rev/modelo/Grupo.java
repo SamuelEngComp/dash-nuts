@@ -13,28 +13,27 @@ import javax.persistence.ManyToMany;
 import javax.validation.constraints.NotNull;
 
 @Entity
-public class Grupo implements Serializable{
+public class Grupo implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long codigo;
-	
+
 	private String nome;
-	
+
 	public Grupo() {
 	}
-	
+
 	public Grupo(Long codigo, String nome) {
 		this.codigo = codigo;
 		this.nome = nome;
 	}
-	
+
 	@NotNull(message = "Selecione pelo menos um grupo")
 	@ManyToMany
-	@JoinTable(name = "grupo_permissao", joinColumns = @JoinColumn(name = "codigo_grupo"),
-										inverseJoinColumns = @JoinColumn(name = "codigo_permissao"))
+	@JoinTable(name = "grupo_permissao", joinColumns = @JoinColumn(name = "codigo_grupo"), inverseJoinColumns = @JoinColumn(name = "codigo_permissao"))
 	private List<Permissao> permissoes;
 
 	public Long getCodigo() {

@@ -53,11 +53,9 @@ public class UsuarioController {
 	@Autowired
 	private GrupoRepository grupoRepository;
 
-	
 	@Autowired
 	private Mailer enviandoEmail;
-	
-	
+
 	@RequestMapping("/novo")
 	public ModelAndView novoUsuario(Usuario usuario) {
 		ModelAndView mv = new ModelAndView("cadastro-usuario");
@@ -66,7 +64,8 @@ public class UsuarioController {
 		return mv;
 	}
 
-	@RequestMapping(value = {"/novo", "/editar/{\\d+}"}, method = RequestMethod.POST)
+	@RequestMapping(value = { "/novo",
+			"/editar/{\\d+}" }, method = RequestMethod.POST, produces = "text/html;charset=UTF-8")
 	public ModelAndView cadastrarUsuario(@Valid Usuario usuario, BindingResult bindingResult, Model model,
 			RedirectAttributes redirect) {
 		if (bindingResult.hasErrors()) {
@@ -89,22 +88,21 @@ public class UsuarioController {
 	}
 
 	@RequestMapping(value = "/{codigo}", method = RequestMethod.GET)
-	public ModelAndView removerUsuario(@PathVariable ("codigo") Long codigo, RedirectAttributes redirect) {
+	public ModelAndView removerUsuario(@PathVariable("codigo") Long codigo, RedirectAttributes redirect) {
 		usuarioService.removerUsuario(codigo);
 		redirect.addFlashAttribute("mensagem", "Usuário Removido Com Sucesso !!! ");
 		return new ModelAndView("redirect:/usuario");
 	}
-	
+
 	@GetMapping("/editar/{codigo}")
-	public ModelAndView editarUsuario(@PathVariable ("codigo") Long codigo) {
-		
+	public ModelAndView editarUsuario(@PathVariable("codigo") Long codigo) {
+
 		Usuario usuario = usuarioRepository.buscarPorGrupos(codigo);
 		ModelAndView mv = novoUsuario(usuario);
 		mv.addObject(usuario);
 		return mv;
 	}
-	
-	
+
 	@GetMapping
 	public ModelAndView pesquisarUsuario(Usuario usuario) {
 		ModelAndView mv = new ModelAndView("pesquisar-usuario");
@@ -112,9 +110,6 @@ public class UsuarioController {
 		mv.addObject("usuarios", usuarioRepository.findAll());
 		return mv;
 	}
-	
-	
-	
 
 	/*
 	 * ESSE AQUI ESTA FUNCIONANDO, ENTÃO DEPOIS BASTA DESCOMENTAR
@@ -130,27 +125,26 @@ public class UsuarioController {
 	 * return mv; }
 	 */
 
-	
-	  @PutMapping("/filtros/status")
-	  @ResponseStatus(HttpStatus.OK) 
-	  public void atualizarStatus(@RequestParam("codigos[]") Long[] codigos, @RequestParam("status") StatusUsuario statusUsuario) {
-		  usuarioService.alterarStatus(codigos, statusUsuario);
-	  }
-	 
+	@PutMapping("/filtros/status")
+	@ResponseStatus(HttpStatus.OK)
+	public void atualizarStatus(@RequestParam("codigos[]") Long[] codigos,
+			@RequestParam("status") StatusUsuario statusUsuario) {
+		usuarioService.alterarStatus(codigos, statusUsuario);
+	}
 
-	@RequestMapping(value = "/filtros", method = RequestMethod.GET) 
-	public ModelAndView filtrarUsuario(UsuarioFiltro usuarioFiltro, BindingResult
-	  bindingResult, @PageableDefault(size = 5) Pageable paginacao, HttpServletRequest httpServletRequest) { 
+	@RequestMapping(value = "/filtros", method = RequestMethod.GET)
+	public ModelAndView filtrarUsuario(UsuarioFiltro usuarioFiltro, BindingResult bindingResult,
+			@PageableDefault(size = 5) Pageable paginacao, HttpServletRequest httpServletRequest) {
 		ModelAndView mv = new ModelAndView("filtros/filtro-usuario");
-	  
+
 		mv.addObject("grupos", grupoRepository.findAll());
-		
-		PageWrapper<Usuario> paginaWrapper = new PageWrapper<Usuario>(usuarioRepository.filtrar(usuarioFiltro, paginacao), httpServletRequest);
-	  
-	   
-		mv.addObject("paginas",paginaWrapper);
-		return mv; 
-	 }
+
+		PageWrapper<Usuario> paginaWrapper = new PageWrapper<Usuario>(
+				usuarioRepository.filtrar(usuarioFiltro, paginacao), httpServletRequest);
+
+		mv.addObject("paginas", paginaWrapper);
+		return mv;
+	}
 
 	/***************************************************************************************
 	 *************************************************************************************** 
@@ -158,7 +152,7 @@ public class UsuarioController {
 	 * *************************************************************************************
 	 *************************************************************************************** 
 	 **/
-	@RequestMapping(value = "/registrar", method = RequestMethod.POST)
+	@RequestMapping(value = "/registrar", method = RequestMethod.POST, produces = "text/html;charset=UTF-8")
 	public ModelAndView cadastrarUsuarioVisitante(@Valid Usuario usuario, BindingResult bindingResult, Model model,
 			RedirectAttributes redirect) {
 		if (bindingResult.hasErrors()) {
@@ -183,9 +177,9 @@ public class UsuarioController {
 		}
 
 		redirect.addFlashAttribute("mensagem", "Usuário Cadastrado Com Sucesso !!! ");
-		
+
 		enviandoEmail.enviar(usuario);
-		
+
 		return new ModelAndView("redirect:/usuario/registrar");
 
 	}

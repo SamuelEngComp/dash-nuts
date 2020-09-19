@@ -12,7 +12,7 @@
 	<groupId>com.rev</groupId>
 	<artifactId>RevSpringBoot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>RevSpringBoot</name>
 	<description>Revisando Spring Boot</description>
 
@@ -136,6 +136,15 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+		<dependency>
+		    <groupId>org.apache.poi</groupId>
+		    <artifactId>poi-ooxml</artifactId>
+		    <version>4.1.2</version>
+		</dependency>
+
+				
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -156,10 +165,17 @@
 	</dependencies>
 
 	<build>
+	
+	<finalName>dash-nuts</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				
+				<configuration>
+	                <executable>true</executable>
+	                <jvmArguments>-Dfile.encoding=UTF8</jvmArguments>
+	            </configuration>
 			</plugin>
 		</plugins>
 	</build>

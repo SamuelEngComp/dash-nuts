@@ -1,26 +1,30 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org">
 
 <head>
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta charset=utf-8 />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
 
   <title>SIG - NUTS</title>
 
   <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" th:href="@{/vendor/fontawesome-free/css/all.min.css}">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" th:href="@{/vendor/fontawesome-free/css/all.min.css}" />
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
 
   <!-- Custom styles for this template-->
-  <link href="css/sb-admin-2.min.css" rel="stylesheet" th:href="@{/css/sb-admin-2.min.css}">
+  <link href="css/sb-admin-2.min.css" rel="stylesheet" th:href="@{/css/sb-admin-2.min.css}" />
   
-  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" th:href="@{/vendor/datatables/dataTables.bootstrap4.min.css}">
-	<link rel ="shortcut icon" th:href="@{/img/logo.png}">
+  <link href="css/bootstrap-datepicker.standalone.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap-datepicker.standalone.min.css}" />
+  
+  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" th:href="@{/vendor/datatables/dataTables.bootstrap4.min.css}" />
+	<link rel ="shortcut icon" th:href="@{/img/logo.png}" />
 </head>
 
 <body id="page-top">
@@ -33,11 +37,9 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/home">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" th:href="@{/home}">
         <div class="sidebar-brand-icon rotate-n-0">
-          <!-- <i class="fas fa-laugh-wink"></i> -->
-          <!-- <img alt="nuts" src="img/logoNutsApenas.png" style="width: 50px; height: 50px;"> -->
-          <!-- <i class="fas fa-user-md"></i> -->
+          
           <i class="fas fa-headset"></i>
         </div>
         <div class="sidebar-brand-text mx-3">SIG - NUTS</div>
@@ -48,8 +50,8 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="/home">
-          <!-- <i class="fas fa-fw fa-tachometer-alt"></i> -->
+        <a class="nav-link" th:href="@{/home}">
+          
           <i class="fas fa-home"></i>
           <span>Dashboard</span></a>
       </li>
@@ -76,17 +78,17 @@
         <div id="collapsePagesCadastro" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Cadastros</h6>
-            <a class="collapse-item" href="/atividade/nova" sec:authorize="hasRole('ROLE_CADASTRAR_ATIVIDADE')">
+            <a class="collapse-item" th:href="@{/atividade/nova}" sec:authorize="hasRole('ROLE_CADASTRAR_ATIVIDADE')">
           		<i class="fas fa-plus"></i>
           		<span>Cadastrar atividade</span>
         	</a>
         	
-            <a class="collapse-item" href="/banca/nova" sec:authorize="hasRole('ROLE_CADASTRAR_BANCA')">
+            <a class="collapse-item" th:href="@{/banca/nova}" sec:authorize="hasRole('ROLE_CADASTRAR_BANCA')">
           		<i class="fas fa-plus"></i>
           		<span>Cadastrar banca</span>
         	</a>
             
-            <a class="collapse-item" href="/usuario/novo" sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')">
+            <a class="collapse-item" th:href="@{/usuario/novo}" sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')">
           		<i class="fas fa-plus"></i>
           		<span>Cadastrar usuário</span>
         	</a>
@@ -108,17 +110,17 @@
         <div id="collapsePagesPesquisa" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Pesquisas</h6>
-            <a class="collapse-item" href="/atividade" sec:authorize="hasRole('ROLE_PESQUISAR_ATIVIDADE')">
+            <a class="collapse-item" th:href="@{/atividade}" sec:authorize="hasRole('ROLE_PESQUISAR_ATIVIDADE')">
           		<i class="fas fa-search"></i>
           		<span>Pesquisar atividade</span>
         	</a>
         	
-            <a class="collapse-item" href="/banca" sec:authorize="hasRole('ROLE_PESQUISAR_BANCA')">
+            <a class="collapse-item" th:href="@{/banca}" sec:authorize="hasRole('ROLE_PESQUISAR_BANCA')">
           		<i class="fas fa-search"></i>
           		<span>Pesquisar banca</span>
         	</a>
             
-            <a class="collapse-item" href="/usuario" sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')">
+            <a class="collapse-item" th:href="@{/usuario}" sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')">
           		<i class="fas fa-search"></i>
           		<span>Pesquisar usuário</span>
         	</a>
@@ -141,17 +143,17 @@
         <div id="collapsePagesFiltros" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Filtros</h6>
-            <a class="collapse-item" href="/atividade/filtros" sec:authorize="hasRole('ROLE_PESQUISAR_ATIVIDADE')">
+            <a class="collapse-item" th:href="@{/atividade/filtros}" sec:authorize="hasRole('ROLE_PESQUISAR_ATIVIDADE')">
           		<i class="fas fa-filter"></i>
           		<span>Filtrar atividade</span>
         	</a>
         	
-            <a class="collapse-item" href="/banca/filtros" sec:authorize="hasRole('ROLE_PESQUISAR_BANCA')">
+            <a class="collapse-item" th:href="@{/banca/filtros}" sec:authorize="hasRole('ROLE_PESQUISAR_BANCA')">
           		<i class="fas fa-filter"></i>
           		<span>Filtrar banca</span>
         	</a>
             
-            <a class="collapse-item" href="/usuario/filtros" sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')">
+            <a class="collapse-item" th:href="@{/usuario/filtros}" sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')">
           		<i class="fas fa-filter"></i>
           		<span>Filtrar usuário</span>
         	</a>
@@ -208,11 +210,13 @@
             
             <div class="collapse-divider"></div>
             <h6 class="collapse-header">DOCUMENTAÇÃO</h6>
-            <a class="collapse-item" th:href="@{/download/sistema}" target="_blank" th:method="get">
+            <a class="collapse-item" href="https://drive.google.com/file/d/12TQ2tXKVZX5BhOpSFcdpu8DE22LNwjQQ/view?usp=sharing" 
+            target="_blank">
 	            <i class="fas fa-download"></i>
 	            <span>Sistema</span>
             </a>
-            <a class="collapse-item" th:href="@{/download/manual}" target="_blank" th:method="get">
+            <a class="collapse-item" href="https://drive.google.com/file/d/1jnlEgdoo4u9KfFfVkYz8j1n9p-Th9Mgt/view?usp=sharing" 
+            target="_blank">
 	            <i class="fas fa-download"></i>
 	            <span>Manual</span>
             </a>
@@ -260,7 +264,7 @@
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small" 
                 th:text="${#authentication.principal.usuario.primeiroNome + ' ' + #authentication.principal.usuario.ultimoNome}">Nome Usuário</span>
-                <!-- <img class="img-profile rounded-circle" th:src="@{/img/iconUser.jpg}"> -->
+                
                 <i class="far fa-user"></i>
               </a>
               
@@ -285,7 +289,7 @@
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
             <h1 class="h3 mb-0 text-gray-800">Pesquisar Atividade</h1>
-            <a href="/atividade/nova" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" sec:authorize="hasRole('ROLE_CADASTRAR_ATIVIDADE')">
+            <a th:href="@{/atividade/nova}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" sec:authorize="hasRole('ROLE_CADASTRAR_ATIVIDADE')">
             <i class="fas fa-plus fa-fw text-white-50"></i>Cadastrar Atividade</a>
           </div>
           
@@ -297,7 +301,62 @@
 	  			<div><span th:text="${mensagem}"></span></div>
 			</div>
           
+          <!-- #################################################################################################  -->
+          
+        <!--   <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Exportar</h1>
+            <a th:href="@{/relatorios/atividade/export}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" sec:authorize="hasRole('ROLE_CADASTRAR_ATIVIDADE')">
+            <i class="fas fa-plus fa-fw text-white-50"></i>Exportar</a>
+          </div>
+		 -->
+		
+		<form class="user" th:method="get" th:action="@{/relatorios/atividade/export}" th:object="${periodoRelatorio}">
 
+						<div class="form-group row">
+							<div class="col-sm-2 mb-3 mb-sm-0">
+							<label for="dataDe">Data incial</label>
+								<input type="text" class="form-control js-data" id="dataDe" placeholder="Data inicial"
+									data-provide="datepicker" data-date-orientation="bottom"
+									data-date-language="pt-BR" data-date-today-highlight="true"
+									autocomplete="off" data-date-format="dd/mm/yyyy"
+									data-date-autoclose="true" th:field="*{dataInicio}"
+									th:classappend="${#fields.hasErrors('dataInicio')} ? is-invalid"
+									required="required">
+									<div class="invalid-feedback hidden">Campo Obrigatório</div>
+							</div>
+							<div class="col-sm-2 mb-3 mb-sm-0">
+							<label for="dataAte">Data final</label>
+								<input type="text" class="form-control js-data" id="dataAte" placeholder="Data final"
+									data-provide="datepicker" data-date-orientation="bottom"
+									data-date-language="pt-BR" data-date-today-highlight="true"
+									autocomplete="off" data-date-format="dd/mm/yyyy"
+									data-date-autoclose="true" th:field="*{dataFim}"
+									th:classappend="${#fields.hasErrors('dataFim')} ? is-invalid"
+									required="required">
+									<div class="invalid-feedback hidden">Campo Obrigatório</div>
+							</div>	
+						</div>
+						
+						<hr>
+
+
+						<div class="form-group row">
+							<div class="col-sm-2 mb-3 mb-sm-0">
+								<button type="submit" class="btn btn-primary btn-block shadow"
+									value="relatorio" title="relatorio" target="_blank">
+									<i class="fas fa-file-excel text-white-100"> Exportar</i></button>
+
+							</div>
+						</div>
+
+					</form>
+		
+		
+		
+		
+		
+		  <!-- ################################################################################################# -->
+			
           <!-- Content Row -->
           <div class="row">
           
@@ -347,11 +406,18 @@
                       		sec:authorize="hasRole('ROLE_CADASTRAR_ATIVIDADE')">
 							<i class="fa fa-edit small"></i></a>
 						
+						
 						<a title="Excluir" class="btn btn-danger btn-circle btn-sm" 
+						th:attr="onclick=${'modalRemover('+atividade.codigo+')'}" 
+						data-toggle="modal" data-target="#exclusaoModal" sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')"> 
+						<i class="far fa-trash-alt small"></i>
+						</a>
+						
+						<!-- <a title="Excluir" class="btn btn-danger btn-circle btn-sm" 
 						th:href="@{/atividade/{codigo}(codigo=${atividade.codigo})}" th:method="get"
 						sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')">
 							<i class="far fa-trash-alt small"></i>
-						</a>
+						</a> -->
 						
                       </td>
                     </tr>
@@ -394,6 +460,37 @@
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
+  
+  
+  
+  <!-- Modal exclusão -->
+  <div class="modal fade" id="exclusaoModal" tabindex="-1" role="dialog" aria-labelledby="exclusaoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exclusaoModalLabel">Deseja realmente excluir?</h5>
+          <input id="modal-deletar-atividade-codigo" type="hidden" name="codigo"/> 
+          <!-- <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button> -->
+        </div>
+        
+        <div class="modal-body">Clique em Sim para excluir.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+          <button class="btn btn-primary" id="deleteAtividade" type="button">Sim</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
 
   <!-- Logout Modal-->
   <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -408,7 +505,7 @@
         <div class="modal-body">Clique em Sair para encerrar a sessão.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-          <a class="btn btn-primary" href="/logout">Sair</a>
+          <a class="btn btn-primary" th:href="@{/logout}">Sair</a>
         </div>
       </div>
     </div>
@@ -430,11 +527,55 @@
   <script src="vendor/datatables/jquery.dataTables.min.js" th:src="@{/vendor/datatables/jquery.dataTables.min.js}"></script>
   <script src="vendor/datatables/dataTables.bootstrap4.min.js" th:src="@{/vendor/datatables/dataTables.bootstrap4.min.js}"></script>
 
+	<script src="js/jquery.maskMoney.min.js" th:src="@{/js/jquery.maskMoney.min.js}"></script>
+	<script src="js/mascaraDinheiro.js" th:src="@{/js/mascaraDinheiro.js}"></script>
+	
+	<script src="js/bootstrap-datepicker.min.js" th:src="@{/js/bootstrap-datepicker.min.js}"></script>
+	<script src="js/bootstrap-datepicker.pt-BR.min.js" th:src="@{/js/bootstrap-datepicker.pt-BR.min.js}"></script>
+
   <!-- Page level custom scripts -->
   <script src="js/demo/datatables-demo.js" th:src="@{/js/demo/datatables-demo.js}"></script>
   <script src="js/traducaoDataTable.js" th:src="@{/js/traducaoDataTable.js}"></script>
+  
+  
+  <script src="js/jquery.maskMoney.min.js" th:src="@{/js/jquery.maskMoney.min.js}"></script>
+	<script src="js/mascaraDinheiro.js" th:src="@{/js/mascaraDinheiro.js}"></script>
+	<script src="js/bootstrap-datepicker.min.js" th:src="@{/js/bootstrap-datepicker.min.js}"></script>
+	<script src="js/bootstrap-datepicker.pt-BR.min.js" th:src="@{/js/bootstrap-datepicker.pt-BR.min.js}"></script>
+	
+	<script src="js/exibir.js" th:src="@{/js/exibir.js}"></script>
+	<script src="js/jquery.mask.min.js" th:src="@{/js/jquery.mask.min.js}"></script>
+  
 
 
+
+<script>		
+	$(document.this).ready(function () {
+		$("#deleteAtividade").on("click", function(e){
+		      e.preventDefault();						
+		      var Id = parseInt($("#modal-deletar-atividade-codigo").val());
+			  var urldaPagina = window.location.href.toString();
+			  console.log(urldaPagina);
+		      $.ajax({
+		    	  method:"GET",
+		          url:urldaPagina+"/"+Id,
+		          data:{
+		        	  codigo : Id
+		        	  },
+	                  success:function (data) {
+		            	   $("#atividades").closest("td#"+data).parent("tr").remove();
+		            	   window.location.reload();
+			          }
+	                  });	
+							        	
+		      });
+	});
+
+    function modalRemover(codigo){
+	  $("#modal-deletar-atividade-codigo").val(codigo);
+	  $("#deleteModal").modal('show');	
+    };
+</script>
 </body>
 
 </html>

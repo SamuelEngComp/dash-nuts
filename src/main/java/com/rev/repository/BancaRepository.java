@@ -7,6 +7,6 @@ import com.rev.modelo.BancaExaminadora;
 import com.rev.repository.helper.banca.BancaRepositoryQueries;
 
 @Repository
-public interface BancaRepository extends JpaRepository<BancaExaminadora, Long>, BancaRepositoryQueries{
+public interface BancaRepository extends JpaRepository<BancaExaminadora, Long>, BancaRepositoryQueries {
 
 }

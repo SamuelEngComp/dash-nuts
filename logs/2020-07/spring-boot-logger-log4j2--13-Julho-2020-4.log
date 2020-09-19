@@ -1,0 +1,805 @@
+2020-07-13 15:32:18,395 INFO o.s.b.StartupInfoLogger [main] Starting RevSpringBootApplication on DESKTOP-H0MQLKS with PID 11380 (C:\Users\samue\Documents\workspace-sts-3.9.12.RELEASE\RevSpringBoot\target\classes started by samue in C:\Users\samue\Documents\workspace-sts-3.9.12.RELEASE\RevSpringBoot)
+2020-07-13 15:32:18,411 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-07-13 15:32:19,336 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-07-13 15:32:19,479 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 133ms. Found 4 JPA repository interfaces.
+2020-07-13 15:32:20,167 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
+2020-07-13 15:32:20,177 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
+2020-07-13 15:32:20,179 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
+2020-07-13 15:32:20,180 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.34]
+2020-07-13 15:32:20,352 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2020-07-13 15:32:20,353 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1836 ms
+2020-07-13 15:32:20,493 INFO o.f.c.i.l.s.Slf4jLog [main] Flyway Community Edition 6.0.8 by Redgate
+2020-07-13 15:32:20,505 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2020-07-13 15:32:21,512 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-07-13 15:32:21,551 INFO o.f.c.i.l.s.Slf4jLog [main] Database: jdbc:mysql://localhost:3306/projetobase (MySQL 8.0)
+2020-07-13 15:32:21,608 INFO o.f.c.i.l.s.Slf4jLog [main] Successfully validated 14 migrations (execution time 00:00.032s)
+2020-07-13 15:32:21,622 INFO o.f.c.i.l.s.Slf4jLog [main] Current version of schema `projetobase`: 14
+2020-07-13 15:32:21,623 INFO o.f.c.i.l.s.Slf4jLog [main] Schema `projetobase` is up to date. No migration necessary.
+2020-07-13 15:32:21,775 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-07-13 15:32:21,841 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-07-13 15:32:21,986 INFO o.h.a.c.r.j.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-07-13 15:32:22,109 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-07-13 15:32:23,126 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-07-13 15:32:23,135 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-07-13 15:32:23,201 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-07-13 15:32:24,213 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/static/**'], []
+2020-07-13 15:32:24,213 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/img/**'], []
+2020-07-13 15:32:24,213 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/css/**'], []
+2020-07-13 15:32:24,213 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/js/**'], []
+2020-07-13 15:32:24,213 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/scss/**'], []
+2020-07-13 15:32:24,213 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/vendor/**'], []
+2020-07-13 15:32:24,255 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62158991, org.springframework.security.web.context.SecurityContextPersistenceFilter@15371de2, org.springframework.security.web.header.HeaderWriterFilter@2be50bba, org.springframework.security.web.csrf.CsrfFilter@727dcc64, org.springframework.security.web.authentication.logout.LogoutFilter@78b9155e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@738a39cc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b5b53c6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5b0e9e0c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@40738846, org.springframework.security.web.session.SessionManagementFilter@79c4f23b, org.springframework.security.web.access.ExceptionTranslationFilter@2b9d4b0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@25421809]
+2020-07-13 15:32:24,630 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
+2020-07-13 15:32:24,655 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
+2020-07-13 15:32:24,658 INFO o.s.b.StartupInfoLogger [main] Started RevSpringBootApplication in 6.729 seconds (JVM running for 8.942)
+2020-07-13 15:32:30,716 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-13 15:32:30,716 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-07-13 15:32:30,725 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 8 ms
+2020-07-13 15:32:30,810 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_
+2020-07-13 15:32:30,826 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(bancaexami0_.valor_total) as col_0_0_ from banca_examinadora bancaexami0_
+2020-07-13 15:32:30,833 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.forma_conexao) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=?
+2020-07-13 15:32:30,835 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.forma_conexao) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=?
+2020-07-13 15:32:30,843 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_
+2020-07-13 15:32:30,846 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(bancaexami0_.codigo) as col_0_0_ from banca_examinadora bancaexami0_
+2020-07-13 15:32:30,850 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.tipo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=?
+2020-07-13 15:32:30,853 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(atividade0_.pontos_conectados) as col_0_0_ from atividade atividade0_
+2020-07-13 15:32:31,285 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-3] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_
+2020-07-13 15:32:31,290 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-3] select sum(bancaexami0_.valor_total) as col_0_0_ from banca_examinadora bancaexami0_
+2020-07-13 15:32:31,294 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-3] select count(atividade0_.forma_conexao) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=?
+2020-07-13 15:32:31,296 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-3] select count(atividade0_.forma_conexao) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=?
+2020-07-13 15:32:31,300 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-3] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_
+2020-07-13 15:32:31,305 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-3] select count(bancaexami0_.codigo) as col_0_0_ from banca_examinadora bancaexami0_
+2020-07-13 15:32:31,309 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-3] select count(atividade0_.tipo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=?
+2020-07-13 15:32:31,311 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-3] select sum(atividade0_.pontos_conectados) as col_0_0_ from atividade atividade0_
+2020-07-13 15:32:38,797 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-10] select usuario0_.codigo as codigo1_5_, usuario0_.ativo as ativo2_5_, usuario0_.email as email3_5_, usuario0_.primeiro_nome as primeiro4_5_, usuario0_.senha as senha5_5_, usuario0_.ultimo_nome as ultimo_n6_5_ from usuario usuario0_ where lower(usuario0_.email)=lower(?) and usuario0_.ativo=1
+2020-07-13 15:32:38,835 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-10] select distinct permissao4_.nome as col_0_0_ from usuario usuario0_ inner join usuario_grupo grupos1_ on usuario0_.codigo=grupos1_.codigo_usuario inner join grupo grupo2_ on grupos1_.codigo_grupo=grupo2_.codigo inner join grupo_permissao permissoes3_ on grupo2_.codigo=permissoes3_.codigo_grupo inner join permissao permissao4_ on permissoes3_.codigo_permissao=permissao4_.codigo where usuario0_.codigo=?
+2020-07-13 15:32:38,977 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-07-13 15:32:38,981 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:38,983 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:38,986 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:38,989 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(bancaexami0_.valor_total) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=?
+2020-07-13 15:32:38,993 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(bancaexami0_.codigo) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=? and bancaexami0_.tipo_de_banca=?
+2020-07-13 15:32:38,995 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(bancaexami0_.codigo) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=? and bancaexami0_.tipo_de_banca=?
+2020-07-13 15:32:38,998 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-07-13 15:32:39,001 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-07-13 15:32:39,003 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-07-13 15:32:39,007 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(atividade0_.duracao)/60 as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-07-13 15:32:39,010 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,012 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,014 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,016 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,018 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,020 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,021 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,025 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,027 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,031 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(bancaexami0_.valor_total) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=?
+2020-07-13 15:32:39,034 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-07-13 15:32:39,037 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-07-13 15:32:39,039 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(atividade0_.duracao)/60 as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-07-13 15:32:39,040 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,044 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,046 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,048 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,049 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,051 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,053 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,055 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,056 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,060 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(bancaexami0_.valor_total) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=?
+2020-07-13 15:32:39,062 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-07-13 15:32:39,064 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-07-13 15:32:39,066 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(atividade0_.duracao)/60 as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-07-13 15:32:39,067 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,070 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,071 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,073 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,077 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,078 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,080 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,082 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,084 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,087 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(bancaexami0_.valor_total) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=?
+2020-07-13 15:32:39,090 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-07-13 15:32:39,093 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-07-13 15:32:39,096 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(atividade0_.duracao)/60 as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-07-13 15:32:39,098 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,100 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,102 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,104 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,106 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,109 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,111 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,113 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,115 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,117 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(bancaexami0_.valor_total) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=?
+2020-07-13 15:32:39,119 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-07-13 15:32:39,120 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-07-13 15:32:39,122 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(atividade0_.duracao)/60 as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-07-13 15:32:39,124 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,127 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,131 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,133 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,135 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,137 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,139 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,142 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,146 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,149 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(bancaexami0_.valor_total) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=?
+2020-07-13 15:32:39,151 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-07-13 15:32:39,153 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-07-13 15:32:39,155 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(atividade0_.duracao)/60 as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-07-13 15:32:39,157 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,159 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,162 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,163 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,165 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,167 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,169 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,171 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,173 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,176 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(bancaexami0_.valor_total) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=?
+2020-07-13 15:32:39,628 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-8] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-07-13 15:32:39,630 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-8] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-07-13 15:32:39,632 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-8] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-07-13 15:32:39,632 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-9] select count(atividade0_.forma_conexao) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,630 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-07-13 15:32:39,636 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-8] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-07-13 15:32:39,636 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-9] select count(atividade0_.forma_conexao) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,638 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-8] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-07-13 15:32:39,639 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-9] select count(atividade0_.tipo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,640 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-8] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-07-13 15:32:39,643 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-8] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-07-13 15:32:39,648 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-10] select count(bancaexami0_.codigo) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=? and bancaexami0_.tipo_de_banca=?
+2020-07-13 15:32:39,648 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-8] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-07-13 15:32:39,651 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-3] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-07-13 15:32:39,652 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-8] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-07-13 15:32:39,655 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-8] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-07-13 15:32:39,655 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,657 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-8] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-07-13 15:32:39,661 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-8] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-07-13 15:32:39,665 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-07-13 15:32:39,668 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-07-13 15:32:39,671 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-07-13 15:32:39,673 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-07-13 15:32:39,678 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-07-13 15:32:39,681 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-07-13 15:32:39,684 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-07-13 15:32:39,687 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-07-13 15:32:39,691 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-07-13 15:32:39,694 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-07-13 15:32:39,694 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,696 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-7] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=? and month(atividade0_.data)=?
+2020-07-13 15:32:39,696 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,698 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-3] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-07-13 15:32:39,698 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,700 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-3] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-07-13 15:32:39,700 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,702 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,702 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-3] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-07-13 15:32:39,703 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-10] select count(bancaexami0_.codigo) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=? and bancaexami0_.tipo_de_banca=?
+2020-07-13 15:32:39,704 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,704 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-3] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-07-13 15:32:39,705 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,705 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-10] select count(bancaexami0_.codigo) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=? and bancaexami0_.tipo_de_banca=?
+2020-07-13 15:32:39,705 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-3] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-07-13 15:32:39,707 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-10] select count(bancaexami0_.codigo) as col_0_0_ from banca_examinadora bancaexami0_ where year(bancaexami0_.data)=? and bancaexami0_.tipo_de_banca=?
+2020-07-13 15:32:39,708 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,707 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-3] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-07-13 15:32:39,711 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,711 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-3] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where year(atividade0_.data)=?
+2020-07-13 15:32:39,713 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,716 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,718 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,720 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,724 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,727 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,729 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,732 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,735 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,738 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,740 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,743 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,746 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,749 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,751 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,753 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,756 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,759 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,761 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,764 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,766 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,768 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,770 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,773 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:32:39,776 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=? and year(atividade0_.data)=?
+2020-07-13 15:33:26,187 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] insert into atividade (data, descriminacao, duracao, forma_conexao, pontos_conectados, qtd_participantes, tema, tipo) values (?, ?, ?, ?, ?, ?, ?, ?)
+2020-07-13 15:33:37,373 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-8] select atividade0_.codigo as codigo1_0_, atividade0_.data as data2_0_, atividade0_.descriminacao as descrimi3_0_, atividade0_.duracao as duracao4_0_, atividade0_.forma_conexao as forma_co5_0_, atividade0_.pontos_conectados as pontos_c6_0_, atividade0_.qtd_participantes as qtd_part7_0_, atividade0_.tema as tema8_0_, atividade0_.tipo as tipo9_0_ from atividade atividade0_
+2020-07-13 15:33:48,734 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(*) as col_0_0_ from atividade atividade0_ where atividade0_.codigo=?
+2020-07-13 15:33:48,755 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select atividade0_.codigo as codigo1_0_0_, atividade0_.data as data2_0_0_, atividade0_.descriminacao as descrimi3_0_0_, atividade0_.duracao as duracao4_0_0_, atividade0_.forma_conexao as forma_co5_0_0_, atividade0_.pontos_conectados as pontos_c6_0_0_, atividade0_.qtd_participantes as qtd_part7_0_0_, atividade0_.tema as tema8_0_0_, atividade0_.tipo as tipo9_0_0_ from atividade atividade0_ where atividade0_.codigo=?
+2020-07-13 15:34:20,717 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-5] select atividade0_.codigo as codigo1_0_0_, atividade0_.data as data2_0_0_, atividade0_.descriminacao as descrimi3_0_0_, atividade0_.duracao as duracao4_0_0_, atividade0_.forma_conexao as forma_co5_0_0_, atividade0_.pontos_conectados as pontos_c6_0_0_, atividade0_.qtd_participantes as qtd_part7_0_0_, atividade0_.tema as tema8_0_0_, atividade0_.tipo as tipo9_0_0_ from atividade atividade0_ where atividade0_.codigo=?
+2020-07-13 15:34:20,740 ERROR o.t.TemplateEngine [http-nio-8080-exec-4] [THYMELEAF][http-nio-8080-exec-4] Exception processing template "cadastrar-atividade": Error resolving template [cadastrar-atividade], template might not exist or might not be accessible by any of the configured Template Resolvers
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [cadastrar-atividade], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) [thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) [thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) [thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) [thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) [spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) [spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) [spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) [spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) [spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) [spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_251]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_251]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_251]
+2020-07-13 15:34:20,761 ERROR o.a.j.l.DirectJDKLog [http-nio-8080-exec-4] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template [cadastrar-atividade], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [cadastrar-atividade], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_251]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_251]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_251]
+2020-07-13 15:34:20,774 ERROR o.t.TemplateEngine [http-nio-8080-exec-4] [THYMELEAF][http-nio-8080-exec-4] Exception processing template "500": Error resolving template [500], template might not exist or might not be accessible by any of the configured Template Resolvers
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [500], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) [thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) [thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) [thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) [thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) [spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) [spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) [spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) [spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:84) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) [spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) [spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) [spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) [spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) [spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:348) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:173) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_251]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_251]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_251]
+2020-07-13 15:34:20,778 ERROR o.a.j.l.DirectJDKLog [http-nio-8080-exec-4] Servlet.service() for servlet [dispatcherServlet] threw exception
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [500], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:84) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:348) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:173) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_251]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_251]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_251]
+2020-07-13 15:34:20,783 ERROR o.a.j.l.DirectJDKLog [http-nio-8080-exec-4] Exception Processing ErrorPage[errorCode=0, location=/error]
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template [500], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:84) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:348) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:173) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_251]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_251]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_251]
+Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [500], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	... 58 more
+2020-07-13 15:34:21,160 ERROR o.t.TemplateEngine [http-nio-8080-exec-7] [THYMELEAF][http-nio-8080-exec-7] Exception processing template "404": Error resolving template [404], template might not exist or might not be accessible by any of the configured Template Resolvers
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [404], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) [thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) [thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) [thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) [thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) [spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) [spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) [spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) [spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:84) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) [spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) [spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) [spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) [spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) [spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) [spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_251]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_251]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_251]
+2020-07-13 15:34:21,162 ERROR o.a.j.l.DirectJDKLog [http-nio-8080-exec-7] Servlet.service() for servlet [dispatcherServlet] threw exception
+org.thymeleaf.exceptions.TemplateInputException: Error resolving template [404], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:84) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_251]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_251]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_251]
+2020-07-13 15:34:21,164 ERROR o.a.j.l.DirectJDKLog [http-nio-8080-exec-7] Exception Processing ErrorPage[errorCode=0, location=/error]
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template [404], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:84) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:103) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178) ~[spring-security-web-5.2.4.RELEASE.jar:5.2.4.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271) ~[spring-web-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:712) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:461) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:384) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:312) ~[tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:394) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:253) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [?:1.8.0_251]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [?:1.8.0_251]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.34.jar:9.0.34]
+	at java.lang.Thread.run(Unknown Source) [?:1.8.0_251]
+Caused by: org.thymeleaf.exceptions.TemplateInputException: Error resolving template [404], template might not exist or might not be accessible by any of the configured Template Resolvers
+	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072) ~[thymeleaf-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189) ~[thymeleaf-spring5-3.0.11.RELEASE.jar:3.0.11.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1373) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1118) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1057) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.2.6.RELEASE.jar:5.2.6.RELEASE]
+	... 57 more

@@ -46,16 +46,41 @@
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="79" splitType="Stretch">
+		<band height="83" splitType="Stretch">
 			<staticText>
-				<reportElement x="80" y="27" width="439" height="42" uuid="c5c73023-ee7b-4781-b805-3d45d6fd7fdf"/>
+				<reportElement x="107" y="43" width="340" height="17" uuid="212141f3-d95c-4c97-9deb-78e961ac8307"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="24" isBold="true"/>
+					<font size="11" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Relatório de Atividades - NUTS]]></text>
+				<text><![CDATA[Núcleo Universitário de Telessaúde]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="107" y="23" width="340" height="20" uuid="d326b1d5-1d47-43a5-90b2-fe0dfb38ae03"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Gerência de Ensino, Pesquisa e Extensão]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="107" y="0" width="340" height="23" uuid="546205aa-5656-4dca-a7ed-7f98322311ca"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Complexo Hospitalar Universitário Professor Edgard Santos]]></text>
 			</staticText>
 		</band>
 	</title>
+	<pageHeader>
+		<band height="40">
+			<staticText>
+				<reportElement x="107" y="10" width="340" height="30" uuid="9db18e1b-f4cb-4c5e-ada0-f9d6f5124bd5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Atividades]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
 	<columnHeader>
 		<band height="41" splitType="Stretch">
 			<staticText>
@@ -113,7 +138,7 @@
 	<detail>
 		<band height="40" splitType="Stretch">
 			<textField pattern="dd/MM/yyyy">
-				<reportElement x="0" y="0" width="59" height="19" uuid="64595755-a90c-44c5-8a0b-3d03f051311e">
+				<reportElement x="0" y="0" width="59" height="30" uuid="64595755-a90c-44c5-8a0b-3d03f051311e">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3bf40e9c-4838-492e-9b2d-cf88781afba8"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">

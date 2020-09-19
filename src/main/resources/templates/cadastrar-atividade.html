@@ -1,34 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org">
 
 <head>
-
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="">
-<meta name="author" content="">
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="" />
+<meta name="author" content="" />
 
 <title>SIG - NUTS</title>
 
 <!-- Custom fonts for this template-->
 <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
-	type="text/css" th:href="@{/vendor/fontawesome-free/css/all.min.css}">
+	type="text/css" th:href="@{/vendor/fontawesome-free/css/all.min.css}" />
 <link
 	href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-	rel="stylesheet">
+	rel="stylesheet" />
 
 <!-- Custom styles for this template-->
 <link href="css/sb-admin-2.min.css" rel="stylesheet"
-	th:href="@{/css/sb-admin-2.min.css}">
+	th:href="@{/css/sb-admin-2.min.css}" />
 	
 	<link href="css/bootstrap-datepicker.standalone.min.css" rel="stylesheet"
-	th:href="@{/css/bootstrap-datepicker.standalone.min.css}">
+	th:href="@{/css/bootstrap-datepicker.standalone.min.css}" />
 	
-	<link rel ="shortcut icon" th:href="@{/img/logo.png}"> 
+	<link rel ="shortcut icon" th:href="@{/img/logo.png}" /> 
 	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 </head>
 
@@ -42,11 +43,9 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/home">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" th:href="@{/home}">
         <div class="sidebar-brand-icon rotate-n-0">
-          <!-- <i class="fas fa-laugh-wink"></i> -->
-          <!-- <img alt="nuts" src="img/logoNutsApenas.png" style="width: 50px; height: 50px;"> -->
-          <!-- <i class="fas fa-user-md"></i> -->
+          
           <i class="fas fa-headset"></i>
         </div>
         <div class="sidebar-brand-text mx-3">SIG - NUTS</div>
@@ -57,7 +56,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="/home">
+        <a class="nav-link" th:href="@{/home}">
           <!-- <i class="fas fa-fw fa-tachometer-alt"></i> -->
           <i class="fas fa-home"></i>
           <span>Dashboard</span></a>
@@ -85,17 +84,17 @@
         <div id="collapsePagesCadastro" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Cadastros</h6>
-            <a class="collapse-item" href="/atividade/nova" sec:authorize="hasRole('ROLE_CADASTRAR_ATIVIDADE')">
+            <a class="collapse-item" th:href="@{/atividade/nova}" sec:authorize="hasRole('ROLE_CADASTRAR_ATIVIDADE')">
           		<i class="fas fa-plus"></i>
           		<span>Cadastrar atividade</span>
         	</a>
         	
-            <a class="collapse-item" href="/banca/nova" sec:authorize="hasRole('ROLE_CADASTRAR_BANCA')">
+            <a class="collapse-item" th:href="@{/banca/nova}" sec:authorize="hasRole('ROLE_CADASTRAR_BANCA')">
           		<i class="fas fa-plus"></i>
           		<span>Cadastrar banca</span>
         	</a>
             
-            <a class="collapse-item" href="/usuario/novo" sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')">
+            <a class="collapse-item" th:href="@{/usuario/novo}" sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')">
           		<i class="fas fa-plus"></i>
           		<span>Cadastrar usuário</span>
         	</a>
@@ -117,17 +116,17 @@
         <div id="collapsePagesPesquisa" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Pesquisas</h6>
-            <a class="collapse-item" href="/atividade" sec:authorize="hasRole('ROLE_PESQUISAR_ATIVIDADE')">
+            <a class="collapse-item" th:href="@{/atividade}" sec:authorize="hasRole('ROLE_PESQUISAR_ATIVIDADE')">
           		<i class="fas fa-search"></i>
           		<span>Pesquisar atividade</span>
         	</a>
         	
-            <a class="collapse-item" href="/banca" sec:authorize="hasRole('ROLE_PESQUISAR_BANCA')">
+            <a class="collapse-item" th:href="@{/banca}" sec:authorize="hasRole('ROLE_PESQUISAR_BANCA')">
           		<i class="fas fa-search"></i>
           		<span>Pesquisar banca</span>
         	</a>
             
-            <a class="collapse-item" href="/usuario" sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')">
+            <a class="collapse-item" th:href="@{/usuario}" sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')">
           		<i class="fas fa-search"></i>
           		<span>Pesquisar usuário</span>
         	</a>
@@ -150,17 +149,17 @@
         <div id="collapsePagesFiltros" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Filtros</h6>
-            <a class="collapse-item" href="/atividade/filtros" sec:authorize="hasRole('ROLE_PESQUISAR_ATIVIDADE')">
+            <a class="collapse-item" th:href="@{/atividade/filtros}" sec:authorize="hasRole('ROLE_PESQUISAR_ATIVIDADE')">
           		<i class="fas fa-filter"></i>
           		<span>Filtrar atividade</span>
         	</a>
         	
-            <a class="collapse-item" href="/banca/filtros" sec:authorize="hasRole('ROLE_PESQUISAR_BANCA')">
+            <a class="collapse-item" th:href="@{/banca/filtros}" sec:authorize="hasRole('ROLE_PESQUISAR_BANCA')">
           		<i class="fas fa-filter"></i>
           		<span>Filtrar banca</span>
         	</a>
             
-            <a class="collapse-item" href="/usuario/filtros" sec:authorize="hasRole('ROLE_PESQUISAR_USUARIO')">
+            <a class="collapse-item" th:href="@{/usuario/filtros}" sec:authorize="hasRole('ROLE_PESQUISAR_USUARIO')">
           		<i class="fas fa-filter"></i>
           		<span>Filtrar usuário</span>
         	</a>
@@ -217,11 +216,13 @@
             
             <div class="collapse-divider"></div>
             <h6 class="collapse-header">DOCUMENTAÇÃO</h6>
-            <a class="collapse-item" th:href="@{/download/sistema}" target="_blank" th:method="get">
+            <a class="collapse-item" href="https://drive.google.com/file/d/12TQ2tXKVZX5BhOpSFcdpu8DE22LNwjQQ/view?usp=sharing" 
+            target="_blank">
 	            <i class="fas fa-download"></i>
 	            <span>Sistema</span>
             </a>
-            <a class="collapse-item" th:href="@{/download/manual}" target="_blank" th:method="get">
+            <a class="collapse-item" href="https://drive.google.com/file/d/1jnlEgdoo4u9KfFfVkYz8j1n9p-Th9Mgt/view?usp=sharing" 
+            target="_blank">
 	            <i class="fas fa-download"></i>
 	            <span>Manual</span>
             </a>
@@ -299,7 +300,7 @@
 						class="d-sm-flex align-items-center justify-content-between mb-4">
 						<h1 class="h3 mb-0 text-gray-800" th:if="${atividade.nova}">Cadastrar Atividade</h1>
 						<h1 class="h3 mb-0 text-gray-800" th:unless="${atividade.nova}">Editar Atividade</h1>
-						<a href="/atividade"
+						<a th:href="@{/atividade}"
 							class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
 							<i class="fas fa-search fa-fw text-white-50" sec:authorize="hasRole('ROLE_PESQUISAR_ATIVIDADE')"></i> Pesquisar</a>
 					</div>
@@ -317,9 +318,6 @@
 									<div class="col-lg-12">
 										<div class="p-5">
 
-											<!-- <div th:each="erro : ${#fields.detailedErrors('${atividade.*}')}">
-												<span th:text="${erro.message}"></span>
-											</div> -->
 											
 											
 										<div class="alert alert-danger alert-dismissible fade show" role="alert" th:if="${#fields.hasErrors('${atividade.*}')}">
@@ -337,7 +335,8 @@
 												
 
 											<form class="user" th:method="post" th:object="${atividade}" 
-											th:action="${atividade.nova}? @{/atividade/nova} : @{/atividade/editar/{codigo}(codigo=${atividade.codigo})}">
+											th:action="${atividade.nova}? @{/atividade/nova} : @{/atividade/editar/{codigo}(codigo=${atividade.codigo})}"
+											accept-charset="utf-8" th:accept-charset="UTF-8">
 												
 													<input type="hidden" th:field="*{codigo}">
 												
@@ -359,7 +358,8 @@
 														<label for="descriminacao">Descriminação*</label> <input
 															type="text" class="form-control" id="descriminacao"
 															placeholder="Descriminação" th:field="*{descriminacao}"
-															th:classappend="${#fields.hasErrors('descriminacao')} ? is-invalid">
+															th:classappend="${#fields.hasErrors('descriminacao')} ? is-invalid"
+															th:accept-charset="utf-8" name="descriminacao">
 															<div class="invalid-feedback hidden">Campo Obrigatório</div>
 													</div>
 
@@ -374,11 +374,7 @@
 																	th:text="${tipoAtividade.getDescricao()}">
 															</option>
 															
-															<!-- <option
-																th:each="tipoAtividade : ${T(com.rev.modelo.TipoAtividade).values()}"
-																th:value="${tipoAtividade}"
-																th:text="${tipoAtividade.getDescricao()}">
-															</option> -->
+															
 														</select>
 														<div class="invalid-feedback hidden">Campo Obrigatório</div>
 													</div>
@@ -398,35 +394,29 @@
 															</option>
 															
 															
-															<!-- <option
-																th:each="forma : ${T(com.rev.modelo.FormaConexao).values()}"
-																th:value="${forma}" 
-																th:text="${forma.getDescricao()}">
-															</option> -->
+															
 														</select>
 														<div class="invalid-feedback hidden">Campo Obrigatório</div>
 													</div>
 
 													<div class="col-sm-4 mb-3 mb-sm-0 col-md-4 col-lg-2">
-														<label for="participantes">Participantes*</label> 
+														<label for="participantes">Participantes</label> 
 														<input type="text" class="form-control js-inteiro"
 															id="participantes" placeholder="Local"
-															th:field="*{qtdParticipantes}" th:classappend="${#fields.hasErrors('qtdParticipantes')} ? is-invalid">
-															<div class="invalid-feedback hidden">Campo Obrigatório</div>
+															th:field="*{qtdParticipantes}">
 													</div>
 													
 													<div class="col-sm-4 mb-3 mb-sm-0 col-md-4 col-lg-2">
 														<label>Conexões</label>	
 														<input type="text" class="form-control js-inteiro"
-															id="participantes" placeholder="Conexões" th:field="*{pontosConectados}"
-															th:classappend="${#fields.hasErrors('pontosConectados')} ? is-invalid">
-															<div class="invalid-feedback hidden">Campo Obrigatório</div>	
+															id="participantes" placeholder="Conexões" th:field="*{pontosConectados}">
 													</div>
 
 													<div class="col-sm-4 mb-3 mb-sm-0 col-md-4 col-lg-4">
 														<label for="tema">Tema*</label> <input type="text"
 															class="form-control" id="tema" placeholder="Tema"
-															th:field="*{tema}" th:classappend="${#fields.hasErrors('tema')} ? is-invalid">
+															th:field="*{tema}" th:classappend="${#fields.hasErrors('tema')} ? is-invalid"
+															th:accept-charset="utf-8" name="tema">
 															<div class="invalid-feedback hidden">Campo Obrigatório</div>
 													</div>
 												</div>
@@ -452,7 +442,7 @@
 													</div>
 
 													<div class="col-sm-4 mb-3 mb-sm-0 col-md-4 col-lg-2">
-														<a href="/home"
+														<a th:href="@{/home}"
 															class="btn bg-gray-600 text-white btn-block shadow">
 															Cancelar </a>
 													</div>
@@ -512,7 +502,7 @@
 				<div class="modal-footer">
 					<button class="btn btn-secondary" type="button"
 						data-dismiss="modal">Cancelar</button>
-					<a class="btn btn-primary" href="/logout">Sair</a>
+					<a class="btn btn-primary" th:href="@{/logout}">Sair</a>
 				</div>
 			</div>
 		</div>
@@ -538,6 +528,22 @@
 	
 	<script src="js/exibir.js" th:src="@{/js/exibir.js}"></script>
 	<script src="js/jquery.mask.min.js" th:src="@{/js/jquery.mask.min.js}"></script>
+	
+	<script type="text/javascript">
+		$(document.this).ready(function(){
+			$('#descriminacao').keyup(function(){
+				$(this).val($(this).val().toUpperCase());
+			});
+		});
+	</script>
+	
+	<script type="text/javascript">
+		$(document.this).ready(function(){
+			$('#tema').keyup(function(){
+				$(this).val($(this).val().toUpperCase());
+			});
+		});
+	</script>
 
 </body>
 

@@ -5,16 +5,15 @@ import java.util.List;
 import com.rev.modelo.Grupo;
 
 public class UsuarioFiltro {
-	
-	
+
 	private String primeiroNome;
-	
+
 	private String ultimoNome;
-	
+
 	private String email;
-	
+
 	private Boolean ativo;
-	
+
 	private List<Grupo> grupos;
 
 	public String getPrimeiroNome() {

@@ -16,76 +16,80 @@ import javax.persistence.PreUpdate;
 import javax.validation.constraints.DecimalMax;
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-public class BancaExaminadora implements Serializable{
-	
+public class BancaExaminadora implements Serializable {
+
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long codigo;
-	
+
 	@NotNull(message = "Data é obrigatório")
 	@Column(name = "data")
 	private LocalDate data;
-	
+
 	@NotNull(message = "O tipo de banca é obrigatório")
 	@Enumerated(EnumType.STRING)
 	@Column(name = "tipo_de_banca")
 	private TipoDeBanca tipoDeBanca;
-	
+
 	@NotNull(message = "A campo Categoria é obrigatório")
 	@Enumerated(EnumType.STRING)
 	@Column(name = "origem")
 	private Origem origem;
-	
+
 	@NotBlank(message = "O campo Instituições não pode ser vazia")
 	@Size(min = 2, max = 99, message = "Minino de 2 digitos e maximo de 99")
 	@Column(name = "instituicao_participante")
 	private String instituicaoParticipante;
-	
+
 	@NotBlank(message = "O campo Estado não deve ser vazio")
 	@Size(min = 2, max = 99, message = "Minino de 2 digitos e maximo de 99")
 	@Column(name = "estado")
 	private String estado;
-	
+
 	@NotBlank(message = "O campo Cidade não deve ser vazio")
 	@Size(min = 2, max = 99, message = "Minino de 2 digitos e maximo de 99")
 	@Column(name = "cidade")
 	private String cidade;
-	
+
 	@NotBlank(message = "O campo Pais não deve ser vazio")
 	@Size(min = 2, max = 99, message = "Minino de 2 digitos e maximo de 99")
 	@Column(name = "pais")
 	private String pais;
-	
+
 	@NotBlank(message = "O campo Localização do Estudante não deve ser vazio")
 	@Size(min = 2, max = 99, message = "Minino de 2 digitos e maximo de 99")
 	@Column(name = "localizacao_estudante")
 	private String localizacaoEstudante;
-	
+
 	@Column(name = "passagens")
 	private String passagens;
-	
+
+	@Min(value = 1, message = "O número de passagens deve ser maior/igual a 1")
 	@Max(value = 99, message = "O número de passagens deve ser menor que 99")
 	@NotNull(message = "O campo N° de Passagens é obrigatório")
 	@Column(name = "numero_de_passagens")
 	private Integer numeroDePassagens;
-	
+
+	@Min(value = 0)
+	@Max(value = 7, message = "O número de Pontos externos deve ser menor que 7")
 	@NotNull(message = "O número de Pontos Externos é um campo obrigatório")
 	@Column(name = "numero_pontos_externos")
 	private Integer numeroPontosExternos;
-	
+
 	@NotNull(message = "Valor de Ida é um campo obrigatório")
 	@DecimalMin(value = "0.10")
 	@DecimalMax(value = "9999999.99", message = "O valor da passagem deve ser menor que R$ 9.999.999,99")
 	@Column(name = "valor_ida")
 	private BigDecimal valorIda;
-	
+
 	@Column(name = "valor_ida_02")
 	private BigDecimal valorIda02 = BigDecimal.ZERO;
 	@Column(name = "valor_ida_03")
@@ -96,13 +100,13 @@ public class BancaExaminadora implements Serializable{
 	private BigDecimal valorIda05 = BigDecimal.ZERO;
 	@Column(name = "valor_ida_06")
 	private BigDecimal valorIda06 = BigDecimal.ZERO;
-	
+
 	@NotNull(message = "Valor de Volta é um campo obrigatório")
 	@DecimalMin(value = "0.10")
 	@DecimalMax(value = "9999999.99", message = "O valor da passagem deve ser menor que R$ 9.999.999,99")
 	@Column(name = "valor_volta")
 	private BigDecimal valorVolta;
-	
+
 	@Column(name = "valor_volta_02")
 	private BigDecimal valorVolta02 = BigDecimal.ZERO;
 	@Column(name = "valor_volta_03")
@@ -113,13 +117,13 @@ public class BancaExaminadora implements Serializable{
 	private BigDecimal valorVolta05 = BigDecimal.ZERO;
 	@Column(name = "valor_volta_06")
 	private BigDecimal valorVolta06 = BigDecimal.ZERO;
-	
+
 	@NotNull(message = "Diarias é um campo obrigatório")
 	@DecimalMin(value = "0.10")
 	@DecimalMax(value = "9999999.99", message = "O valor das Diarias deve ser menor que R$ 9.999.999,99")
 	@Column(name = "diarias")
 	private BigDecimal diarias;
-	
+
 	@Column(name = "diarias_02")
 	private BigDecimal diarias02 = BigDecimal.ZERO;
 	@Column(name = "diarias_03")
@@ -130,13 +134,14 @@ public class BancaExaminadora implements Serializable{
 	private BigDecimal diarias05 = BigDecimal.ZERO;
 	@Column(name = "diarias_06")
 	private BigDecimal diarias06 = BigDecimal.ZERO;
-	
+
 	@Column(name = "valor_total")
 	private BigDecimal valorTotal;
-	
-	
-	@PrePersist @PreUpdate
-	private void prePersistUpdate() { //antes de salvar no banco de dados eu quero que tudo fique com letras maiusculas
+
+	@PrePersist
+	@PreUpdate
+	private void prePersistUpdate() { // antes de salvar no banco de dados eu quero que tudo fique com letras
+										// maiusculas
 		instituicaoParticipante = instituicaoParticipante.toUpperCase();
 		estado = estado.toUpperCase();
 		cidade = cidade.toUpperCase();
@@ -257,9 +262,9 @@ public class BancaExaminadora implements Serializable{
 		this.numeroDePassagens = numeroDePassagens;
 	}
 
-	
-	  public BigDecimal getValorIda() { return valorIda; }
-	 
+	public BigDecimal getValorIda() {
+		return valorIda;
+	}
 
 	public Integer getNumeroPontosExternos() {
 		return numeroPontosExternos;
@@ -269,9 +274,9 @@ public class BancaExaminadora implements Serializable{
 		this.numeroPontosExternos = numeroPontosExternos;
 	}
 
-	
-	  public void setValorIda(BigDecimal valorIda) { this.valorIda = valorIda; }
-	 
+	public void setValorIda(BigDecimal valorIda) {
+		this.valorIda = valorIda;
+	}
 
 	public BigDecimal getValorVolta() {
 		return valorVolta;
@@ -286,12 +291,12 @@ public class BancaExaminadora implements Serializable{
 	}
 
 	public BigDecimal getValorTotal() {
-		//this.valorTotal = this.valorVolta.add(this.valorIda).add(this.diarias);
+		// this.valorTotal = this.valorVolta.add(this.valorIda).add(this.diarias);
 		return valorTotal;
 	}
 
 	public void setValorTotal(BigDecimal valorTotal) {
-		//valorTotal = this.valorIda.add(this.valorVolta).add(this.diarias);
+		// valorTotal = this.valorIda.add(this.valorVolta).add(this.diarias);
 		this.valorTotal = valorTotal;
 	}
 
@@ -418,9 +423,9 @@ public class BancaExaminadora implements Serializable{
 	public void setDiarias06(BigDecimal diarias06) {
 		this.diarias06 = diarias06;
 	}
-	
+
 	public boolean isNova() {
 		return codigo == null;
 	}
-		
+
 }

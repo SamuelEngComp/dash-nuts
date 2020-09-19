@@ -48,16 +48,3 @@ CREATE TABLE banca_examinadora(
 	diarias_06 DECIMAL(10,2)
 	
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-
-
-
-
-
-
-
-
-
-
-
-

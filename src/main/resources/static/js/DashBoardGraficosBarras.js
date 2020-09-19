@@ -43,6 +43,15 @@ Nuts.GraficoPublicoPorMes = (function(){
 		    		data : valores
 		    	}]
 		    },
+		    
+		    options:{
+		    	plugins:{
+		    		labels:{
+		    			render:'value'	
+		    		}
+		    	}
+		    }
+		    
 		});
 	}
 	

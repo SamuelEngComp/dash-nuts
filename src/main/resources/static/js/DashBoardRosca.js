@@ -50,7 +50,16 @@ Nuts.GraficoFormasConexaoPorMes = (function(){
 			    legend: {
 			      display: false
 			    },
-			    cutoutPercentage: 80,
+			    cutoutPercentage: 50,
+			    
+			    plugins:{
+			    		labels:{
+			    			render:'value',
+			    			fontColor:'#fff',
+			    			position: 'border'
+			    		}
+			    	}
+			    
 			  },
 		});
 	}

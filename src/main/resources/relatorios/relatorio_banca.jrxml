@@ -40,16 +40,41 @@
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="79" splitType="Stretch">
+		<band height="86" splitType="Stretch">
 			<staticText>
-				<reportElement x="40" y="10" width="480" height="60" uuid="ab146849-8c74-498e-b9a7-945876014e6e"/>
+				<reportElement x="107" y="0" width="340" height="23" uuid="ea427949-a3ca-4dc0-9493-f937aab8526a"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="22" isBold="true"/>
+					<font size="11" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Relatório de Bancas Examinadoras - NUTS]]></text>
+				<text><![CDATA[Complexo Hospitalar Universitário Professor Edgard Santos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="107" y="23" width="340" height="20" uuid="b9db6a18-1a51-485e-af45-d580c7431fa4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Gerência de Ensino, Pesquisa e Extensão]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="107" y="43" width="340" height="17" uuid="be3d40a0-72ff-42ee-a6e6-7ce417bc05dc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Núcleo Universitário de Telessaúde]]></text>
 			</staticText>
 		</band>
 	</title>
+	<pageHeader>
+		<band height="50">
+			<staticText>
+				<reportElement x="107" y="10" width="340" height="30" uuid="f982da32-756c-4823-906f-8471e0361370"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Bancas Examinadoras]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
 	<columnHeader>
 		<band height="31" splitType="Stretch">
 			<staticText>
@@ -138,7 +163,7 @@
 	<detail>
 		<band height="32" splitType="Stretch">
 			<textField pattern="dd/MM/yyyy">
-				<reportElement x="0" y="0" width="60" height="20" uuid="d8d5b608-e77d-491c-98d9-fc1f6bf07528">
+				<reportElement x="0" y="0" width="60" height="30" uuid="d8d5b608-e77d-491c-98d9-fc1f6bf07528">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="66630e4a-c55e-457e-89c9-a2235bcfc775"/>
 				</reportElement>
 				<box>

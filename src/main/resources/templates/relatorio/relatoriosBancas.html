@@ -1,32 +1,32 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org">
 
 <head>
 
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="">
-<meta name="author" content="">
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="" />
+<meta name="author" content="" />
 
 <title>SIG - NUTS</title>
 
 <!-- Custom fonts for this template-->
 <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
-	type="text/css" th:href="@{/vendor/fontawesome-free/css/all.min.css}">
+	type="text/css" th:href="@{/vendor/fontawesome-free/css/all.min.css}" />
 <link
 	href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-	rel="stylesheet">
+	rel="stylesheet" />
 
 <!-- Custom styles for this template-->
 <link href="css/sb-admin-2.min.css" rel="stylesheet"
-	th:href="@{/css/sb-admin-2.min.css}">
+	th:href="@{/css/sb-admin-2.min.css}" />
 	
 	<link href="css/bootstrap-datepicker.standalone.min.css" rel="stylesheet"
-	th:href="@{/css/bootstrap-datepicker.standalone.min.css}">
-<link rel="shortcut icon" th:href="@{/img/logo.png}">
+	th:href="@{/css/bootstrap-datepicker.standalone.min.css}" />
+<link rel="shortcut icon" th:href="@{/img/logo.png}" />
 </head>
 
 <body id="page-top">
@@ -39,11 +39,9 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/home">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" th:href="@{/home}">
         <div class="sidebar-brand-icon rotate-n-0">
-          <!-- <i class="fas fa-laugh-wink"></i> -->
-          <!-- <img alt="nuts" src="img/logoNutsApenas.png" style="width: 50px; height: 50px;"> -->
-          <!-- <i class="fas fa-user-md"></i> -->
+          
           <i class="fas fa-headset"></i>
         </div>
         <div class="sidebar-brand-text mx-3">SIG - NUTS</div>
@@ -54,8 +52,8 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="/home">
-          <!-- <i class="fas fa-fw fa-tachometer-alt"></i> -->
+        <a class="nav-link" th:href="@{/home}">
+          
           <i class="fas fa-home"></i>
           <span>Dashboard</span></a>
       </li>
@@ -82,17 +80,17 @@
         <div id="collapsePagesCadastro" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Cadastros</h6>
-            <a class="collapse-item" href="/atividade/nova" sec:authorize="hasRole('ROLE_CADASTRAR_ATIVIDADE')">
+            <a class="collapse-item" th:href="@{/atividade/nova}" sec:authorize="hasRole('ROLE_CADASTRAR_ATIVIDADE')">
           		<i class="fas fa-plus"></i>
           		<span>Cadastrar atividade</span>
         	</a>
         	
-            <a class="collapse-item" href="/banca/nova" sec:authorize="hasRole('ROLE_CADASTRAR_BANCA')">
+            <a class="collapse-item" th:href="@{/banca/nova}" sec:authorize="hasRole('ROLE_CADASTRAR_BANCA')">
           		<i class="fas fa-plus"></i>
           		<span>Cadastrar banca</span>
         	</a>
             
-            <a class="collapse-item" href="/usuario/novo" sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')">
+            <a class="collapse-item" th:href="@{/usuario/novo}" sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')">
           		<i class="fas fa-plus"></i>
           		<span>Cadastrar usuário</span>
         	</a>
@@ -114,17 +112,17 @@
         <div id="collapsePagesPesquisa" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Pesquisas</h6>
-            <a class="collapse-item" href="/atividade" sec:authorize="hasRole('ROLE_PESQUISAR_ATIVIDADE')">
+            <a class="collapse-item" th:href="@{/atividade}" sec:authorize="hasRole('ROLE_PESQUISAR_ATIVIDADE')">
           		<i class="fas fa-search"></i>
           		<span>Pesquisar atividade</span>
         	</a>
         	
-            <a class="collapse-item" href="/banca" sec:authorize="hasRole('ROLE_PESQUISAR_BANCA')">
+            <a class="collapse-item" th:href="@{/banca}" sec:authorize="hasRole('ROLE_PESQUISAR_BANCA')">
           		<i class="fas fa-search"></i>
           		<span>Pesquisar banca</span>
         	</a>
             
-            <a class="collapse-item" href="/usuario" sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')">
+            <a class="collapse-item" th:href="@{/usuario}" sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')">
           		<i class="fas fa-search"></i>
           		<span>Pesquisar usuário</span>
         	</a>
@@ -147,17 +145,17 @@
         <div id="collapsePagesFiltros" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Filtros</h6>
-            <a class="collapse-item" href="/atividade/filtros" sec:authorize="hasRole('ROLE_PESQUISAR_ATIVIDADE')">
+            <a class="collapse-item" th:href="@{/atividade/filtros}" sec:authorize="hasRole('ROLE_PESQUISAR_ATIVIDADE')">
           		<i class="fas fa-filter"></i>
           		<span>Filtrar atividade</span>
         	</a>
         	
-            <a class="collapse-item" href="/banca/filtros" sec:authorize="hasRole('ROLE_PESQUISAR_BANCA')">
+            <a class="collapse-item" th:href="@{/banca/filtros}" sec:authorize="hasRole('ROLE_PESQUISAR_BANCA')">
           		<i class="fas fa-filter"></i>
           		<span>Filtrar banca</span>
         	</a>
             
-            <a class="collapse-item" href="/usuario/filtros" sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')">
+            <a class="collapse-item" th:href="@{/usuario/filtros}" sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')">
           		<i class="fas fa-filter"></i>
           		<span>Filtrar usuário</span>
         	</a>
@@ -167,19 +165,11 @@
         </div>
       </li>
 		
-		
-		
-		
-		
-	
-
-
 <!-- FIM -->
 
       
       <!-- Divider -->
       <hr class="sidebar-divider">
-
 
 
 		<div sec:authorize="hasRole('ROLE_PESQUISAR_ATIVIDADE')">
@@ -214,11 +204,13 @@
            
             <div class="collapse-divider"></div>
             <h6 class="collapse-header">DOCUMENTAÇÃO</h6>
-            <a class="collapse-item" th:href="@{/download/sistema}" target="_blank" th:method="get">
+            <a class="collapse-item" href="https://drive.google.com/file/d/12TQ2tXKVZX5BhOpSFcdpu8DE22LNwjQQ/view?usp=sharing" 
+            target="_blank">
 	            <i class="fas fa-download"></i>
 	            <span>Sistema</span>
             </a>
-            <a class="collapse-item" th:href="@{/download/manual}" target="_blank" th:method="get">
+            <a class="collapse-item" href="https://drive.google.com/file/d/1jnlEgdoo4u9KfFfVkYz8j1n9p-Th9Mgt/view?usp=sharing" 
+            target="_blank">
 	            <i class="fas fa-download"></i>
 	            <span>Manual</span>
             </a>
@@ -269,7 +261,7 @@
 							role="button" data-toggle="dropdown" aria-haspopup="true"
 							aria-expanded="false"> <span class="mr-2 d-none d-lg-inline text-gray-600 small" 
                 th:text="${#authentication.principal.usuario.primeiroNome + ' ' + #authentication.principal.usuario.ultimoNome}">Nome Usuário</span>
-                <!-- <img class="img-profile rounded-circle" th:src="@{/img/iconUser.jpg}"> -->
+                
                 <i class="far fa-user"></i>
 						</a> <!-- Dropdown - Sair -->
 							<div
@@ -294,10 +286,8 @@
 					<!-- Page Heading -->
 					<div
 						class="d-sm-flex align-items-center justify-content-between mb-4">
-						<h1 class="h3 mb-0 text-gray-800">Gerar relatório</h1>
-						<!-- <a href="cadastrar-atividade"
-							class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-							class="fas fa-plus fa-fw text-white-50"></i>Cadastrar Atividade</a> -->
+						<h1 class="h3 mb-0 text-gray-800">Gerar relatório de Bancas</h1>
+						
 					</div>
 					
 					
@@ -393,7 +383,7 @@
 				<div class="modal-footer">
 					<button class="btn btn-secondary" type="button"
 						data-dismiss="modal">Cancelar</button>
-					<a class="btn btn-primary" href="/logout">Sair</a>
+					<a class="btn btn-primary" th:href="@{/logout}">Sair</a>
 				</div>
 			</div>
 		</div>

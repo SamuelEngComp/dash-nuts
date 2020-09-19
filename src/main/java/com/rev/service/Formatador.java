@@ -19,29 +19,26 @@ import com.rev.controller.UsuarioController;
 
 @Service
 @ComponentScan(basePackageClasses = { AtividadeController.class, UsuarioController.class })
-public class Formatador{
-	
-	
-	
+public class Formatador {
+
 	public String formatadorData(LocalDate dataDoForm) {
 		String formattedDate = dataDoForm.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT));
 		return formattedDate;
 	}
-	
-	
+
 //	@Bean
 	public FormattingConversionService mvcConversionService() {
 		DefaultFormattingConversionService conversionService = new DefaultFormattingConversionService();
-		
+
 		NumberStyleFormatter bigDecimalFormatter = new NumberStyleFormatter("#,##0.00");
 		conversionService.addFormatterForFieldType(BigDecimal.class, bigDecimalFormatter);
-		
+
 		NumberStyleFormatter integerFormatter = new NumberStyleFormatter("#,##0");
 		conversionService.addFormatterForFieldType(Integer.class, integerFormatter);
-		
+
 		return conversionService;
 	}
-	
+
 //	@Bean
 	public LocaleResolver localeResolver() {
 		return new FixedLocaleResolver(new Locale("pt", "BR"));

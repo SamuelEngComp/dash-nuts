@@ -30,7 +30,7 @@ Nuts.GraficoBancasExaminadoras = (function(){
 		    		data : valores,
 		    		label : 'Bancas examinadoras',
 		    		backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc','#FF0000' ],
-		    		hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf', '#FF0000'],
+		    		hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf', '#ff8282'],
 		    		hoverBorderColor: "rgba(234, 236, 244, 1)",
 		    	}],
 		    },
@@ -41,16 +41,23 @@ Nuts.GraficoBancasExaminadoras = (function(){
 			      backgroundColor: "rgb(255,255,255)",
 			      bodyFontColor: "#858796",
 			      borderColor: '#dddfeb',
-			      borderWidth: 1,
+			      borderWidth: 2,
 			      xPadding: 15,
 			      yPadding: 15,
-			      displayColors: false,
-			      caretPadding: 10,
+			      displayColors: true,
+			      caretPadding: 15,
 			    },
 			    legend: {
 			      display: false
 			    },
-			    cutoutPercentage: 80,
+			    cutoutPercentage: 100,
+			    plugins:{
+		    		labels:{
+		    			render:'value',
+		    			fontColor:'#fff',
+		    			position: 'border'
+		    		}
+		    	}
 			  },
 		    
 		    

@@ -8,21 +8,21 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "usuario_grupo")
-public class UsuarioGrupo implements Serializable{
+public class UsuarioGrupo implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	@EmbeddedId
 	private UsuarioGrupoId codigo;
 
-		public UsuarioGrupoId getCodigo() {
+	public UsuarioGrupoId getCodigo() {
 		return codigo;
 	}
 
 	public void setCodigo(UsuarioGrupoId codigo) {
 		this.codigo = codigo;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -47,5 +47,5 @@ public class UsuarioGrupo implements Serializable{
 			return false;
 		return true;
 	}
-	
+
 }

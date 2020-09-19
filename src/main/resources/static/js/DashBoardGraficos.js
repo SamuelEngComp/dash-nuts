@@ -32,7 +32,7 @@ Nuts.GraficoAtividadesPorMes = (function(){
 		    		borderColor: "rgba(78, 115, 223, 1)",
 		    		pointBorderColor : 'rgba(2, 6, 8, 0.5)',
 		    		pointRadius: 3,
-		    	    pointBackgroundColor: "rgba(78, 115, 223, 1)",
+		    	    pointBackgroundColor: "rgba(255, 255, 255, 0.5)", //rgba(78, 115, 223, 1)
 		    	    pointBorderColor: "rgba(78, 115, 223, 1)",
 		    	    pointHoverRadius: 3,
 		    	    pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",

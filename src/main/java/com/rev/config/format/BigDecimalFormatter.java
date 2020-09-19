@@ -8,19 +8,17 @@ import java.util.Locale;
 
 import org.springframework.format.Formatter;
 
-public class BigDecimalFormatter implements Formatter<BigDecimal>{
+public class BigDecimalFormatter implements Formatter<BigDecimal> {
 
 	private DecimalFormat decimalFormat;
-	
+
 	public BigDecimalFormatter(String pattern) {
-		NumberFormat format = NumberFormat.getInstance(new Locale("pt","BR"));
+		NumberFormat format = NumberFormat.getInstance(new Locale("pt", "BR"));
 		decimalFormat = (DecimalFormat) format;
 		decimalFormat.setParseBigDecimal(true);
 		decimalFormat.applyPattern(pattern);
 	}
-	
-	
-	
+
 	@Override
 	public String print(BigDecimal object, Locale locale) {
 		return decimalFormat.format(object);

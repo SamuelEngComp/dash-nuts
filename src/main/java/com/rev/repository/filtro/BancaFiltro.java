@@ -7,39 +7,39 @@ import com.rev.modelo.Origem;
 import com.rev.modelo.TipoDeBanca;
 
 public class BancaFiltro {
-	
+
 	private LocalDate dataDe;
 
 	private LocalDate dataAte;
-	
+
 	private TipoDeBanca tipoDeBanca;
-	
+
 	private Origem origem;
-	
+
 	private String instituicaoParticipante;
-	
+
 	private String estado;
-	
+
 	private String cidade;
-	
+
 	private String pais;
-	
+
 	private String localizacaoEstudante;
-	
+
 	private String passagens;
-	
+
 	private Integer numeroDePassagens;
-	
+
 	private Integer numeroPontosExternos;
-	
+
 	private BigDecimal valorIda;
-	
+
 	private BigDecimal valorVolta;
-	
+
 	private BigDecimal diarias;
-	
+
 	private BigDecimal valorTotalDe;
-	
+
 	private BigDecimal valorTotalAte;
 
 	public LocalDate getDataDe() {
@@ -177,7 +177,5 @@ public class BancaFiltro {
 	public void setValorTotalAte(BigDecimal valorTotalAte) {
 		this.valorTotalAte = valorTotalAte;
 	}
-
-	
 
 }

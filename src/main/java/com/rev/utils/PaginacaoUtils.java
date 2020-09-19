@@ -7,15 +7,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class PaginacaoUtils {
 
-	
-	  public void preparar(Criteria criteria, Pageable pageable) { 
-		  int paginaAtual = pageable.getPageNumber(); 
-		  int totalRegistrosPorPagina = pageable.getPageSize(); 
-		  int primeiroRegistro = paginaAtual * totalRegistrosPorPagina;
-	  
-		  criteria.setFirstResult(primeiroRegistro);
-		  criteria.setMaxResults(totalRegistrosPorPagina);
-	  
-	   }
-	 
+	public void preparar(Criteria criteria, Pageable pageable) {
+		int paginaAtual = pageable.getPageNumber();
+		int totalRegistrosPorPagina = pageable.getPageSize();
+		int primeiroRegistro = paginaAtual * totalRegistrosPorPagina;
+
+		criteria.setFirstResult(primeiroRegistro);
+		criteria.setMaxResults(totalRegistrosPorPagina);
+
+	}
+
 }

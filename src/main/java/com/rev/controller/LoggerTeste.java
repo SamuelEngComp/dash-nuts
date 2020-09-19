@@ -7,17 +7,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class LoggerTeste {
- 
-    Logger logger = LoggerFactory.getLogger(LoggerTeste.class);
- 
-    @RequestMapping("/log")
-    public String index() {
-        logger.trace("A TRACE Message");
-        logger.debug("A DEBUG Message");
-        logger.info("An INFO Message");
-        logger.warn("A WARN Message");
-        logger.error("An ERROR Message");
- 
-        return "Howdy! Check out the Logs to see the output...";
-    }
+
+	Logger logger = LoggerFactory.getLogger(LoggerTeste.class);
+
+	@RequestMapping("/log")
+	public String index() {
+		logger.trace("A TRACE Message");
+		logger.debug("A DEBUG Message");
+		logger.info("An INFO Message");
+		logger.warn("A WARN Message");
+		logger.error("An ERROR Message");
+
+		return "Howdy! Check out the Logs to see the output...";
+	}
 }

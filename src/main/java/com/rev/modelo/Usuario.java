@@ -22,53 +22,48 @@ import org.hibernate.annotations.DynamicUpdate;
 
 import com.rev.modelo.validator.AtributoConfirmacao;
 
-
 @AtributoConfirmacao(atributo = "senha", atributoConfirmacao = "confirmarSenha", message = "Confirmação da Senha não confere")
 @Entity
 @DynamicUpdate
-public class Usuario implements Serializable{
+public class Usuario implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long codigo;
-	
+
 	@NotBlank(message = "Primeiro Nome é obrigatório")
 	@Column(name = "primeiro_nome")
 	private String primeiroNome;
-	
+
 	@NotBlank(message = "Ultimo Nome é obrigatório")
 	@Column(name = "ultimo_nome")
 	private String ultimoNome;
-	
+
 	@NotBlank(message = "E-mail é obrigatório")
 	@Email(message = "E-mail inválido")
 	private String email;
-	
-	
+
 	private String senha;
-	
+
 	@Transient
 	private String confirmarSenha;
-	
+
 	private Boolean ativo;
-	
-	
+
 	@PreUpdate
 	private void preUpdate() {
 		this.confirmarSenha = senha;
 	}
-	
-	
+
 	public boolean isNovo() {
 		return codigo == null;
 	}
-	
-	@Size(min=1, message = "Selecione pelo menos um grupo")
+
+	@Size(min = 1, message = "Selecione pelo menos um grupo")
 	@ManyToMany
-	@JoinTable(name = "usuario_grupo", joinColumns = @JoinColumn(name = "codigo_usuario"),
-										inverseJoinColumns = @JoinColumn(name = "codigo_grupo"))
+	@JoinTable(name = "usuario_grupo", joinColumns = @JoinColumn(name = "codigo_usuario"), inverseJoinColumns = @JoinColumn(name = "codigo_grupo"))
 	private List<Grupo> grupos;
 
 	public Long getCodigo() {
@@ -126,7 +121,7 @@ public class Usuario implements Serializable{
 	public void setGrupos(List<Grupo> grupos) {
 		this.grupos = grupos;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -160,19 +155,3 @@ public class Usuario implements Serializable{
 		this.confirmarSenha = confirmarSenha;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

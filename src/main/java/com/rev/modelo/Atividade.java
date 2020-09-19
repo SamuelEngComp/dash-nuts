@@ -15,73 +15,80 @@ import javax.persistence.Id;
 import javax.persistence.PostLoad;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 @Entity
-public class Atividade implements Serializable{
-	
+public class Atividade implements Serializable {
+
 	private static final long serialVersionUID = 1L;
 
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
 	private Long codigo;
-	
+
 	@NotNull(message = "O campo Data é obrigatório")
 	@Column(name = "data")
 	private LocalDate data;
-	
+
 	@NotNull
 	@NotBlank(message = "O campo Descriminação é obrigatório")
 	@Column(name = "descriminacao")
 	private String descriminacao;
-	
+
 	@NotNull(message = "O campo Tipo de Atividade é obrigatório")
 	@Enumerated(EnumType.STRING)
 	@Column(name = "tipo")
 	private TipoAtividade tipo;
-	
+
 	@NotNull(message = "O campo Forma de Conexão é obrigatório")
 	@Enumerated(EnumType.STRING)
 	@Column(name = "forma_conexao")
 	private FormaConexao formaConexao;
-	
-	@NotNull(message = "Quantidade de participantes deve ser no minimo de 1 e no máximo 999")
+
+	@Min(value = 0)
+	@Max(value = 999)
+//	@NotNull(message = "Quantidade de participantes deve ser no minimo de 0 e no máximo 999")
 	@Column(name = "qtd_participantes")
 	private Integer qtdParticipantes = Integer.valueOf(0);
-	
+
 	@NotBlank(message = "O campo Tema é obrigatório")
 	@NotNull
 	@Column(name = "tema")
 	private String tema;
-	
-	
+
+	@Min(value = 1)
+	@Max(value = 1440)
 	@NotNull(message = "Duração deve ser no minimo de 1 e maximo de 1440 minutos")
 	@Column(name = "duracao")
 	private Integer duracao;
-	
-	@NotNull(message = "Pontos Conectados deve ser no minimo 0 e no maximo 1000")
+
+	@Min(value = 0)
+	@Max(value = 1000)
+//	@NotNull(message = "Pontos Conectados deve ser no minimo 0 e no maximo 1000")
 	@Column(name = "pontos_conectados")
 	private Integer pontosConectados = Integer.valueOf(0);
-	
+
 	public boolean isNova() {
 		return codigo == null;
 	}
-	
-	
-	@PrePersist @PreUpdate
-	private void prePersistUpdate() { //antes de salvar no banco de dados eu quero que tudo fique com letras maiusculas
-		  descriminacao = descriminacao.toUpperCase(); 
-		  tema = tema.toUpperCase();
-		 
-	}
-	
+
+	/*
+	 * @PrePersist @PreUpdate private void prePersistUpdate() { //antes de salvar no
+	 * banco de dados eu quero que tudo fique com letras maiusculas descriminacao =
+	 * descriminacao.toUpperCase(); tema = tema.toUpperCase();
+	 * 
+	 * }
+	 */
+
 	/*
 	 * @PostLoad private void postLoad() { //DateTimeFormatter dataFormatar =
 	 * DateTimeFormatter.ofPattern("dd/MM/yyyy"); data =
 	 * this.data.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT)); }
 	 */
-	
+
 	public Long getCodigo() {
 		return codigo;
 	}
@@ -150,11 +157,9 @@ public class Atividade implements Serializable{
 		return pontosConectados;
 	}
 
-
 	public void setPontosConectados(Integer pontosConectados) {
 		this.pontosConectados = pontosConectados;
 	}
-
 
 	@Override
 	public int hashCode() {
@@ -180,6 +185,5 @@ public class Atividade implements Serializable{
 			return false;
 		return true;
 	}
-	
-	
+
 }

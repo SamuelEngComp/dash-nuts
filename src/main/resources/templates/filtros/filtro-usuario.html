@@ -1,35 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org">
 
 <head>
 
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport"
-	content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="">
-<meta name="author" content="">
+	content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="description" content="" />
+<meta name="author" content="" />
 
 <title>SIG - NUTS</title>
 
 <!-- Custom fonts for this template-->
 <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
-	type="text/css" th:href="@{/vendor/fontawesome-free/css/all.min.css}">
+	type="text/css" th:href="@{/vendor/fontawesome-free/css/all.min.css}" />
 <link
 	href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-	rel="stylesheet">
+	rel="stylesheet" />
 
 <!-- Custom styles for this template-->
 <link href="css/sb-admin-2.min.css" rel="stylesheet"
-	th:href="@{/css/sb-admin-2.min.css}">
+	th:href="@{/css/sb-admin-2.min.css}" />
 	
 	<link href="css/bootstrap-datepicker.standalone.min.css" rel="stylesheet"
-	th:href="@{/css/bootstrap-datepicker.standalone.min.css}">
+	th:href="@{/css/bootstrap-datepicker.standalone.min.css}" />
 	
 	<link href="css/meucss.css" rel="stylesheet"
-	th:href="@{/css/meucss.css}">
-<link rel="shortcut icon" th:href="@{/img/logo.png}">
+	th:href="@{/css/meucss.css}" />
+<link rel="shortcut icon" th:href="@{/img/logo.png}" />
 </head>
 
 <body id="page-top">
@@ -42,11 +42,9 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/home">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" th:href="@{/home}">
         <div class="sidebar-brand-icon rotate-n-0">
-          <!-- <i class="fas fa-laugh-wink"></i> -->
-          <!-- <img alt="nuts" src="img/logoNutsApenas.png" style="width: 50px; height: 50px;"> -->
-          <!-- <i class="fas fa-user-md"></i> -->
+          
           <i class="fas fa-headset"></i>
         </div>
         <div class="sidebar-brand-text mx-3">SIG - NUTS</div>
@@ -57,8 +55,8 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="/home">
-          <!-- <i class="fas fa-fw fa-tachometer-alt"></i> -->
+        <a class="nav-link" th:href="@{/home}">
+          
           <i class="fas fa-home"></i>
           <span>Dashboard</span></a>
       </li>
@@ -85,17 +83,17 @@
         <div id="collapsePagesCadastro" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Cadastros</h6>
-            <a class="collapse-item" href="/atividade/nova" sec:authorize="hasRole('ROLE_CADASTRAR_ATIVIDADE')">
+            <a class="collapse-item" th:href="@{/atividade/nova}" sec:authorize="hasRole('ROLE_CADASTRAR_ATIVIDADE')">
           		<i class="fas fa-plus"></i>
           		<span>Cadastrar atividade</span>
         	</a>
         	
-            <a class="collapse-item" href="/banca/nova" sec:authorize="hasRole('ROLE_CADASTRAR_BANCA')">
+            <a class="collapse-item" th:href="@{/banca/nova}" sec:authorize="hasRole('ROLE_CADASTRAR_BANCA')">
           		<i class="fas fa-plus"></i>
           		<span>Cadastrar banca</span>
         	</a>
             
-            <a class="collapse-item" href="/usuario/novo" sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')">
+            <a class="collapse-item" th:href="@{/usuario/novo}" sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')">
           		<i class="fas fa-plus"></i>
           		<span>Cadastrar usuário</span>
         	</a>
@@ -117,17 +115,17 @@
         <div id="collapsePagesPesquisa" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Pesquisas</h6>
-            <a class="collapse-item" href="/atividade" sec:authorize="hasRole('ROLE_PESQUISAR_ATIVIDADE')">
+            <a class="collapse-item" th:href="@{/atividade}" sec:authorize="hasRole('ROLE_PESQUISAR_ATIVIDADE')">
           		<i class="fas fa-search"></i>
           		<span>Pesquisar atividade</span>
         	</a>
         	
-            <a class="collapse-item" href="/banca" sec:authorize="hasRole('ROLE_PESQUISAR_BANCA')">
+            <a class="collapse-item" th:href="@{/banca}" sec:authorize="hasRole('ROLE_PESQUISAR_BANCA')">
           		<i class="fas fa-search"></i>
           		<span>Pesquisar banca</span>
         	</a>
             
-            <a class="collapse-item" href="/usuario" sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')">
+            <a class="collapse-item" th:href="@{/usuario}" sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')">
           		<i class="fas fa-search"></i>
           		<span>Pesquisar usuário</span>
         	</a>
@@ -150,17 +148,17 @@
         <div id="collapsePagesFiltros" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Filtros</h6>
-            <a class="collapse-item" href="/atividade/filtros" sec:authorize="hasRole('ROLE_PESQUISAR_ATIVIDADE')">
+            <a class="collapse-item" th:href="@{/atividade/filtros}" sec:authorize="hasRole('ROLE_PESQUISAR_ATIVIDADE')">
           		<i class="fas fa-filter"></i>
           		<span>Filtrar atividade</span>
         	</a>
         	
-            <a class="collapse-item" href="/banca/filtros" sec:authorize="hasRole('ROLE_PESQUISAR_BANCA')">
+            <a class="collapse-item" th:href="@{/banca/filtros}" sec:authorize="hasRole('ROLE_PESQUISAR_BANCA')">
           		<i class="fas fa-filter"></i>
           		<span>Filtrar banca</span>
         	</a>
             
-            <a class="collapse-item" href="/usuario/filtros" sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')">
+            <a class="collapse-item" th:href="@{/usuario/filtros}" sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')">
           		<i class="fas fa-filter"></i>
           		<span>Filtrar usuário</span>
         	</a>
@@ -170,13 +168,6 @@
         </div>
       </li>
 		
-		
-		
-		
-		
-	
-
-
 <!-- FIM -->
 
            
@@ -218,11 +209,13 @@
         
             <div class="collapse-divider"></div>
             <h6 class="collapse-header">DOCUMENTAÇÃO</h6>
-            <a class="collapse-item" th:href="@{/download/sistema}" target="_blank" th:method="get">
+            <a class="collapse-item" href="https://drive.google.com/file/d/12TQ2tXKVZX5BhOpSFcdpu8DE22LNwjQQ/view?usp=sharing" 
+            target="_blank">
 	            <i class="fas fa-download"></i>
 	            <span>Sistema</span>
             </a>
-            <a class="collapse-item" th:href="@{/download/manual}" target="_blank" th:method="get">
+            <a class="collapse-item" href="https://drive.google.com/file/d/1jnlEgdoo4u9KfFfVkYz8j1n9p-Th9Mgt/view?usp=sharing" 
+            target="_blank">
 	            <i class="fas fa-download"></i>
 	            <span>Manual</span>
             </a>
@@ -301,7 +294,8 @@
 						<h1 class="h3 mb-0 text-gray-800">Filtrar Usuários</h1>
 					</div>
 
-					<form class="user" th:method="get" th:object="${usuarioFiltro}" th:action="@{/usuario/filtros}">
+					<form class="user" th:method="get" th:object="${usuarioFiltro}" th:action="@{/usuario/filtros}"
+					accept-charset="utf-8" th:accept-charset="utf-8">
 
 						<div class="form-group row">
 							
@@ -355,17 +349,6 @@
 					</form>
 					
 					
-					
-					<!-- <div class="toolbar" style="padding: 5px">
-						<button class="btn btn-success btn-circle btn-sm small js-status-btn" data-status="ATIVAR" title="Ativar">
-							<span><i class="fas fa-check"></i></span>
-						</button>
-						
-						<button class="btn btn-danger btn-circle btn-sm small js-status-btn" data-status="DESATIVAR" title="Desativar">
-							<span><i class="fas fa-times"></i></span>
-						</button>
-					</div> -->
-					
 
 					<!-- Content Row -->
 					<div class="row">
@@ -387,7 +370,7 @@
                       							<th>E-mail</th>
                       							<th>Grupos</th>
 							                    <th>Status</th>
-							                    <th>Ações</th>
+							                    <!-- <th>Ações</th> -->
 											</tr>
 										</thead>
 										
@@ -407,17 +390,26 @@
 														<span class="text-danger">Inativo</span>
 													</th:block>
 												</td>
-												<td>
+												
+												<!-- <td>
 							                      	<a th:href="@{/usuario/editar/{codigo}(codigo=${usuario.codigo})}" 
 							                      	th:method="get" title="Editar" class="btn btn-primary btn-circle btn-sm"
 							                      	sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')">
 							                      		<i class="fa fa-edit small"></i></a>
-							                      	<a th:href="@{/usuario/{codigo}(codigo=${usuario.codigo})}" th:method="get" 
-							                      	title="Excluir" class="btn btn-danger btn-circle btn-sm"
-							                      	sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')"
-							                      	th:if="${#authentication.principal.usuario.codigo != usuario.codigo}">
-							                      		<i class="far fa-trash-alt small"></i></a>
-							                    </td>
+							                      	
+							                      	
+							                      	
+							                      	<a title="Excluir" class="btn btn-danger btn-circle btn-sm" 
+														th:attr="onclick=${'modalRemover('+usuario.codigo+')'}" 
+														data-toggle="modal" data-target="#exclusaoModal" 
+														th:if="${#authentication.principal.usuario.codigo != usuario.codigo}"
+														sec:authorize="hasRole('ROLE_CADASTRAR_USUARIO')"> 
+														<i class="far fa-trash-alt small"></i>
+													</a>
+							                      	
+							                    </td> -->
+							                    
+							                    
 											</tr>
 											<tr th:if="${paginas.vazia}">
 												<td colspan="5">Nenhum Usuário encontrada</td>
@@ -487,6 +479,40 @@
 		class="fas fa-angle-up"></i>
 	</a>
 
+
+
+
+<!-- Modal exclusão -->
+  <div class="modal fade" id="exclusaoModal" tabindex="-1" role="dialog" aria-labelledby="exclusaoModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exclusaoModalLabel">Deseja realmente excluir?</h5>
+          <input id="modal-deletar-usuarioFiltro-codigo" type="hidden" name="codigo"/> 
+          <!-- <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button> -->
+        </div>
+        
+        <div class="modal-body">Clique em Sim para excluir.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+          <button class="btn btn-primary" id="deleteUsuarioFiltro" type="button">Sim</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
 	<!-- Logout Modal-->
 	<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
 		aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -504,7 +530,7 @@
 				<div class="modal-footer">
 					<button class="btn btn-secondary" type="button"
 						data-dismiss="modal">Cancelar</button>
-					<a class="btn btn-primary" href="/logout">Sair</a>
+					<a class="btn btn-primary" th:href="@{/logout}">Sair</a>
 				</div>
 			</div>
 		</div>
@@ -533,6 +559,38 @@
 	
 	<script src="js/multiselecao.js" th:src="@{/js/multiselecao.js}"></script>
 
+
+
+
+
+
+<script>		
+	$(document.this).ready(function () {
+		$("#deleteUsuarioFiltro").on("click", function(e){
+		      e.preventDefault();						
+		      var Id = parseInt($("#modal-deletar-usuarioFiltro-codigo").val());
+		      var urldaPagina = window.location.href.toString();
+				console.log(Id);					
+		      $.ajax({
+		    	  method:"GET",
+		          url:urldaPagina+"/"+Id,
+		          data:{
+		        	  codigo : Id
+		        	  },
+	                  success:function (data) {
+		            	   $("#pagina.conteudo").closest("td#"+data).parent("tr").remove();
+		            	   window.location.reload();
+			          }
+	                  });	
+							        	
+		      });
+	});
+
+    function modalRemover(codigo){
+	  $("#modal-deletar-usuarioFiltro-codigo").val(codigo);
+	  $("#deleteModal").modal('show');	
+    };
+</script>
 
 </body>
 
