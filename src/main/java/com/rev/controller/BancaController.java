@@ -31,6 +31,7 @@ import com.rev.modelo.TipoDeBanca;
 import com.rev.repository.BancaRepository;
 import com.rev.repository.filtro.BancaFiltro;
 import com.rev.service.BancaService;
+import com.rev.utils.PeriodoRelatorio;
 
 @RestController
 @RequestMapping("/banca")
@@ -72,6 +73,7 @@ public class BancaController {
 
 		ModelAndView mv = new ModelAndView("pesquisar-banca");
 		mv.addObject("bancas", bancaService.buscarTodas());
+		mv.addObject("periodoRelatorio", new PeriodoRelatorio());
 		return mv;
 
 	}

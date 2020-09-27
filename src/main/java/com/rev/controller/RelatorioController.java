@@ -29,8 +29,11 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.rev.modelo.Atividade;
+import com.rev.modelo.BancaExaminadora;
 import com.rev.repository.AtividadeRepository;
+import com.rev.repository.BancaRepository;
 import com.rev.utils.AtividadeExportExcel;
+import com.rev.utils.BancaExportExcel;
 import com.rev.utils.PeriodoRelatorio;
 
 import net.sf.jasperreports.engine.JRException;
@@ -48,7 +51,10 @@ public class RelatorioController {
 	private DataSource dataSource;
 	
 	@Autowired
-	private AtividadeRepository atividadeRepository; 
+	private AtividadeRepository atividadeRepository;
+	
+	@Autowired
+	private BancaRepository bancaRepository; 
 
 	@RequestMapping(value = "/atividades", method = RequestMethod.GET)
 	public ModelAndView paginaRelatorioAtividade() {
@@ -156,6 +162,29 @@ public class RelatorioController {
 		
 		AtividadeExportExcel atividadeExcelExport = new AtividadeExportExcel(atividades);
 		atividadeExcelExport.exportExcel(response);
+		
+	}
+	
+	
+	@RequestMapping(value = "/banca/export", method = RequestMethod.GET)
+	public void exportarBancaExcel(PeriodoRelatorio periodo, HttpServletResponse response) throws IOException {
+		
+		DateFormat dataFormatada = new SimpleDateFormat("dd/MM/yyyy");
+		String dataAtual = dataFormatada.format(new Date());
+		String fileName = "BANCAS_NUTS_"+dataAtual+".xlsx";
+		
+		response.setContentType("application/octet-stream");
+		String headerKey = "Content-Disposition";
+		String headerValue = "attachement; filename="+fileName;
+		
+		
+		
+		response.setHeader(headerKey, headerValue);
+		
+		List<BancaExaminadora> bancas = bancaRepository.bancasPorDatas(periodo.getDataInicio(), periodo.getDataFim());
+		
+		BancaExportExcel bancaExcelExport = new BancaExportExcel(bancas);
+		bancaExcelExport.exportExcel(response);
 		
 	}
 	

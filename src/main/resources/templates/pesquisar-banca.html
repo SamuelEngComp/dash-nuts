@@ -19,6 +19,9 @@
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet" th:href="@{/css/sb-admin-2.min.css}" />
   
+  <link href="css/bootstrap-datepicker.standalone.min.css" rel="stylesheet"
+	th:href="@{/css/bootstrap-datepicker.standalone.min.css}" />
+  
   <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" th:href="@{/vendor/datatables/dataTables.bootstrap4.min.css}" />
 	<link rel ="shortcut icon" th:href="@{/img/logo.png}" />
 </head>
@@ -292,6 +295,51 @@
 	  			<div><span th:text="${mensagem}"></span></div>
 			</div>
 		
+		<!-- ######################################################################################################### -->
+		
+		<form class="user" th:method="get" th:action="@{/relatorios/banca/export}" th:object="${periodoRelatorio}">
+
+						<div class="form-group row">
+							<div class="col-sm-2 mb-3 mb-sm-0">
+							<label for="dataDe">Data incial</label>
+								<input type="text" class="form-control js-data" id="dataDe" placeholder="Data inicial"
+									data-provide="datepicker" data-date-orientation="bottom"
+									data-date-language="pt-BR" data-date-today-highlight="true"
+									autocomplete="off" data-date-format="dd/mm/yyyy"
+									data-date-autoclose="true" th:field="*{dataInicio}"
+									th:classappend="${#fields.hasErrors('dataInicio')} ? is-invalid"
+									required="required">
+									<div class="invalid-feedback hidden">Campo Obrigatório</div>
+							</div>
+							<div class="col-sm-2 mb-3 mb-sm-0">
+							<label for="dataAte">Data final</label>
+								<input type="text" class="form-control js-data" id="dataAte" placeholder="Data final"
+									data-provide="datepicker" data-date-orientation="bottom"
+									data-date-language="pt-BR" data-date-today-highlight="true"
+									autocomplete="off" data-date-format="dd/mm/yyyy"
+									data-date-autoclose="true" th:field="*{dataFim}"
+									th:classappend="${#fields.hasErrors('dataFim')} ? is-invalid"
+									required="required">
+									<div class="invalid-feedback hidden">Campo Obrigatório</div>
+							</div>	
+						</div>
+						
+						<hr>
+
+
+						<div class="form-group row">
+							<div class="col-sm-2 mb-3 mb-sm-0">
+								<button type="submit" class="btn btn-primary btn-block shadow"
+									value="relatorio" title="relatorio" target="_blank">
+									<i class="fas fa-file-excel text-white-100"> Exportar</i></button>
+
+							</div>
+						</div>
+
+					</form>
+		
+		
+		<!-- ######################################################################################################### -->
 
           <!-- Content Row -->
           <div class="row">
@@ -467,6 +515,15 @@
   <!-- Page level custom scripts -->
   <script src="js/demo/datatables-demo.js" th:src="@{/js/demo/datatables-demo.js}"></script>
   <script src="js/traducaoDataTable.js" th:src="@{/js/traducaoDataTable.js}"></script>
+  
+  
+  <script src="js/jquery.maskMoney.min.js" th:src="@{/js/jquery.maskMoney.min.js}"></script>
+	<script src="js/mascaraDinheiro.js" th:src="@{/js/mascaraDinheiro.js}"></script>
+	<script src="js/bootstrap-datepicker.min.js" th:src="@{/js/bootstrap-datepicker.min.js}"></script>
+	<script src="js/bootstrap-datepicker.pt-BR.min.js" th:src="@{/js/bootstrap-datepicker.pt-BR.min.js}"></script>
+	
+	<script src="js/exibir.js" th:src="@{/js/exibir.js}"></script>
+	<script src="js/jquery.mask.min.js" th:src="@{/js/jquery.mask.min.js}"></script>
   
 
 
