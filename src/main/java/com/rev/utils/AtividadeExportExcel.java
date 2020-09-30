@@ -64,7 +64,7 @@ public class AtividadeExportExcel {
 		cell.setCellStyle(style);
 		
 		cell = row.createCell(1);
-		cell.setCellValue("DESCRIMINAÇÃO");
+		cell.setCellValue("DISCRIMINAÇÃO");
 		cell.setCellStyle(style);
 		
 		cell = row.createCell(2);
