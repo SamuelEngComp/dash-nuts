@@ -286,6 +286,21 @@
             
           </div>
 
+
+
+		  <!-- ##################################################################################################### 
+           
+            AQUI COMEÇAM O DASHBOARD DO ANO ATUAL, A PRINCIPIO SÃO OS CARDS, LOGO EM SEGUIDA SÃO OS DEMAIS GRÁFICOS.
+              
+           ##################################################################################################### -->
+
+		
+		<!-- ##################################################################################################### 
+           
+            INICIO DA PRIMEIRA LINHA.
+              
+           ##################################################################################################### -->
+			
           <!-- Content Row -->
           <div class="row">
 
@@ -361,9 +376,23 @@
               </div>
             </div>
           </div>
-          
+          <!-- ##################################################################################################### 
+           
+            FIM DA PRIMEIRA LINHA.
+              
+           ##################################################################################################### -->
           
           <!-- ##################################################################################################### -->
+          <!-- ##################################################################################################### -->
+          <!-- ##################################################################################################### -->
+          
+          
+          
+          <!-- ##################################################################################################### 
+           
+            INICIO DA SEGUNDA LINHA.
+              
+           ##################################################################################################### -->
           
           <!-- Content Row -->
           <div class="row">
@@ -441,6 +470,204 @@
             </div>
           </div>
           
+          <!-- ##################################################################################################### 
+           
+            FIM DA SEGUNDA LINHA.
+              
+           ##################################################################################################### -->
+           
+           
+           
+           <!-- ##################################################################################################### 
+           
+            INICIO DA TERCEIRA LINHA.
+              
+           ##################################################################################################### -->
+          
+          <!-- Content Row -->
+          <div class="row">
+
+            <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-2">Máx. Atividades &nbsp &nbsp &nbsp [[${metaTotalAtividades}]]
+                                            </div>
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">[[${metaPorcentagemTotalAtividades}]]%</div>
+                                                </div>
+                                                <div class="col">
+                                                
+                                                <th:block>
+                                                    <div class="progress progress-sm mr-2" >
+                                                        <div class="progress-bar bg-primary" role="progressbar"
+                                                             th:style="|width: ${metaPorcentagemTotalAtividades}%|" aria-valuenow="25" aria-valuemin="0"
+                                                            aria-valuemax="100">
+                                                        </div> 
+                                                    </div>
+                                                 </th:block>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+            <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Máx. Banca Examinadora &nbsp 
+                                            [[${metaTotalBancasExaminadoras}]]</div>
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">[[${metaPorcentagemTotalBancas}]]%</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="progress progress-sm mr-2">
+                                                        <div class="progress-bar bg-success" role="progressbar"
+                                                            th:style="|width: ${metaPorcentagemTotalBancas}%|" aria-valuenow="50" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+            <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Máx. Gravação Vídeo &nbsp
+                                            [[${metaTotalgravacoes}]]</div>
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">[[${metaPorcentagemTotalGravacoes}]]%</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="progress progress-sm mr-2">
+                                                        <div class="progress-bar bg-info" role="progressbar"
+                                                            th:style="|width: ${metaPorcentagemTotalGravacoes}%|" aria-valuenow="50" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+            
+            <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Máx. Participantes Local &nbsp
+                                            [[${metaTotalParticipantesLocal}]]</div>
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">[[${metaPorcentagemParticipantesLocal}]]%</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="progress progress-sm mr-2">
+                                                        <div class="progress-bar bg-warning" role="progressbar"
+                                                            th:style="|width: ${metaPorcentagemParticipantesLocal}%|" aria-valuenow="50" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+          
+          <!-- ##################################################################################################### 
+           
+            FIM DA TERCEIRA LINHA.
+              
+           ##################################################################################################### -->
+           </div>
+           
+           
+           
+           <!-- ############################################################################################################### -->
+           
+           
+           <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Content Column -->
+                        <div class="col-sm-12 col-xl-12 col-lg-12">
+
+                            <!-- Project Card Example -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Números a serem alcançados</h6>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="small font-weight-bold">Máx. Sessões Clínicas -> [[${metaTotalSessoesClinicas}]]<span
+                                            class="float-right">[[${metaPorcentagemSessoesClinicas}]]%</span></h4>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar bg-danger" role="progressbar" th:style="|width: ${metaPorcentagemSessoesClinicas}%|"
+                                            aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <h4 class="small font-weight-bold">Máx. Webconferências -> [[${metaTotalWebconferencias}]]<span
+                                            class="float-right">[[${metaPorcentagemWebconferencias}]]%</span></h4>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar bg-warning" role="progressbar" th:style="|width: ${metaPorcentagemWebconferencias}%|"
+                                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <h4 class="small font-weight-bold">Máx. SIG's -> [[${metaTotalSig}]]<span
+                                            class="float-right">[[${metaPorcentagemSig}]]%</span></h4>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar" role="progressbar" th:style="|width: ${metaPorcentagemSig}%|"
+                                            aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <h4 class="small font-weight-bold">Máx. Horas de atividade -> [[${metaTotalHorasAtividade}]] h<span
+                                            class="float-right">[[${metaPorcentagemHorasDeAtividade}]]%</span></h4>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar bg-info" role="progressbar" th:style="|width: ${metaPorcentagemHorasDeAtividade}%|"
+                                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <h4 class="small font-weight-bold">Máx. Pontos Conectados -> [[${metaTotalPontosConectados}]]<span
+                                            class="float-right">[[${metaPorcentagemPontosConectados}]]%</span></h4>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success" role="progressbar" th:style="|width: ${metaPorcentagemPontosConectados}%|"
+                                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+           			</div>
+           		</div>
+           
+           <!-- ############################################################################################################### -->
+           
+           
+           
+           
+           
           <!-- ##################################################################################################### -->
           
 
@@ -599,6 +826,641 @@
             <!-- ############################################################################################### -->
             
 			<div id="accordion" class="col">
+			
+			
+			<!-- ############################################################################################### -->
+			<!-- INICIO CARDS 2021 -->
+			<!-- <div class="card">
+			    
+				<div class="card-header" id="headingVinte">
+			      <h5 class="mb-0">
+			        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseVinte" aria-expanded="true" aria-controls="collapseVinte">
+			          <strong>Dados das Atividades de 2020</strong>
+			        </button>
+			      </h5>
+			    </div>
+			
+			    <div id="collapseVinte" class="collapse show" aria-labelledby="headingVinte" data-parent="#accordion">
+			      <div class="card-body">
+			      INICIO DA PRIMEIRA LINHA
+						<div class="row"> 
+							<div class="col-xl-3 col-md-6 mb-4">
+				              <div class="card border-bottom-primary shadow h-100 py-2">
+				                <div class="card-body">
+				                  <div class="row no-gutters align-items-center">
+				                    <div class="col mr-2">
+				                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total de Atividades</div>
+				                      <div class="h5 mb-0 font-weight-bold text-gray-800">[[${{painel2020TotalDeAtividades}}]]</div>
+				                    </div>
+				                    <div class="col-auto">
+				                      <i class="fas fa-clipboard-list fa-2x text-gray-800"></i>
+				                    </div>
+				                  </div>
+				                </div>
+				              </div>
+				            </div>
+			            
+			            
+			            
+			            
+				            <div class="col-xl-3 col-md-6 mb-4">
+				              <div class="card border-bottom-primary shadow h-100 py-2">
+				                <div class="card-body">
+				                  <div class="row no-gutters align-items-center">
+				                    <div class="col mr-2">
+				                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total de Participantes</div>
+				                      <div class="h5 mb-0 font-weight-bold text-gray-800">[[${{painel2020TotalDeParticipantes}}]]</div>
+				                    </div>
+				                    <div class="col-auto">
+				                      <i class="fa fa-user-md fa-2x text-gray-800"></i>
+				                    </div>
+				                  </div>
+				                </div>
+				              </div>
+				            </div>
+			            
+			            
+			            
+			            
+			            
+				            <div class="col-xl-3 col-md-6 mb-4">
+				              <div class="card border-bottom-primary shadow h-100 py-2">
+				                <div class="card-body">
+				                  <div class="row no-gutters align-items-center">
+				                    <div class="col mr-2">
+				                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Horas de Atividade</div>
+				                      <div class="h5 mb-0 font-weight-bold text-gray-800">[[${{painel2020TotalDeHoras}}]] h</div>
+				                    </div>
+				                    <div class="col-auto">
+				                      <i class="far fa-clock fa-2x text-gray-800"></i>
+				                    </div>
+				                  </div>
+				                </div>
+				              </div>
+				            </div>
+			            
+			            
+			            
+			            <div class="col-xl-3 col-md-6 mb-4">
+			              <div class="card border-bottom-primary shadow h-100 py-2">
+			                <div class="card-body">
+			                  <div class="row no-gutters align-items-center">
+			                    <div class="col mr-2">
+			                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Sessões Clínicas</div>
+			                      <div class="h5 mb-0 font-weight-bold text-gray-800">[[${{painel2020Totalsessoes}}]]</div>
+			                    </div>
+			                    <div class="col-auto">
+			                      <i class="fas fa-comments fa-2x text-gray-800"></i>
+			                    </div>
+			                  </div>
+			                </div>
+			              </div>
+			            </div>
+			            
+			        </div>
+			            FIM DA PRIMEIRA LINHA
+			            INICIO DA SEGUNDA LINHA
+			            <div class="row"> 
+							<div class="col-xl-3 col-md-6 mb-4">
+				              <div class="card border-bottom-primary shadow h-100 py-2">
+				                <div class="card-body">
+				                  <div class="row no-gutters align-items-center">
+				                    <div class="col mr-2">
+				                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Atividades EBSERH</div>
+				                      <div class="h5 mb-0 font-weight-bold text-gray-800">[[${{painel2020Totalebserh}}]]</div>
+				                    </div>
+				                    <div class="col-auto">
+				                      <i class="fas fa-comments fa-2x text-gray-800"></i>
+				                    </div>
+				                  </div>
+				                </div>
+				              </div>
+				            </div>
+			            
+			            
+			            
+			            
+				            <div class="col-xl-3 col-md-6 mb-4">
+				              <div class="card border-bottom-primary shadow h-100 py-2">
+				                <div class="card-body">
+				                  <div class="row no-gutters align-items-center">
+				                    <div class="col mr-2">
+				                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total de SIG's</div>
+				                      <div class="h5 mb-0 font-weight-bold text-gray-800">[[${{painel2020Totalsig}}]]</div>
+				                    </div>
+				                    <div class="col-auto">
+				                      <i class="fas fa-comments fa-2x text-gray-800"></i>
+				                    </div>
+				                  </div>
+				                </div>
+				              </div>
+				            </div>
+			            
+			            
+			            
+			            
+			            
+				            <div class="col-xl-3 col-md-6 mb-4">
+				              <div class="card border-bottom-primary shadow h-100 py-2">
+				                <div class="card-body">
+				                  <div class="row no-gutters align-items-center">
+				                    <div class="col mr-2">
+				                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total de Bancas</div>
+				                      <div class="h5 mb-0 font-weight-bold text-gray-800">[[${{painel2020Totalbancas}}]]</div>
+				                    </div>
+				                    <div class="col-auto">
+				                      <i class="fa fa-graduation-cap fa-2x text-gray-800"></i>
+				                    </div>
+				                  </div>
+				                </div>
+				              </div>
+				            </div>
+			            
+			            
+			            
+			            <div class="col-xl-3 col-md-6 mb-4">
+			              <div class="card border-bottom-primary shadow h-100 py-2">
+			                <div class="card-body">
+			                  <div class="row no-gutters align-items-center">
+			                    <div class="col mr-2">
+			                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Economia com as Bancas</div>
+			                      <div class="h5 mb-0 font-weight-bold text-gray-800">R$ [[${{painel2020TotalEconomiaComBancas}}]]</div>
+			                    </div>
+			                    <div class="col-auto">
+			                      <i class="fas fa-dollar-sign fa-2x text-gray-800"></i>
+			                    </div>
+			                  </div>
+			                </div>
+			              </div>
+			            </div>
+			            
+			        </div>
+			            FIM DA SEGUNDA LINHA
+			            INICIO DA TERCEIRA LINHA
+			            
+			            <div class="row"> 
+							<div class="col-xl-3 col-md-6 mb-4">
+				              <div class="card border-bottom-primary shadow h-100 py-2">
+				                <div class="card-body">
+				                  <div class="row no-gutters align-items-center">
+				                    <div class="col mr-2">
+				                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Gravações de Vídeo</div>
+				                      <div class="h5 mb-0 font-weight-bold text-gray-800">[[${{painel2020Totalgravacao}}]]</div>
+				                    </div>
+				                    <div class="col-auto">
+				                      <i class="fa fa-film fa-2x text-gray-800"></i>
+				                    </div>
+				                  </div>
+				                </div>
+				              </div>
+				            </div>
+			            
+			            
+			            
+			            
+				            <div class="col-xl-3 col-md-6 mb-4">
+				              <div class="card border-bottom-primary shadow h-100 py-2">
+				                <div class="card-body">
+				                  <div class="row no-gutters align-items-center">
+				                    <div class="col mr-2">
+				                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Transmissões de Cirurgias</div>
+				                      <div class="h5 mb-0 font-weight-bold text-gray-800">[[${{painel2020Totalcirurgias}}]]</div>
+				                    </div>
+				                    <div class="col-auto">
+				                      <i class="fas fa-stethoscope fa-2x text-gray-800"></i>
+				                    </div>
+				                  </div>
+				                </div>
+				              </div>
+				            </div>
+			            
+			            
+			            
+			            
+			            
+				            <div class="col-xl-3 col-md-6 mb-4">
+				              <div class="card border-bottom-primary shadow h-100 py-2">
+				                <div class="card-body">
+				                  <div class="row no-gutters align-items-center">
+				                    <div class="col mr-2">
+				                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">WebConferências</div>
+				                      <div class="h5 mb-0 font-weight-bold text-gray-800">[[${{painel2020TotalWebconferencias}}]]</div>
+				                    </div>
+				                    <div class="col-auto">
+				                      <i class="fas fa-wifi fa-2x text-gray-800"></i>
+				                    </div>
+				                  </div>
+				                </div>
+				              </div>
+				            </div>
+			            
+			            
+			            
+			            <div class="col-xl-3 col-md-6 mb-4">
+			              <div class="card border-bottom-primary shadow h-100 py-2">
+			                <div class="card-body">
+			                  <div class="row no-gutters align-items-center">
+			                    <div class="col mr-2">
+			                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">VideoConferências</div>
+			                      <div class="h5 mb-0 font-weight-bold text-gray-800">[[${{painel2020TotalVideoconferencias}}]]</div>
+			                    </div>
+			                    <div class="col-auto">
+			                      <i class="fa fa-desktop fa-2x text-gray-800"></i>
+			                    </div>
+			                  </div>
+			                </div>
+			              </div>
+			            </div>
+			            
+			        </div>
+			            
+			            FIM DA TERCEIRA LINHA
+			            
+			            #####################################################################################
+			            
+			            
+			            INICIO DOS PAINEIS DE PIZZA
+					##########################################################################################
+
+					
+					
+					<div class="row"> INICIO DOS GRAFICOS DE PIZZA
+			            	
+							<div class="col-xl-4 col-lg-5">
+				              <div class="card shadow mb-4">
+				                Card Header - Dropdown
+				                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+				                  <h6 class="m-0 font-weight-bold text-primary">Categoria das Bancas</h6>
+				                </div>
+				                Card Body
+				                <div class="card-body">
+				                  <div class="chart-pie pt-4 pb-2">chartjs-render-monitor
+				                    <canvas id="pizzaCategoria2020"></canvas>
+				                  </div>
+				                  <div class="mt-4 text-center small">
+				                    <span class="mr-2">
+				                      <i class="fas fa-circle text-primary"></i> Nacionais
+				                    </span>
+				                    <span class="mr-2">
+				                      <i class="fas fa-circle text-success"></i> Internacionais
+				                    </span>
+				                    
+				                  </div>
+				                  <hr>
+				                </div>
+				              </div>
+				            </div>
+				            
+				            
+				            
+				            ######################################################################
+				            
+				            <div class="col-xl-4 col-lg-5">
+				              <div class="card shadow mb-4">
+				                Card Header - Dropdown
+				                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+				                  <h6 class="m-0 font-weight-bold text-primary">Tipo das Bancas</h6>
+				                </div>
+				                Card Body
+				                <div class="card-body">
+				                  <div class="chart-pie pt-4 pb-2">chartjs-render-monitor
+				                    <canvas id="pizzatipo2020"></canvas>
+				                  </div>
+				                  <div class="mt-4 text-center small">
+				                  
+				                  	<span class="mr-2">
+				                      <i class="fas fa-circle text-primary"></i> TCC
+				                    </span>
+				                    <span class="mr-2">
+				                      <i class="fas fa-circle text-success"></i> TCR
+				                    </span>
+				                    <span class="mr-2">
+				                      <i class="fas fa-circle text-info"></i> Quali Mestrado
+				                    </span>
+				                    <span class="mr-2">
+				                      <i class="fas fa-circle text-danger"></i> Quali Doutorado
+				                    </span>
+				                    <span class="mr-2">
+				                      <i class="fas fa-circle text-warning"></i> Mestrado
+				                    </span>
+				                    <span class="mr-2">
+				                      <i class="fas fa-circle text-secondary"></i> Doutorado
+				                    </span>
+				                    
+				                  </div>
+				                  <hr>
+				                </div>
+				              </div>
+				            </div>
+				            
+				            #####################################################################
+				            
+				            
+				            
+				            
+				            
+				            ######################################################################
+				            
+				            <div class="col-xl-4 col-lg-5">
+				              <div class="card shadow mb-4">
+				                Card Header - Dropdown
+				                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+				                  <h6 class="m-0 font-weight-bold text-primary">Valor economizado por tipo de Banca</h6>
+				                </div>
+				                Card Body
+				                <div class="card-body">
+				                  <div class="chart-pie pt-4 pb-2">chartjs-render-monitor
+				                    <canvas id="pizzavalores2020"></canvas>
+				                  </div>
+				                  <div class="mt-4 text-center small">
+				                    <span class="mr-2">
+				                      <i class="fas fa-circle text-primary"></i> TCC
+				                    </span>
+				                    <span class="mr-2">
+				                      <i class="fas fa-circle text-success"></i> TCR
+				                    </span>
+				                    
+				                    <span class="mr-2">
+				                      <i class="fas fa-circle text-info"></i> Quali Mestrado
+				                    </span>
+				                    <span class="mr-2">
+				                      <i class="fas fa-circle text-danger"></i> Quali Doutorado
+				                    </span>
+				                    <span class="mr-2">
+				                      <i class="fas fa-circle text-warning"></i> Mestrado
+				                    </span>
+				                    <span class="mr-2">
+				                      <i class="fas fa-circle text-secondary"></i> Doutorado
+				                    </span>
+				                    
+				                  </div>
+				                  <hr>
+				                </div>
+				              </div>
+				            </div>
+				            
+				            #####################################################################
+				            
+				            
+				            
+
+
+
+			            </div>FIM DOS GRAFICOS DE PIZZA
+			            
+			            
+			            FIM DA QUARTA LINHA
+			            
+			            INICIO DA QUINTA LINHA
+			            
+			            <div class="row"> INICIO CARDS BANCAS EXAMINADORAS
+			            	
+			            	
+			            	<div class="col-xl-3 col-md-6 mb-4">
+				              <div class="card border-bottom-primary shadow h-100 py-2">
+				                <div class="card-body">
+				                  <div class="row no-gutters align-items-center">
+				                    <div class="col mr-2">
+				                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Qualificação Mestrado</div>
+				                      <div class="h5 mb-0 font-weight-bold text-gray-800">[[${{painel2020TotalQualiMestrado}}]]</div>
+				                    </div>
+				                    <div class="col-auto">
+				                      <i class="fa fa-graduation-cap fa-2x text-gray-800"></i>
+				                    </div>
+				                  </div>
+				                </div>
+				              </div>
+				            </div>
+						
+						
+						
+						
+						<div class="col-xl-3 col-md-6 mb-4">
+				              <div class="card border-bottom-primary shadow h-100 py-2">
+				                <div class="card-body">
+				                  <div class="row no-gutters align-items-center">
+				                    <div class="col mr-2">
+				                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Dissertação Mestrado</div>
+				                      <div class="h5 mb-0 font-weight-bold text-gray-800">[[${{painel2020TotalMestrado}}]]</div>
+				                    </div>
+				                    <div class="col-auto">
+				                      <i class="fa fa-graduation-cap fa-2x text-gray-800"></i>
+				                    </div>
+				                  </div>
+				                </div>
+				              </div>
+				            </div>
+						
+						
+						
+						<div class="col-xl-3 col-md-6 mb-4">
+				              <div class="card border-bottom-primary shadow h-100 py-2">
+				                <div class="card-body">
+				                  <div class="row no-gutters align-items-center">
+				                    <div class="col mr-2">
+				                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Qualificação Doutorado</div>
+				                      <div class="h5 mb-0 font-weight-bold text-gray-800">[[${{painel2020TotalQualiDoutorado}}]]</div>
+				                    </div>
+				                    <div class="col-auto">
+				                      <i class="fa fa-graduation-cap fa-2x text-gray-800"></i>
+				                    </div>
+				                  </div>
+				                </div>
+				              </div>
+				            </div>
+						
+						
+						
+						
+						<div class="col-xl-3 col-md-6 mb-4">
+				              <div class="card border-bottom-primary shadow h-100 py-2">
+				                <div class="card-body">
+				                  <div class="row no-gutters align-items-center">
+				                    <div class="col mr-2">
+				                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Tese Doutorado</div>
+				                      <div class="h5 mb-0 font-weight-bold text-gray-800">[[${{painel2020TotalDoutorado}}]]</div>
+				                    </div>
+				                    <div class="col-auto">
+				                      <i class="fa fa-graduation-cap fa-2x text-gray-800"></i>
+				                    </div>
+				                  </div>
+				                </div>
+				              </div>
+				            </div>
+			            	
+			            	
+			            
+			            </div>FIM CARDS BANCAS EXAMINADORAS
+			            
+			            
+			            
+			            
+			            INICIO DOS CARDS SECUNDARIOS
+			            <div class="row">
+			            
+						
+						<div class="col-xl-3 col-md-6 mb-4">
+				              <div class="card border-bottom-primary shadow h-100 py-2">
+				                <div class="card-body">
+				                  <div class="row no-gutters align-items-center">
+				                    <div class="col mr-2">
+				                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Reunião Administrativa</div>
+				                      <div class="h5 mb-0 font-weight-bold text-gray-800">[[${{painel2020Totalreunioes}}]]</div>
+				                    </div>
+				                    <div class="col-auto">
+				                      <i class="fas fa-comments fa-2x text-gray-800"></i>
+				                    </div>
+				                  </div>
+				                </div>
+				              </div>
+				            </div>
+						
+						
+						
+						
+						<div class="col-xl-3 col-md-6 mb-4">
+				              <div class="card border-bottom-primary shadow h-100 py-2">
+				                <div class="card-body">
+				                  <div class="row no-gutters align-items-center">
+				                    <div class="col mr-2">
+				                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Pontos Conectados</div>
+				                      <div class="h5 mb-0 font-weight-bold text-gray-800">[[${{painel2020TotalPontosConectados}}]]</div>
+				                    </div>
+				                    <div class="col-auto">
+				                      <i class="fas fa-comments fa-2x text-gray-800"></i>
+				                    </div>
+				                  </div>
+				                </div>
+				              </div>
+				            </div>
+						
+						
+						
+						<div class="col-xl-3 col-md-6 mb-4">
+				              <div class="card border-bottom-primary shadow h-100 py-2">
+				                <div class="card-body">
+				                  <div class="row no-gutters align-items-center">
+				                    <div class="col mr-2">
+				                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Webinários</div>
+				                      <div class="h5 mb-0 font-weight-bold text-gray-800">[[${{painel2020TotalWebnario}}]]</div>
+				                    </div>
+				                    <div class="col-auto">
+				                      <i class="fas fa-comments fa-2x text-gray-800"></i>
+				                    </div>
+				                  </div>
+				                </div>
+				              </div>
+				            </div>
+						
+						
+						
+						
+						<div class="col-xl-3 col-md-6 mb-4">
+				              <div class="card border-bottom-primary shadow h-100 py-2">
+				                <div class="card-body">
+				                  <div class="row no-gutters align-items-center">
+				                    <div class="col mr-2">
+				                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Curso</div>
+				                      <div class="h5 mb-0 font-weight-bold text-gray-800">[[${{painel2020TotalCurso}}]]</div>
+				                    </div>
+				                    <div class="col-auto">
+				                      <i class="fas fa-comments fa-2x text-gray-800"></i>
+				                    </div>
+				                  </div>
+				                </div>
+				              </div>
+				            </div>
+						
+						
+						
+			            </div> FIM DOS CARDS SECUNDARIOS
+			            
+			            
+			            FIM DA QUINTA LINHA
+			            INICIO DA SEXTA LINHA
+			            
+			            
+			            <div class="row">
+			            
+				            <div class="col-xl-6 col-lg-4">
+				              <div class="card shadow mb-4">
+				                <div class="card-header py-3">
+				                  <h6 class="m-0 font-weight-bold text-primary">Público Local por mês</h6>
+				                </div>
+				                <div class="card-body">
+				                  <div class="chartjs-render-monitor"> chart-bar
+				                    <canvas id="2020PublicoPorMes"></canvas>
+				                  </div>
+				                  <hr>
+				                 
+				                </div>
+				              </div>
+				            </div>
+				            
+				            
+				            
+				            <div class="col-xl-6 col-lg-4">
+				              <div class="card shadow mb-4">
+				                <div class="card-header py-3">
+				                  <h6 class="m-0 font-weight-bold text-primary">Pontos conectados por mês</h6>
+				                </div>
+				                <div class="card-body">
+				                  <div class="chartjs-render-monitor"> chart-bar
+				                    <canvas id="2020PontosConectadosPorMes"></canvas>
+				                  </div>
+				                  <hr>
+				                 
+				                </div>
+				              </div>
+				            </div>
+			            
+			            
+			            </div>
+			            
+			            
+			            FIM DA SEXTA LINHA
+			            INICIO DA SETIMA LINHA
+			            
+			            <div class="row">
+			            	<div class="col-xl-12 col-lg-12"> col-xl-8 col-lg-7
+				              <div class="card shadow mb-4">
+				                Card Header - Dropdown
+				                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+				                  <h6 class="m-0 font-weight-bold text-primary">Atividades por mês</h6>
+				                </div>
+				                Card Body
+				                <div class="card-body">
+				                  <div class="chartjs-render-monitor"> chart-area
+				                    <canvas id="atividades2020PorMes"></canvas> myAreaChart
+				                  </div>
+				                  <hr>
+				                </div>
+				              </div>
+				            </div>
+			            </div>
+			            
+			            FIM DA SETIMA LINHA
+					
+					
+					
+					
+					
+					FIM DOS PAINEIS
+					#########################################################################################
+			        
+			            
+			      </div>
+			    </div>
+				
+			  </div> -->
+			
+			<!-- FIM CARDS 2021 -->
+			<!-- ############################################################################################### -->
+			
+			
+			
+			
+			
 			
 			<!-- INICIO CARD 2020 -->
 			<div class="card">

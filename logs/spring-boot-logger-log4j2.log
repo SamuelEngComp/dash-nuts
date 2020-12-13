@@ -1,49 +1,35 @@
-2020-10-02 09:53:33,672 INFO o.s.b.StartupInfoLogger [main] Starting RevSpringBootApplication on DESKTOP-H0MQLKS with PID 8444 (C:\Users\samue\Documents\workspace-sts-3.9.12.RELEASE\RevSpringBoot\target\classes started by samue in C:\Users\samue\Documents\workspace-sts-3.9.12.RELEASE\RevSpringBoot)
-2020-10-02 09:53:33,690 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
-2020-10-02 09:53:34,669 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-10-02 09:53:34,822 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 142ms. Found 4 JPA repository interfaces.
-2020-10-02 09:53:35,562 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat initialized with port(s): 8080 (http)
-2020-10-02 09:53:35,573 INFO o.a.j.l.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8080"]
-2020-10-02 09:53:35,574 INFO o.a.j.l.DirectJDKLog [main] Starting service [Tomcat]
-2020-10-02 09:53:35,574 INFO o.a.j.l.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.34]
-2020-10-02 09:53:35,761 INFO o.a.j.l.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
-2020-10-02 09:53:35,762 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1960 ms
-2020-10-02 09:53:35,907 INFO o.f.c.i.l.s.Slf4jLog [main] Flyway Community Edition 6.0.8 by Redgate
-2020-10-02 09:53:35,920 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
-2020-10-02 09:53:36,830 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
-2020-10-02 09:53:36,871 INFO o.f.c.i.l.s.Slf4jLog [main] Database: jdbc:mysql://localhost:3306/projetobase (MySQL 8.0)
-2020-10-02 09:53:36,936 INFO o.f.c.i.l.s.Slf4jLog [main] Successfully validated 15 migrations (execution time 00:00.035s)
-2020-10-02 09:53:36,956 INFO o.f.c.i.l.s.Slf4jLog [main] Current version of schema `projetobase`: 15
-2020-10-02 09:53:36,958 INFO o.f.c.i.l.s.Slf4jLog [main] Schema `projetobase` is up to date. No migration necessary.
-2020-10-02 09:53:37,110 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
-2020-10-02 09:53:37,168 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 5.4.15.Final
-2020-10-02 09:53:37,373 INFO o.h.a.c.r.j.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2020-10-02 09:53:37,580 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2020-10-02 09:53:38,703 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2020-10-02 09:53:38,713 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-10-02 09:53:38,788 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2020-10-02 09:53:39,864 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/static/**'], []
-2020-10-02 09:53:39,864 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/img/**'], []
-2020-10-02 09:53:39,865 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/css/**'], []
-2020-10-02 09:53:39,865 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/js/**'], []
-2020-10-02 09:53:39,865 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/scss/**'], []
-2020-10-02 09:53:39,865 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/vendor/**'], []
-2020-10-02 09:53:39,910 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4ef8090b, org.springframework.security.web.context.SecurityContextPersistenceFilter@43445fc6, org.springframework.security.web.header.HeaderWriterFilter@5bb99d1d, org.springframework.security.web.csrf.CsrfFilter@60a6840c, org.springframework.security.web.authentication.logout.LogoutFilter@cf984d9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@58021c3c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@17befef0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@24018c8b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6d31f14, org.springframework.security.web.session.SessionManagementFilter@4fd37449, org.springframework.security.web.access.ExceptionTranslationFilter@241d1052, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4392362c]
-2020-10-02 09:53:40,318 INFO o.a.j.l.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8080"]
-2020-10-02 09:53:40,346 INFO o.s.b.w.e.t.TomcatWebServer [main] Tomcat started on port(s): 8080 (http) with context path ''
-2020-10-02 09:53:40,349 INFO o.s.b.StartupInfoLogger [main] Started RevSpringBootApplication in 7.166 seconds (JVM running for 9.729)
-2020-10-02 09:53:45,294 INFO o.a.j.l.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-10-02 09:53:45,294 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
-2020-10-02 09:53:45,302 INFO o.s.w.s.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 8 ms
-2020-10-02 09:53:45,393 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(atividade0_.qtd_participantes) as col_0_0_ from atividade atividade0_
-2020-10-02 09:53:45,410 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(bancaexami0_.valor_total) as col_0_0_ from banca_examinadora bancaexami0_
-2020-10-02 09:53:45,419 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.forma_conexao) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=?
-2020-10-02 09:53:45,421 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.forma_conexao) as col_0_0_ from atividade atividade0_ where atividade0_.forma_conexao=?
-2020-10-02 09:53:45,430 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.codigo) as col_0_0_ from atividade atividade0_
-2020-10-02 09:53:45,436 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(bancaexami0_.codigo) as col_0_0_ from banca_examinadora bancaexami0_
-2020-10-02 09:53:45,440 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select count(atividade0_.tipo) as col_0_0_ from atividade atividade0_ where atividade0_.tipo=?
-2020-10-02 09:53:45,443 DEBUG o.h.e.j.s.SqlStatementLogger [http-nio-8080-exec-2] select sum(atividade0_.pontos_conectados) as col_0_0_ from atividade atividade0_
-2020-10-02 09:54:18,936 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(2)-127.0.0.1] Application shutdown requested.
-2020-10-02 09:54:18,941 INFO o.s.o.j.AbstractEntityManagerFactoryBean [RMI TCP Connection(2)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
-2020-10-02 09:54:18,946 INFO c.z.h.HikariDataSource [RMI TCP Connection(2)-127.0.0.1] HikariPool-1 - Shutdown initiated...
-2020-10-02 09:54:18,961 INFO c.z.h.HikariDataSource [RMI TCP Connection(2)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2020-12-12 22:04:45,931 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.rev.RevSpringBootApplicationTests], using SpringBootContextLoader
+2020-12-12 22:04:45,946 INFO o.s.t.c.s.AbstractContextLoader [main] Could not detect default resource locations for test class [com.rev.RevSpringBootApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-12-12 22:04:45,946 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.rev.RevSpringBootApplicationTests]: RevSpringBootApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-12-12 22:04:46,165 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.rev.RevSpringBootApplication for test class com.rev.RevSpringBootApplicationTests
+2020-12-12 22:04:46,337 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-12-12 22:04:46,368 INFO o.s.t.c.s.AbstractTestContextBootstrapper [main] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@2c1156a7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@33fe57a9, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4982cc36, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@691939c9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4f1bfe23, org.springframework.test.context.transaction.TransactionalTestExecutionListener@e19bb76, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@512535ff, org.springframework.test.context.event.EventPublishingTestExecutionListener@71529963, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@61a88b8c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@22295ec4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5adb0db3, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3f270e0a, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1a760689]
+2020-12-12 22:04:47,009 INFO o.s.b.StartupInfoLogger [main] Starting RevSpringBootApplicationTests on DESKTOP-H0MQLKS with PID 10492 (started by samue in C:\Users\samue\Documents\workspace-sts-3.9.12.RELEASE\RevSpringBoot)
+2020-12-12 22:04:47,024 INFO o.s.b.SpringApplication [main] No active profile set, falling back to default profiles: default
+2020-12-12 22:04:48,993 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-12 22:04:49,193 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 189ms. Found 4 JPA repository interfaces.
+2020-12-12 22:04:50,818 INFO o.f.c.i.l.s.Slf4jLog [main] Flyway Community Edition 6.0.8 by Redgate
+2020-12-12 22:04:50,838 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2020-12-12 22:04:52,041 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2020-12-12 22:04:52,128 INFO o.f.c.i.l.s.Slf4jLog [main] Database: jdbc:mysql://localhost:3306/projetobase (MySQL 8.0)
+2020-12-12 22:04:52,269 INFO o.f.c.i.l.s.Slf4jLog [main] Successfully validated 15 migrations (execution time 00:00.085s)
+2020-12-12 22:04:52,300 INFO o.f.c.i.l.s.Slf4jLog [main] Current version of schema `projetobase`: 15
+2020-12-12 22:04:52,300 INFO o.f.c.i.l.s.Slf4jLog [main] Schema `projetobase` is up to date. No migration necessary.
+2020-12-12 22:04:52,644 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-12 22:04:52,769 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 5.4.15.Final
+2020-12-12 22:04:53,159 INFO o.h.a.c.r.j.JavaReflectionManager [main] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-12-12 22:04:53,564 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2020-12-12 22:04:55,486 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-12 22:04:55,500 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-12 22:04:55,610 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-12 22:04:57,969 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/static/**'], []
+2020-12-12 22:04:57,978 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/img/**'], []
+2020-12-12 22:04:57,978 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/css/**'], []
+2020-12-12 22:04:57,979 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/js/**'], []
+2020-12-12 22:04:57,980 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/scss/**'], []
+2020-12-12 22:04:57,980 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: Ant [pattern='/vendor/**'], []
+2020-12-12 22:04:58,339 INFO o.s.s.w.DefaultSecurityFilterChain [main] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7b7cf475, org.springframework.security.web.context.SecurityContextPersistenceFilter@4e6280de, org.springframework.security.web.header.HeaderWriterFilter@6c8e5ac4, org.springframework.security.web.csrf.CsrfFilter@303fbc4, org.springframework.security.web.authentication.logout.LogoutFilter@146add7b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@44864ebe, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4a2653a0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4ebed2b3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@404dc999, org.springframework.security.web.session.SessionManagementFilter@3b8b4846, org.springframework.security.web.access.ExceptionTranslationFilter@437c1a87, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1786150f]
+2020-12-12 22:05:00,277 INFO o.s.b.StartupInfoLogger [main] Started RevSpringBootApplicationTests in 13.849 seconds (JVM running for 17.36)
+2020-12-12 22:05:00,602 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringContextShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-12 22:05:00,602 INFO c.z.h.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown initiated...
+2020-12-12 22:05:00,618 INFO c.z.h.HikariDataSource [SpringContextShutdownHook] HikariPool-1 - Shutdown completed.

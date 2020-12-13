@@ -73,7 +73,40 @@ public class Home {
 		
 		mv.addObject("nacional", banca.origemBancas(Origem.NACIONAL, Year.now().getValue()));
 		mv.addObject("internacional", banca.origemBancas(Origem.INTERNACIONAL, Year.now().getValue()));
+		
+		
+		/**
+		 *  CARDS DO DASHBOARD ATUAL - CARDS DE METAS, BARRAS DE PROGRESSO
+		 * 	JÁ VOU DEIXAR OS CÁLCULOS REALIZADOS E VOU ENVIAR PARA O FRONT-END AS PORCENTAGENS. 
+		 */
+		
+		  mv.addObject("metaTotalAtividades", atividade.numeroMaximoDeAtividades());
+		  mv.addObject("metaPorcentagemTotalAtividades", atividade.porcentagemMaximoAtividades());
+		  
+		  mv.addObject("metaTotalBancasExaminadoras", atividade.numeroMaximoDeBancasExaminadoras());
+		  mv.addObject("metaPorcentagemTotalBancas", atividade.porcentagemMaximaBancasExaminadoras());
+		  
+		  mv.addObject("metaTotalgravacoes", atividade.numeroMaximoDeGravacoes());
+		  mv.addObject("metaPorcentagemTotalGravacoes", atividade.porcentagemMaximoGravacoes());
+		  
+		  mv.addObject("metaTotalParticipantesLocal", atividade.numeroMaximoDeParticipantesLocal());
+		  mv.addObject("metaPorcentagemParticipantesLocal", atividade.porcentagemMaximaParticipantesLocal());
+		  
+		  mv.addObject("metaTotalSessoesClinicas", atividade.numeroMaximoDeSessoesClinicas());
+		  mv.addObject("metaPorcentagemSessoesClinicas", atividade.porcentagemMaximaSessoesClinicas());
+		  
+		  mv.addObject("metaTotalWebconferencias", atividade.numeroMaximoDeWebconferencias());
+		  mv.addObject("metaPorcentagemWebconferencias", atividade.porcentagemMaximaWebconferencias());
+		 
+		  mv.addObject("metaTotalSig", atividade.numeroMaximoDeSig());
+		  mv.addObject("metaPorcentagemSig", atividade.porcentagemMaximaSig());
+		  
+		  mv.addObject("metaTotalHorasAtividade", atividade.numeroMaximoHorasDeAtividade());
+		  mv.addObject("metaPorcentagemHorasDeAtividade", atividade.porcentagemMaximaHorasDeAtividade());
 
+		  mv.addObject("metaTotalPontosConectados", atividade.numeroMaximoDePontosConectados());
+		  mv.addObject("metaPorcentagemPontosConectados", atividade.porcentagemMaximaDePontosConectados());
+		  
 		/**
 		 * lembretes: 1 - grafico 01 - os dados são obtidos pela requisicao ajax... 2 -
 		 * grafico 02 - os dados são obtidos pela requisicao ajax... 3 - grafico 03 - os

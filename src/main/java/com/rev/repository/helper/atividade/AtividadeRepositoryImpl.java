@@ -3,6 +3,7 @@ package com.rev.repository.helper.atividade;
 import java.time.LocalDate;
 import java.time.Year;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
@@ -882,6 +883,226 @@ public class AtividadeRepositoryImpl implements AtividadeRepositoryQueries {
 		valores.add(10, novembro.orElse(Long.valueOf(0)));
 		valores.add(11, dezembro.orElse(Long.valueOf(0)));
 		return valores;
+	}
+
+	
+	/**
+	 * qual o ano que teve maior numero de atividades
+	 */
+	@Override
+	public Long numeroMaximoDeAtividades() {
+		
+		//pega o ano que tem o maior numero de atividades
+		List<Long> maximos = new ArrayList<Long>();
+		for(int i=2015, j=0; i<2030; i++, j++) {
+			maximos.add(j, painelTotalAtividadesPorAno(i));
+		}
+		
+		return (long) Collections.max(maximos);
+	}
+
+	@Override
+	public double porcentagemMaximoAtividades() {
+		
+		//realiza a logica da porcentagem de acordo com o maximo valor
+		Long atividadesAnoAtual = painelTotalAtividadesPorAno(Year.now().getValue());
+		Long maxAtividades = numeroMaximoDeAtividades();
+		Double porcentagemMaxAtividades = (atividadesAnoAtual.doubleValue()/maxAtividades.doubleValue()) * 100;
+		
+		//caso o numero de atividades continue em crescimento, tudo fica em 100%
+		if(porcentagemMaxAtividades >= 100) { 
+			return (long) 100; 
+		}
+		
+		//arrendondando a porcentagem
+		return Math.round(porcentagemMaxAtividades);
+	}
+
+	
+	//retorna o numero maximo de bancas examinadoras que teve no ano. 
+	//essa função testa todos os anos ate 2030, iniciando de 2015
+	@Override
+	public Long numeroMaximoDeBancasExaminadoras() {
+		
+		List<Long> maximos = new ArrayList<Long>();
+		for(int i=2015, j=0; i<2030; i++, j++) {
+			maximos.add(j, painelTotalTipoDeAtividadePorAno(TipoAtividade.BANCA, i));
+		}
+		
+		return (long) Collections.max(maximos);
+	}
+
+	
+	
+	@Override
+	public double porcentagemMaximaBancasExaminadoras() {
+		Long bancasExaminadorasAnoAtual = painelTotalTipoDeAtividadePorAno(TipoAtividade.BANCA, Year.now().getValue());
+		Long maxBancasExaminadoras = numeroMaximoDeBancasExaminadoras();
+		Double porcentagemMaxBancaExaminadora = (bancasExaminadorasAnoAtual.doubleValue()/maxBancasExaminadoras.doubleValue()) * 100;
+		
+		if(porcentagemMaxBancaExaminadora >= 100) {
+			return (long) 100;
+		}
+		return Math.round(porcentagemMaxBancaExaminadora);
+	}
+
+	@Override
+	public Long numeroMaximoDeGravacoes() {
+		List<Long> maximos = new ArrayList<Long>();
+		for(int i=2015, j=0; i<2030; i++, j++) {
+			maximos.add(j, painelTotalTipoDeAtividadePorAno(TipoAtividade.GRAVACAO_DE_VIDEO, i));
+		}
+		
+		return (long) Collections.max(maximos);
+	}
+
+	@Override
+	public double porcentagemMaximoGravacoes() {
+		Long gravacoesAnoAtual = painelTotalTipoDeAtividadePorAno(TipoAtividade.GRAVACAO_DE_VIDEO, Year.now().getValue());
+		Long maxGravacoes = numeroMaximoDeGravacoes();
+		Double porcentagemMaxGravacoes = (gravacoesAnoAtual.doubleValue()/maxGravacoes.doubleValue()) * 100;
+		
+		if(porcentagemMaxGravacoes >= 100) {
+			return (long) 100;
+		}
+		return Math.round(porcentagemMaxGravacoes);
+	}
+
+	
+	
+	
+	@Override
+	public Long numeroMaximoDeParticipantesLocal() {
+		List<Long> maximos = new ArrayList<Long>();
+		for(int i=2015, j=0; i<2030; i++, j++) {
+			maximos.add(j, painelTotalParticipantesPorAno(i));
+		}
+		
+		return (long) Collections.max(maximos);
+	}
+
+	@Override
+	public double porcentagemMaximaParticipantesLocal() {
+		Long participantesAnoAtual = painelTotalParticipantesPorAno(Year.now().getValue());
+		Long maxParticipantes = numeroMaximoDeParticipantesLocal();
+		Double porcentagemMaxParticipantes = (participantesAnoAtual.doubleValue()/maxParticipantes.doubleValue()) * 100;
+		
+		if(porcentagemMaxParticipantes >= 100) {
+			return (long) 100;
+		}
+		return Math.round(porcentagemMaxParticipantes);
+	}
+
+	
+	
+	@Override
+	public Long numeroMaximoDeSessoesClinicas() {
+		List<Long> maximos = new ArrayList<Long>();
+		for(int i=2015, j=0; i<2030; i++, j++) {
+			maximos.add(j, painelTotalTipoDeAtividadePorAno(TipoAtividade.SESSAO_CLINICA, i));
+		}
+		
+		return (long) Collections.max(maximos);
+	}
+
+	@Override
+	public double porcentagemMaximaSessoesClinicas() {
+		Long sessoesClinicasAnoAtual = painelTotalTipoDeAtividadePorAno(TipoAtividade.SESSAO_CLINICA, Year.now().getValue());
+		Long maxSessoes = numeroMaximoDeSessoesClinicas();
+		Double porcentagemMaxSessoes = (sessoesClinicasAnoAtual.doubleValue()/maxSessoes.doubleValue()) * 100;
+		
+		if(porcentagemMaxSessoes >= 100) {
+			return (long) 100;
+		}
+		return Math.round(porcentagemMaxSessoes);
+	}
+
+	@Override
+	public Long numeroMaximoDeWebconferencias() {
+		List<Long> maximos = new ArrayList<Long>();
+		for(int i=2015, j=0; i<2030; i++, j++) {
+			maximos.add(j, painelTotalFormaDeConexaoPorAno(FormaConexao.WEBCONFERENCIA, i));
+		}
+		
+		return (long) Collections.max(maximos);
+	}
+
+	@Override
+	public double porcentagemMaximaWebconferencias() {
+		Long webconferenciaAnoAtual = painelTotalFormaDeConexaoPorAno(FormaConexao.WEBCONFERENCIA, Year.now().getValue());
+		Long maxWebs = numeroMaximoDeWebconferencias();
+		Double porcentagemMaxWebs = (webconferenciaAnoAtual.doubleValue()/maxWebs.doubleValue()) * 100;
+		
+		if(porcentagemMaxWebs >= 100) {
+			return (long) 100;
+		}
+		return Math.round(porcentagemMaxWebs);
+	}
+
+	@Override
+	public Long numeroMaximoDeSig() {
+		List<Long> maximos = new ArrayList<Long>();
+		for(int i=2015, j=0; i<2030; i++, j++) {
+			maximos.add(j, painelTotalTipoDeAtividadePorAno(TipoAtividade.SIG, i));
+		}
+		
+		return (long) Collections.max(maximos);
+	}
+
+	@Override
+	public double porcentagemMaximaSig() {
+		Long sigAnoAtual = painelTotalTipoDeAtividadePorAno(TipoAtividade.SIG, Year.now().getValue());
+		Long maxSig = numeroMaximoDeSig();
+		Double porcentagemMaxSig = (sigAnoAtual.doubleValue()/maxSig.doubleValue()) * 100;
+		
+		if(porcentagemMaxSig >= 100) {
+			return (long) 100;
+		}
+		return Math.round(porcentagemMaxSig);
+	}
+
+	@Override
+	public Long numeroMaximoHorasDeAtividade() {
+		List<Long> maximos = new ArrayList<Long>();
+		for(int i=2015, j=0; i<2030; i++, j++) {
+			maximos.add(j, painelTotalHorasAtividadePorAno(i));
+		}
+		
+		return (long) Collections.max(maximos);
+	}
+
+	@Override
+	public double porcentagemMaximaHorasDeAtividade() {
+		Long horasAnoAtual = painelTotalHorasAtividadePorAno(Year.now().getValue());
+		Long maxHoras = numeroMaximoHorasDeAtividade();
+		Double porcentagemMaxHoras = (horasAnoAtual.doubleValue()/maxHoras.doubleValue()) * 100;
+		
+		if(porcentagemMaxHoras >= 100) {
+			return (long) 100;
+		}
+		return Math.round(porcentagemMaxHoras);
+	}
+
+	@Override
+	public Long numeroMaximoDePontosConectados() {
+		List<Long> maximos = new ArrayList<Long>();
+		for(int i=2015, j=0; i<2030; i++, j++) {
+			maximos.add(j, painelTotalPontosConectadosPorAno(i));
+		}
+		
+		return (long) Collections.max(maximos);
+	}
+
+	@Override
+	public double porcentagemMaximaDePontosConectados() {
+		Long pontosConectadosAnoAtual = painelTotalPontosConectadosPorAno(Year.now().getValue());
+		Long maxPontosConectados = numeroMaximoDePontosConectados();
+		Double porcentagemMaxPontosConectados = (pontosConectadosAnoAtual.doubleValue()/maxPontosConectados.doubleValue()) * 100;
+		
+		if(porcentagemMaxPontosConectados >= 100) {
+			return (long) 100;
+		}
+		return Math.round(porcentagemMaxPontosConectados);
 	}
 
 	

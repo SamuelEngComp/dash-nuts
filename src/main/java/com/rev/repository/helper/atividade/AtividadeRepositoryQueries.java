@@ -116,8 +116,45 @@ public interface AtividadeRepositoryQueries {
 
 	public Long painelTotalPontosConectadosPorAno(int ano);
 	
+	/**
+	 * Esse metodo foi criado para retornar o numero maximo de atividade entre todos os anos
+	 * @return
+	 */
+	public Long numeroMaximoDeAtividades();
+	public double porcentagemMaximoAtividades();
 	
+	public Long numeroMaximoDeBancasExaminadoras();
+	public double porcentagemMaximaBancasExaminadoras();
 	
+	public Long numeroMaximoDeGravacoes();
+	public double porcentagemMaximoGravacoes();
+	
+	public Long numeroMaximoDeParticipantesLocal();
+	public double porcentagemMaximaParticipantesLocal();
+	
+	public Long numeroMaximoDeSessoesClinicas();
+	public double porcentagemMaximaSessoesClinicas();
+	
+	public Long numeroMaximoDeWebconferencias();
+	public double porcentagemMaximaWebconferencias();
+	
+	public Long numeroMaximoDeSig();
+	public double porcentagemMaximaSig();
+	
+	public Long numeroMaximoHorasDeAtividade();
+	public double porcentagemMaximaHorasDeAtividade();
+	
+	public Long numeroMaximoDePontosConectados();
+	public double porcentagemMaximaDePontosConectados();
 	
 
 }
+
+
+
+
+
+
+
+
+
