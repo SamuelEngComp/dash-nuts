@@ -51,6 +51,7 @@ public class Home {
 	public ModelAndView home() {
 		ModelAndView mv = new ModelAndView("home");
 
+		LocalDate data2021 = LocalDate.parse("2021-01-01");
 		LocalDate data2020 = LocalDate.parse("2020-01-01");
 		LocalDate data2019 = LocalDate.parse("2019-01-01");
 		LocalDate data2018 = LocalDate.parse("2018-01-01");
@@ -106,6 +107,65 @@ public class Home {
 
 		  mv.addObject("metaTotalPontosConectados", atividade.numeroMaximoDePontosConectados());
 		  mv.addObject("metaPorcentagemPontosConectados", atividade.porcentagemMaximaDePontosConectados());
+		  
+		  /**
+			 * #######################################################################
+			 * ######################## Painel de dados de 2021 ######################
+			 * #######################################################################
+			 *
+			 * QUANDO FINALIZAR O ANO DE 2020 BASTA CHAMAR OS METODOS E ADICIONAR UM PAINEL
+			 * DE CARDS NO HOME
+			 *
+			 */  
+		  
+		  	mv.addObject("painel2021TotalDeAtividades", atividade.painelTotalAtividadesPorAno(data2021.getYear()));
+			mv.addObject("painel2021TotalDeParticipantes", atividade.painelTotalParticipantesPorAno(data2021.getYear()));
+			mv.addObject("painel2021TotalDeHoras", atividade.painelTotalHorasAtividadePorAno(data2021.getYear()));
+			
+			
+			mv.addObject("painel2021TotalQualiMestrado",banca.qtdPorTiposDeBancas(TipoDeBanca.QUALIFICACAO_MESTRADO, data2021.getYear()));
+			mv.addObject("painel2021TotalMestrado", banca.qtdPorTiposDeBancas(TipoDeBanca.BANCA_MESTRADO, data2021.getYear()));
+			mv.addObject("painel2021TotalQualiDoutorado", banca.qtdPorTiposDeBancas(TipoDeBanca.QUALIFICACAO_DOUTORADO, data2021.getYear()));
+			mv.addObject("painel2021TotalDoutorado", banca.qtdPorTiposDeBancas(TipoDeBanca.BANCA_DOUTORADO, data2021.getYear()));
+			
+			mv.addObject("painel2021Totalreunioes", atividade.painelTotalTipoDeAtividadePorAno(TipoAtividade.REUNIAO_ADMINISTRATIVA, data2021.getYear()));
+			mv.addObject("painel2021TotalPontosConectados", atividade.painelTotalPontosConectadosPorAno(data2021.getYear()));
+			mv.addObject("painel2021TotalWebnario", atividade.painelTotalTipoDeAtividadePorAno(TipoAtividade.WEBINARIO, data2021.getYear()));
+			mv.addObject("painel2021TotalCurso", atividade.painelTotalTipoDeAtividadePorAno(TipoAtividade.CURSO, data2021.getYear()));
+			
+
+			mv.addObject("painel2021Totalsessoes",
+					atividade.painelTotalTipoDeAtividadePorAno(TipoAtividade.SESSAO_CLINICA, data2021.getYear()));
+			mv.addObject("painel2021Totalebserh",
+					atividade.painelTotalTipoDeAtividadePorAno(TipoAtividade.EBSERH, data2021.getYear()));
+			mv.addObject("painel2021Totalgravacao",
+					atividade.painelTotalTipoDeAtividadePorAno(TipoAtividade.GRAVACAO_DE_VIDEO, data2021.getYear()));
+			mv.addObject("painel2021Totalsig",
+					atividade.painelTotalTipoDeAtividadePorAno(TipoAtividade.SIG, data2021.getYear()));
+			mv.addObject("painel2021Totalbancas",
+					atividade.painelTotalTipoDeAtividadePorAno(TipoAtividade.BANCA, data2021.getYear()));
+			
+			mv.addObject("painel2021Totalcirurgias",
+					atividade.painelTotalTipoDeAtividadePorAno(TipoAtividade.CIRURGIA, data2021.getYear()));
+
+			mv.addObject("painel2021TotalWebconferencias",
+					atividade.painelTotalFormaDeConexaoPorAno(FormaConexao.WEBCONFERENCIA, data2021.getYear()));
+			mv.addObject("painel2021TotalVideoconferencias",
+					atividade.painelTotalFormaDeConexaoPorAno(FormaConexao.VIDEOCONFERENCIA, data2021.getYear()));
+			mv.addObject("painel2021TotalVideoWeb",
+					atividade.painelTotalFormaDeConexaoPorAno(FormaConexao.VC_WEB, data2021.getYear()));
+			mv.addObject("painel2021TotalWebStreaming",
+					atividade.painelTotalFormaDeConexaoPorAno(FormaConexao.WEBCONFERENCIA_STREAMING, data2021.getYear()));
+
+			mv.addObject("painel2021TotalEconomiaComBancas", banca.painelEconomiaComBancaPorAno(data2021.getYear()));
+			
+			mv.addObject("painel2021TotalEconomiaComBancasNacionais", banca.painelEconomiaPorTipoDeBancaPorAno(Origem.NACIONAL, data2021.getYear()));
+			mv.addObject("painel2021TotalEconomiaComBancasInternacionais", banca.painelEconomiaPorTipoDeBancaPorAno(Origem.INTERNACIONAL, data2021.getYear()));
+		  
+		  
+			
+		  
+		 /*################################################################################*/ 
 		  
 		/**
 		 * lembretes: 1 - grafico 01 - os dados são obtidos pela requisicao ajax... 2 -

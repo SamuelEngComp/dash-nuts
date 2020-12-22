@@ -261,6 +261,29 @@ public class BancaController {
 		LocalDate data2015 = LocalDate.parse("2020-01-01");
 		return bancaRepository.valorEconomizadoPorTipoDeBanca(data2015.getYear());
 	}
+	
+	/**
+	 * painel 2021
+	 * @return
+	 */
+	@GetMapping(value = "/dados/categoria2021bancas", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<Long> categoria2021Bancas() {
+		LocalDate data2015 = LocalDate.parse("2021-01-01");		
+		return bancaRepository.origemDasBancas(data2015.getYear());
+		
+	}
+	
+	@GetMapping(value = "/dados/tiposdebancas2021porano", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<Long> tiposDeBancas2021PorCategoria(){
+		LocalDate data2015 = LocalDate.parse("2021-01-01");
+		return bancaRepository.tiposDasBancas(data2015.getYear());
+	}
+
+	@GetMapping(value = "/dados/valoresbancas2021porano", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<BigDecimal> valoresPorTipoDe2021Banca(){
+		LocalDate data2015 = LocalDate.parse("2021-01-01");
+		return bancaRepository.valorEconomizadoPorTipoDeBanca(data2015.getYear());
+	}
 
 }
 

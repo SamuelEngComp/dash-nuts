@@ -76,7 +76,7 @@ Nuts.GraficoRadar = (function(){
 		    		
 		    		{
 			    		label: '2021',
-			    		backgroundColor: 'rgba(255, 206, 86, 0.5)', 
+			    		backgroundColor: 'rgba(255, 0, 0, 0.5)', 
 			    		borderColor: 'rgba(178, 15, 23, 1)',
 			    		borderWidth: 1,
 			    	    data: comparativofinal['2021']

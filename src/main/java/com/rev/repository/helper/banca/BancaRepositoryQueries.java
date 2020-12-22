@@ -22,6 +22,8 @@ public interface BancaRepositoryQueries {
 	public Long totalBancasExamiadoras();
 
 	public BigDecimal painelEconomiaComBancaPorAno(int ano);
+	
+	public BigDecimal painelEconomiaPorTipoDeBancaPorAno(Origem origemBanca, int ano);
 
 	public List<Long> totalBancasPorTipoAnoAtual();
 

@@ -46,6 +46,9 @@ public class ConfiguracaoBasica extends WebSecurityConfigurerAdapter {
 				.antMatchers("/atividade/dados").permitAll().antMatchers("/atividade/dados/pontosConectados2018").permitAll()
 				.antMatchers("/atividade/dados").permitAll().antMatchers("/atividade/dados/pontosConectados2019").permitAll()
 				.antMatchers("/atividade/dados").permitAll().antMatchers("/atividade/dados/pontosConectados2020").permitAll()
+				.antMatchers("/atividade/dados").permitAll().antMatchers("/atividade/dados/pontosConectados2021").permitAll()
+				.antMatchers("/atividade/dados").permitAll().antMatchers("/atividade/dados/comparativoAnual").permitAll()
+				
 				.antMatchers("/atividade/dados").permitAll().antMatchers("/atividade/dados/pontosConectados").permitAll()
 				.antMatchers("/atividade/dados").permitAll().antMatchers("/atividade/dados/Publico2015").permitAll()
 				.antMatchers("/atividade/dados").permitAll().antMatchers("/atividade/dados/Publico2016").permitAll()
@@ -53,25 +56,36 @@ public class ConfiguracaoBasica extends WebSecurityConfigurerAdapter {
 				.antMatchers("/atividade/dados").permitAll().antMatchers("/atividade/dados/Publico2018").permitAll()
 				.antMatchers("/atividade/dados").permitAll().antMatchers("/atividade/dados/Publico2019").permitAll()
 				.antMatchers("/atividade/dados").permitAll().antMatchers("/atividade/dados/Publico2020").permitAll()
+				.antMatchers("/atividade/dados").permitAll().antMatchers("/atividade/dados/Publico2021").permitAll()
 
 				.antMatchers("/banca/dados").permitAll().antMatchers("/banca/dados/categoria2015bancas").permitAll()
 				.antMatchers("/banca/dados").permitAll().antMatchers("/banca/dados/tiposdebancas2015porano").permitAll()
 				.antMatchers("/banca/dados").permitAll().antMatchers("/banca/dados/valoresbancas2015porano").permitAll()
+				
 				.antMatchers("/banca/dados").permitAll().antMatchers("/banca/dados/categoria2016bancas").permitAll()
 				.antMatchers("/banca/dados").permitAll().antMatchers("/banca/dados/tiposdebancas2016porano").permitAll()
 				.antMatchers("/banca/dados").permitAll().antMatchers("/banca/dados/valoresbancas2016porano").permitAll()
+				
 				.antMatchers("/banca/dados").permitAll().antMatchers("/banca/dados/categoria2017bancas").permitAll()
 				.antMatchers("/banca/dados").permitAll().antMatchers("/banca/dados/tiposdebancas2017porano").permitAll()
 				.antMatchers("/banca/dados").permitAll().antMatchers("/banca/dados/valoresbancas2017porano").permitAll()
+				
 				.antMatchers("/banca/dados").permitAll().antMatchers("/banca/dados/categoria2018bancas").permitAll()
 				.antMatchers("/banca/dados").permitAll().antMatchers("/banca/dados/tiposdebancas2018porano").permitAll()
 				.antMatchers("/banca/dados").permitAll().antMatchers("/banca/dados/valoresbancas2018porano").permitAll()
+				
 				.antMatchers("/banca/dados").permitAll().antMatchers("/banca/dados/categoria2019bancas").permitAll()
 				.antMatchers("/banca/dados").permitAll().antMatchers("/banca/dados/tiposdebancas2019porano").permitAll()
 				.antMatchers("/banca/dados").permitAll().antMatchers("/banca/dados/valoresbancas2019porano").permitAll()
+				
 				.antMatchers("/banca/dados").permitAll().antMatchers("/banca/dados/categoria2020bancas").permitAll()
 				.antMatchers("/banca/dados").permitAll().antMatchers("/banca/dados/tiposdebancas2020porano").permitAll()
 				.antMatchers("/banca/dados").permitAll().antMatchers("/banca/dados/valoresbancas2020porano").permitAll()
+				
+				.antMatchers("/banca/dados").permitAll().antMatchers("/banca/dados/categoria2021bancas").permitAll()
+				.antMatchers("/banca/dados").permitAll().antMatchers("/banca/dados/tiposdebancas2021porano").permitAll()
+				.antMatchers("/banca/dados").permitAll().antMatchers("/banca/dados/valoresbancas2021porano").permitAll()
+				
 				.antMatchers("/atividade/dados/formasconexao").permitAll().antMatchers("/atividade/nova")
 				.hasRole("CADASTRAR_ATIVIDADE").antMatchers("/atividade/editar/*").hasRole("CADASTRAR_ATIVIDADE")
 				.antMatchers("/atividade/{codigo}").hasRole("CADASTRAR_USUARIO").antMatchers("/banca/nova")

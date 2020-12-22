@@ -180,6 +180,12 @@ public class AtividadeController {
 		return atividadeRepository.atividadesPorMes(data2015.getYear());
 	}
 	
+	@GetMapping(value = "/dados/atividades2021", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<Long> atividades2021PorMes() {
+		LocalDate data2015 = LocalDate.parse("2021-01-01");
+		return atividadeRepository.atividadesPorMes(data2015.getYear());
+	}
+	
 	
 	
 	
@@ -244,6 +250,13 @@ public class AtividadeController {
 		return atividadeRepository.participantesLocalPorMes(data2015.getYear());
 	}
 	
+	@GetMapping(value = "/dados/Publico2021", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<Long> publicoLocal2021(){
+		LocalDate data2015 = LocalDate.parse("2021-01-01");
+		
+		return atividadeRepository.participantesLocalPorMes(data2015.getYear());
+	}
+	
 	
 	
 	@GetMapping(value = "/dados/pontosConectados2015", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -279,6 +292,12 @@ public class AtividadeController {
 	@GetMapping(value = "/dados/pontosConectados2020", produces = MediaType.APPLICATION_JSON_VALUE)
 	public @ResponseBody List<Long> pontosConectados2020() {
 		LocalDate data2020 = LocalDate.parse("2020-01-01");
+		return atividadeRepository.pontosConectados(data2020.getYear());
+	}
+	
+	@GetMapping(value = "/dados/pontosConectados2021", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody List<Long> pontosConectados2021() {
+		LocalDate data2020 = LocalDate.parse("2021-01-01");
 		return atividadeRepository.pontosConectados(data2020.getYear());
 	}
 	

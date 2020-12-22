@@ -326,6 +326,16 @@ public class BancaRepositoryImpl implements BancaRepositoryQueries {
 	
 	}
 
+	@Override
+	public BigDecimal painelEconomiaPorTipoDeBancaPorAno(Origem origemBanca, int ano) {
+		Optional<BigDecimal> valorBancaPorOrigem = Optional.ofNullable(
+				manager.createQuery("select sum(a.valorTotal) from BancaExaminadora a where a.origem = :origemBanca and year(data) = :ano",
+						BigDecimal.class).setParameter("origemBanca", origemBanca)
+				.setParameter("ano", ano).getSingleResult());
+		
+		return valorBancaPorOrigem.orElse(BigDecimal.ZERO);
+	}
+
 	
 
 }
