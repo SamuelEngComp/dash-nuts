@@ -65,7 +65,8 @@ public class Home {
 		mv.addObject("totalAtividade", atividade.totalAtividadePorAno());
 		mv.addObject("sessao", atividade.totalAtividadePorTipo(TipoAtividade.SESSAO_CLINICA));
 		mv.addObject("gravacao", atividade.totalAtividadePorTipo(TipoAtividade.GRAVACAO_DE_VIDEO));
-		mv.addObject("totalEbserh", atividade.totalAtividadePorTipo(TipoAtividade.EBSERH));
+//		mv.addObject("totalEbserh", atividade.totalAtividadePorTipo(TipoAtividade.EBSERH));
+		mv.addObject("totalPontosConectados", atividade.totalPontosConectadosPorAno());
 
 		mv.addObject("economiaBancasAtual", banca.economiaComBancasAnoAtual());
 		mv.addObject("mestrado", banca.bancasPorTipoAnoAtual(TipoDeBanca.BANCA_MESTRADO));

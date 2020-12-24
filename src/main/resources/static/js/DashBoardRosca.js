@@ -27,11 +27,11 @@ Nuts.GraficoFormasConexaoPorMes = (function(){
 		var graficoFormaConexaoPorMes = new Chart(this.ctx, {
 			type: 'doughnut',
 			  data: {
-			    labels: ["Webconferência", "Videoconferência", "Gravação de video"],
+			    labels: ["Webconferência", "Videoconferência", "Video/Web", "Web/Streaming"],
 			    datasets: [{
 			      data: valores,
-			      backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc'],
-			      hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
+			      backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc', '#ff0004'],
+			      hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf', '#cf1b1e'],
 			      hoverBorderColor: "rgba(234, 236, 244, 1)",
 			    }],
 			  },
@@ -54,7 +54,7 @@ Nuts.GraficoFormasConexaoPorMes = (function(){
 			    
 			    plugins:{
 			    		labels:{
-			    			render:'value',
+			    			render:'percentage',
 			    			fontColor:'#fff',
 			    			position: 'border'
 			    		}

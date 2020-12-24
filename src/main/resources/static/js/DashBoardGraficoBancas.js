@@ -53,7 +53,7 @@ Nuts.GraficoBancasExaminadoras = (function(){
 			    cutoutPercentage: 100,
 			    plugins:{
 		    		labels:{
-		    			render:'value',
+		    			render:'percentage',
 		    			fontColor:'#fff',
 		    			position: 'border'
 		    		}

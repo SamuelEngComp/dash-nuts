@@ -352,15 +352,31 @@ public class AtividadeRepositoryImpl implements AtividadeRepositoryQueries {
 				Long.class).setParameter("ano", Year.now().getValue())
 				.setParameter("formaConexao", FormaConexao.VIDEOCONFERENCIA).getSingleResult());
 
-		Optional<Long> gravacoes = Optional.ofNullable(manager
-				.createQuery("select count(a.tipo) from Atividade a where a.tipo = :tipo and year(data) = :ano",
-						Long.class)
-				.setParameter("ano", Year.now().getValue()).setParameter("tipo", TipoAtividade.GRAVACAO_DE_VIDEO)
-				.getSingleResult());
+		/*
+		 * Optional<Long> gravacoes = Optional.ofNullable(manager
+		 * .createQuery("select count(a.tipo) from Atividade a where a.tipo = :tipo and year(data) = :ano"
+		 * , Long.class) .setParameter("ano",
+		 * Year.now().getValue()).setParameter("tipo", TipoAtividade.GRAVACAO_DE_VIDEO)
+		 * .getSingleResult());
+		 */
+		
+		
+		Optional<Long> videoWeb = Optional.ofNullable(manager.createQuery(
+				"select count(a.formaConexao) from Atividade a where a.formaConexao = :formaConexao and year(data) = :ano",
+				Long.class).setParameter("ano", Year.now().getValue())
+				.setParameter("formaConexao", FormaConexao.VC_WEB).getSingleResult());
+		
+		Optional<Long> webStreaming = Optional.ofNullable(manager.createQuery(
+				"select count(a.formaConexao) from Atividade a where a.formaConexao = :formaConexao and year(data) = :ano",
+				Long.class).setParameter("ano", Year.now().getValue())
+				.setParameter("formaConexao", FormaConexao.WEBCONFERENCIA_STREAMING).getSingleResult());
+		
 
 		formas.add(0, webconferencias.orElse(Long.valueOf(0)));
 		formas.add(1, videoconferencias.orElse(Long.valueOf(0)));
-		formas.add(2, gravacoes.orElse(Long.valueOf(0)));
+		formas.add(2, videoWeb.orElse(Long.valueOf(0)));
+		formas.add(3, webStreaming.orElse(Long.valueOf(0)));
+//		formas.add(2, gravacoes.orElse(Long.valueOf(0)));
 
 		return formas;
 	}
