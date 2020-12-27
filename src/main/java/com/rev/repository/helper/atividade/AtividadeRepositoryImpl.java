@@ -1121,6 +1121,85 @@ public class AtividadeRepositoryImpl implements AtividadeRepositoryQueries {
 		return Math.round(porcentagemMaxPontosConectados);
 	}
 
+	@Override
+	public HashMap<String, List<Long>> atividadesPorMesLinhas() {
+		
+		List<Long> ano2015 = atividadesPorMes(2015);
+		List<Long> ano2016 = atividadesPorMes(2016);
+		List<Long> ano2017 = atividadesPorMes(2017);
+		List<Long> ano2018 = atividadesPorMes(2018);
+		List<Long> ano2019 = atividadesPorMes(2019);
+		List<Long> ano2020 = atividadesPorMes(2020);
+		List<Long> ano2021 = atividadesPorMes(2021);
+		List<Long> anoAtual = atividadesPorMes(Year.now().getValue());
+		
+		HashMap<String, List<Long>> valores = new HashMap<String, List<Long>>();
+		
+		valores.put("2015", ano2015);
+		valores.put("2016", ano2016);
+		valores.put("2017", ano2017);
+		valores.put("2018", ano2018);
+		valores.put("2019", ano2019);
+		valores.put("2020", ano2020);
+		valores.put("2021", ano2021);
+		valores.put("Atual", anoAtual);
+		
+		
+		return valores;
+	}
+
+	@Override
+	public HashMap<String, Long> comparativoPublicoLocalAnual() {
+		
+		Long ano2015 = painelTotalParticipantesPorAno(2015);
+		Long ano2016 = painelTotalParticipantesPorAno(2016);
+		Long ano2017 = painelTotalParticipantesPorAno(2017);
+		Long ano2018 = painelTotalParticipantesPorAno(2018);
+		Long ano2019 = painelTotalParticipantesPorAno(2019);
+		Long ano2020 = painelTotalParticipantesPorAno(2020);
+		Long ano2021 = painelTotalParticipantesPorAno(2021);
+		Long anoAtual = painelTotalParticipantesPorAno(Year.now().getValue());
+		
+		HashMap<String, Long> valores = new HashMap<String, Long>();
+		
+		valores.put("2015", ano2015);
+		valores.put("2016", ano2016);
+		valores.put("2017", ano2017);
+		valores.put("2018", ano2018);
+		valores.put("2019", ano2019);
+		valores.put("2020", ano2020);
+		valores.put("2021", ano2021);
+		valores.put("Atual", anoAtual);
+		
+		return valores;
+	}
+
+	@Override
+	public HashMap<String, Long> comparativoPontosConectadosAnual() {
+		
+		Long ano2015 = painelTotalPontosConectadosPorAno(2015);
+		Long ano2016 = painelTotalPontosConectadosPorAno(2016);
+		Long ano2017 = painelTotalPontosConectadosPorAno(2017);
+		Long ano2018 = painelTotalPontosConectadosPorAno(2018);
+		Long ano2019 = painelTotalPontosConectadosPorAno(2019);
+		Long ano2020 = painelTotalPontosConectadosPorAno(2020);
+		Long ano2021 = painelTotalPontosConectadosPorAno(2021);
+		Long anoAtual = painelTotalPontosConectadosPorAno(Year.now().getValue());
+		
+		HashMap<String, Long> valores = new HashMap<String, Long>();
+		
+		valores.put("2015", ano2015);
+		valores.put("2016", ano2016);
+		valores.put("2017", ano2017);
+		valores.put("2018", ano2018);
+		valores.put("2019", ano2019);
+		valores.put("2020", ano2020);
+		valores.put("2021", ano2021);
+		valores.put("Atual", anoAtual);
+		
+		return valores;
+	}
+
 	
 
 }

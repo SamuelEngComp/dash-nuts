@@ -45,7 +45,12 @@ public interface AtividadeRepositoryQueries {
 	// fim total geral
 
 	public List<Long> atividadesPorMes();
+	public HashMap<String, List<Long>> atividadesPorMesLinhas();
 	public List<Long> atividadesPorMes(int ano);
+	
+	//comparativo de publico local e pontos conectados - para cada ano
+	public HashMap<String, Long> comparativoPublicoLocalAnual();
+	public HashMap<String, Long> comparativoPontosConectadosAnual();
 
 	public List<Long> participantesLocalPorMes();
 	public List<Long> participantesLocalPorMes(int ano);

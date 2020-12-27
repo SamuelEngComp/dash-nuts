@@ -130,6 +130,17 @@ public class AtividadeController {
 	public @ResponseBody List<Long> atividadesPorMes() {
 		return atividadeRepository.atividadesPorMes();
 	}
+	
+	
+	/**
+	 * grafico de linha do dashboard - comparativo anual
+	 * 
+	 * @return o valor de atividades por ano de cada mês
+	 */
+	@GetMapping(value = "/dados/linhas", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody HashMap<String, List<Long>> atividadesPorMesLinhas() {
+		return atividadeRepository.atividadesPorMesLinhas();
+	}
 
 	/**
 	 * grafico de barras verticais do dashboard
@@ -324,4 +335,34 @@ public class AtividadeController {
 		return atividadeRepository.comparativoFinal();
 	}
 
+	
+	/**
+	 * COMPARATIVO ANUAL DE PUBLICO LOCAL
+	 */
+	@GetMapping(value = "/dados/comparativopublicolocal", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody HashMap<String, Long> comparativoPublicoLocalAnual() {
+		return atividadeRepository.comparativoPublicoLocalAnual();
+	}
+	
+	
+	
+	/**
+	 * COMPARATIVO ANUAL DE PONTOS CONECTADOS
+	 */
+	@GetMapping(value = "/dados/comparativopontosconectadosanual", produces = MediaType.APPLICATION_JSON_VALUE)
+	public @ResponseBody HashMap<String, Long> comparativoPontosConectadosAnual() {
+		return atividadeRepository.comparativoPontosConectadosAnual();
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+

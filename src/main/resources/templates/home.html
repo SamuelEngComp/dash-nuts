@@ -821,6 +821,72 @@
               </div>
           
           </div>
+          
+          <!-- #################################### INICIO - COMPARATIVO DE ATIVIDADES POR MÊS DE CADA ANO - GRÁFICO DE LINHA ######################################## -->
+          <div class="row">
+          	<div class="col-xl-12 col-lg-12"> 
+				<div class="card shadow mb-4">
+				    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+				        <h6 class="m-0 font-weight-bold text-primary">Atividades por mês - Comparativo Anual</h6>
+				    </div>
+				                
+				    <div class="card-body">
+				       <div class="chartjs-render-monitor"> 
+				           <canvas id="comparativoAtividadePorMesLinhas"></canvas>
+				       </div>
+				       <hr>
+				    </div>
+				</div>
+			</div>
+          
+          </div>
+          <!-- #################################### FIM - COMPARATIVO DE ATIVIDADES POR MÊS DE CADA ANO - GRÁFICO DE LINHA ######################################## -->
+          
+          <!-- ################################### INICIO - COMPARATIVO PUBLICO LOCAL POR ANO E COMPARATIVO PONTOS CONECTADOS POR ANO  ############################ -->
+          
+          <div class="row">
+			            
+				            <div class="col-xl-6 col-lg-4">
+				              <div class="card shadow mb-4">
+				                <div class="card-header py-3">
+				                  <h6 class="m-0 font-weight-bold text-primary">Público Local - Comparativo anual</h6>
+				                </div>
+				                <div class="card-body">
+				                  <div class="chartjs-render-monitor"> <!-- chart-bar -->
+				                    <canvas id="comparativoAnualPublicoLocal"></canvas>
+				                  </div>
+				                  <hr>
+				                 
+				                </div>
+				              </div>
+				            </div>
+				            
+				            
+				            
+				            <div class="col-xl-6 col-lg-4">
+				              <div class="card shadow mb-4">
+				                <div class="card-header py-3">
+				                  <h6 class="m-0 font-weight-bold text-primary">Pontos conectados - Comparativo anual</h6>
+				                </div>
+				                <div class="card-body">
+				                  <div class="chartjs-render-monitor"> <!-- chart-bar -->
+				                    <canvas id="comparativoAnualPontosConectados"></canvas>
+				                  </div>
+				                  <hr>
+				                 
+				                </div>
+				              </div>
+				            </div>
+			            
+			            
+		</div>
+          
+          
+          
+          
+          <!-- ################################# FIM - COMPARATIVO PUBLICO LOCAL POR ANO E COMPARATIVO PONTOS CONECTADOS POR ANO ################################# -->
+          
+          
           <!-- FIM DOS GRÁFICOS DE RADAR -->
         
           
@@ -5422,6 +5488,9 @@
 	<script src="js/DashBoardGraficoBancas.js" th:src="@{/js/DashBoardGraficoBancas.js}"></script>
 	<script src="js/radarComparativoAnual.js" th:src="@{/js/radarComparativoAnual.js}"></script>
 	<script src="js/radarFinal.js" th:src="@{/js/radarFinal.js}"></script>
+	
+	
+	
 	<script src="js/Chart.min.js" th:src="@{/js/Chart.min.js}"></script>
 	
 	
@@ -5432,7 +5501,14 @@
 	<script src="js/painel2021PontosConectados.js" th:src="@{/js/painel2021PontosConectados.js}"></script>
 	<script src="js/painel2021AtividadesPorMes.js" th:src="@{/js/painel2021AtividadesPorMes.js}"></script>
 	
+	<script src="js/comparativoLinhasAtividades.js" th:src="@{/js/comparativoLinhasAtividades.js}"></script>
+	
+	<script src="js/dashComparativoPontosConectadosAnual.js" th:src="@{/js/dashComparativoPontosConectadosAnual.js}"></script>
+	<script src="js/dashComparativoPublicoLocalAnual.js" th:src="@{/js/dashComparativoPublicoLocalAnual.js}"></script>
+	
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
+	<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script> -->
+	
 	
 	
 	
