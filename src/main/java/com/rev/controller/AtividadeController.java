@@ -137,10 +137,12 @@ public class AtividadeController {
 	 * 
 	 * @return o valor de atividades por ano de cada mês
 	 */
-	@GetMapping(value = "/dados/linhas", produces = MediaType.APPLICATION_JSON_VALUE)
-	public @ResponseBody HashMap<String, List<Long>> atividadesPorMesLinhas() {
-		return atividadeRepository.atividadesPorMesLinhas();
-	}
+	/*
+	 * @GetMapping(value = "/dados/linhas", produces =
+	 * MediaType.APPLICATION_JSON_VALUE) public @ResponseBody HashMap<String,
+	 * List<Long>> atividadesPorMesLinhas() { return
+	 * atividadeRepository.atividadesPorMesLinhas(); }
+	 */
 
 	/**
 	 * grafico de barras verticais do dashboard

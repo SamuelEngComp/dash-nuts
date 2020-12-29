@@ -48,7 +48,7 @@ public class ConfiguracaoBasica extends WebSecurityConfigurerAdapter {
 				.antMatchers("/atividade/dados").permitAll().antMatchers("/atividade/dados/pontosConectados2020").permitAll()
 				.antMatchers("/atividade/dados").permitAll().antMatchers("/atividade/dados/pontosConectados2021").permitAll()
 				.antMatchers("/atividade/dados").permitAll().antMatchers("/atividade/dados/comparativoAnual").permitAll()
-				.antMatchers("/atividade/dados").permitAll().antMatchers("/atividade/dados/linhas").permitAll()
+//				.antMatchers("/atividade/dados").permitAll().antMatchers("/atividade/dados/linhas").permitAll()
 				.antMatchers("/atividade/dados").permitAll().antMatchers("/atividade/dados/comparativopublicolocal").permitAll()
 				.antMatchers("/atividade/dados").permitAll().antMatchers("/atividade/dados/comparativopontosconectadosanual").permitAll()
 				
